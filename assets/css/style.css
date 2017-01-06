@@ -160,7 +160,7 @@ HOVERS
 .nav-item:hover {
     text-decoration: none;
     color: #000;
-    /*font-family: "Permanent Marker", sans-serif;*/
+    font-family: "Permanent Marker", sans-serif;
 }
 
 .nav-item.inactive:hover {

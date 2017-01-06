@@ -134,7 +134,7 @@ Navigation Scripts
 <script>
 
     // **** Overview ****
-    $("#overview-active").click(function(){
+    $("#overview-active").click(function () {
 //        $("#overview-active").hide();
         $(".nav-span-inactive").animate({width: '0px'});
         $("#overview-inactive").animate({width: '73px'});
@@ -147,38 +147,37 @@ Navigation Scripts
     var portfolio_w_plus = portfolio_w + 5;
     console.log("portfolio_w_plus =" + portfolio_w_plus);
 
-    $("#portfolio-active").click(function(){
+    $("#portfolio-active").click(function () {
 //        $("#portfolio-active").hide();
         $(".nav-span-inactive").animate({width: '0px'});
-        $("#portfolio-inactive").animate({width:'77px'});
+        $("#portfolio-inactive").animate({width: '77px'});
     });
 
     // **** timeline ****
-//    var timeline_w = $("#timeline-active").outerWidth();
-//    console.log("timeline_w =" + timeline_w);
-//
-//    var timeline_w_plus = timeline_w + 5;
-//    console.log("timeline_w =" + timeline_w_plus);
+    //    var timeline_w = $("#timeline-active").outerWidth();
+    //    console.log("timeline_w =" + timeline_w);
+    //
+    //    var timeline_w_plus = timeline_w + 5;
+    //    console.log("timeline_w =" + timeline_w_plus);
 
-    $("#timeline-active").click(function(){
+    $("#timeline-active").click(function () {
 //        $("#timeline-active").hide();
         $(".nav-span-inactive").animate({width: '0px'});
         $("#timeline-inactive").animate({width: '67px'});
     });
 
     // **** contact ****
-//    var contact_w = $("#contact-active").outerWidth();
-//    console.log("contact_w =" + contact_w);
-//
-//    var contact_w_plus = contact_w + 5;
-//    console.log("contact_w =" + contact_w_plus);
+    //    var contact_w = $("#contact-active").outerWidth();
+    //    console.log("contact_w =" + contact_w);
+    //
+    //    var contact_w_plus = contact_w + 5;
+    //    console.log("contact_w =" + contact_w_plus);
 
-    $("#contact-active").click(function(){
+    $("#contact-active").click(function () {
 //        $("#contact-active").hide();
         $(".nav-span-inactive").animate({width: '0px'});
         $("#contact-inactive").animate({width: '63px'});
     });
-
 
 
     //    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -198,19 +197,76 @@ PAGE OPEN ANIMATIONS
 ================================================== -->
 <script>
 
-    $("#stem").animate({height: '50%'});
-    $("#daniel, #sturrock").fadeIn();
-    $("#ux-designer, #front-end-developer").fadeIn();
+
+//        function header_init(){
+//            stem_grow();
+//            // set timer to start next action a certain time after the sound starts
+//            setTimeout(function() {
+//                bigger(image);
+//            }, 1000);   // set the time here for how long you want to wait after starting the sound before making it bigger
+//        }
 
 
-    $("#overview-active").animate({width: '45px'});
-    $("#portfolio-active").animate({width: '46px'});
-    $("#timeline-active").animate({width: '44px'});
-    $("#contact-active").animate({width: '40px'});
-//    $("#daniel, #sturrock").animate({width: '100%'});
-//    $("#ux-designer, #front-end-developer").animate({width: '100%'});
+function FindIt(image, id){
+    sound();
+    // set timer to start next action a certain time after the sound starts
+    setTimeout(function() {
+        bigger(image);
+        // set timer to start next action a certain time after making the image bigger
+        setTimeout (function() {
+            hide(image);
+        }, 1000);   // set this time for how long you want to wait after bigger, before hide
+    }, 1000);   // set the time here for how long you want to wait after starting the sound before making it bigger
+}
+
+    function header_init() {
+        stem_grow();
+
+        setTimeout(function () {
+            nameTitle_fadeIN();
+
+            setTimeout(function () {
+                NavReveal();
+
+            }, 500)
+        }, 500)
+    }
+
+    function stem_grow() {
+        $("#stem").animate({height: '50%'});
+    }
+
+    function nameTitle_fadeIN() {
+        $("#daniel, #sturrock").fadeIn();
+        $("#ux-designer, #front-end-developer").fadeIn();
+    }
+
+    function NavReveal() {
+
+        setTimeout(function () {
+            $("#overview-active").animate({width: '100%'});
+
+            setTimeout(function () {
+                $("#portfolio-active").animate({width: '100%'});
+
+                setTimeout (function() {
+                    $("#timeline-active").animate({width: '100%'});
+
+                    setTimeout (function() {
+                        $("#contact-active").animate({width: '100%'});
+
+                    }, 500);
+                }, 500);
+            }, 500)
+        }, 500)
+    }
 
 
+
+    $(document).ready(header_init());
+
+    //    $("#daniel, #sturrock").animate({width: '100%'});
+    //    $("#ux-designer, #front-end-developer").animate({width: '100%'});
 
 
 </script>
