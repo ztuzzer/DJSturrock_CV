@@ -1,45 +1,180 @@
-.cont-whole {
-    /*background-color: orange;*/
-}
 
+/* ==================================================
+GLOBAL
+================================================== */
+
+/*temp until media queries*/
 .body {
     min-width: 980px;
 }
 
+/*temp*/
+.hgt-mimic {
+    height: 2000px;
+}
+
+* {
+    font-family: 'Lato', 'Open Sans', 'Open Sans Condensed', sans-serif;
+}
+
+.cont-whole {
+    /*background-color: orange;*/
+}
+
 .stem {
-    position: absolute;
+    position: fixed;
     height: 50%;
     width: 30%;
-
     min-width: 294px;
+
     border-right: 5px solid #000;
 }
+
+/* ==================================================
+CONTENT CONTAINERS
+================================================== */
 
 .container-content {
     height: 500px;
     width:100%;
-    background-color: red;
     min-width: 980px;
+
+    /*background-color: red;*/
 }
 
 .cont-left {
     float: left;
+
     width: 30%;
-    height: 50px;
-    background-color: blue;
+
+    /*background-color: blue;*/
 }
 
 .cont-right {
     float:right;
+
     width:70%;
-    height:50px;
-    background-color: green;
+
+    /*background-color: green;*/
 }
 
 .cont-whole {
     clear: both;
     width:100%;
-    height:75px;
-    background-color: orange;
-    /*position: relative;*/
+
+    position: relative;
+
+    /*background-color: orange;*/
+}
+
+
+.cont-img {
+    width: 60%;
+
+    text-align: center;
+
+    /*background-color: pink;*/
+}
+
+/* ==================================================
+IMAGES
+================================================== */
+
+.img {
+    width: 500px;
+
+    border-radius: 100%;
+    border: 5px solid black;
+    margin-bottom: 500px;
+}
+
+/* ==================================================
+HEADER
+================================================== */
+
+.cont-nav {
+    text-align: right;
+}
+
+.cont-title {
+    text-align: left;
+    padding: 0px;
+}
+
+ul.ul-simple {
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.li-header {
+    height: 42px;
+    position: relative;
+    /*background-color: pink;*/
+    margin: 0px;
+}
+
+
+
+
+h1.name {
+    font-family:  "Permanent Marker", sans-serif;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px 6px;
+}
+
+h1.title {
+    font-family:  "Amatic SC", sans-serif;
+    font-weight: 100;
+    margin: 0px;
+    padding: 0px 6px;
+}
+
+/* ==================================================
+HOVERS
+================================================== */
+
+.li-header:hover, body:hover {
+    cursor: crosshair;
+}
+
+
+
+
+
+.nav-item {
+    padding: 0px 5px;
+    color: #000;
+    font-family: "Amatic SC", sans-serif;
+}
+
+.nav-item:hover {
+    text-decoration: none;
+    color: #000;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+.nav-item.inactive:hover {
+    color: #fff;
+}
+
+
+.nav-span-active, .nav-span-inactive {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    overflow: hidden;
+}
+
+.nav-span-inactive {
+    background-color: black;
+    width: 0px;
+    /*display: none;*/
+}
+
+.nav-span-inactive > .nav-item {
+    font-family: "Permanent Marker", sans-serif;
+    color: #fff;
 }

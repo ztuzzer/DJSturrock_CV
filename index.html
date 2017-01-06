@@ -5,6 +5,17 @@
     <title>D.J.Sturrock CV</title>
 
     <!-- ********************
+    GOOGLE FONTS
+    ******************** -->
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">-->
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lato|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">-->
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lato|Open+Sans|Open+Sans+Condensed:300|Permanent+Marker"
+          rel="stylesheet">
+
+    <!-- ********************
     JQUERY
     ******************** -->
 
@@ -39,50 +50,150 @@
 <body>
 
 
-
-
 <div class="stem"></div>
 
 <div class="container-content">
-    <div class="cont-whole">
-        <div class="cont-left"></div>
-        <div class="cont-right"></div>
-    </div>
-    <div class="cont-whole">
+    <div class="cont-left">
+        <div class="cont-nav">
+            <ul class="ul-simple">
+                <li class="li-header">
+                    <span id="overview-active" class="nav-span-active">
+                        <a class="nav-item">Overview</a>
+                    </span>
+                    <span id="overview-inactive" class="nav-span-inactive">
+                        <a class="nav-item inactive">Overview</a>
+                    </span>
+                </li>
+                <li class="li-header">
+                    <span id="portfolio-active" class="nav-span-active">
+                        <a class="nav-item">portfolio</a>
+                    </span>
+                    <span id="portfolio-inactive" class="nav-span-inactive">
+                        <a class="nav-item inactive">portfolio</a>
+                    </span>
+                </li>
+                <li class="li-header">
+                    <span id="timeline-active" class="nav-span-active">
+                        <a class="nav-item">timeline</a>
+                    </span>
+                    <span id="timeline-inactive" class="nav-span-inactive">
+                        <a class="nav-item inactive">timeline</a>
+                    </span>
+                </li>
+                <li class="li-header">
+                    <span id="contact-active" class="nav-span-active">
+                        <a class="nav-item">contact</a>
+                    </span>
+                    <span id="contact-inactive" class="nav-span-inactive">
+                        <a class="nav-item inactive">contact</a>
+                    </span>
+                </li>
+            </ul>
 
+        </div>
     </div>
+    <div class="cont-right">
+        <div class="cont-gtitle">
+            <ul class="ul-simple">
+                <li class="li-header">
+                    <h1 class="name">Daniel</h1>
+                </li>
+                <li class="li-header">
+                    <h1 class="name">Sturrock</h1>
+                </li>
+                <li class="li-header">
+                    <h1 class="title">UX Designer &</h1>
+                </li>
+                <li class="li-header">
+                    <h1 class="title">Front End Developer</h1>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="hgt-mimic"></div>
 
+    <!--<div class="cont-whole">-->
+    <!--<div class="cont-left"></div>-->
+    <!--<div class="cont-right"></div>-->
+    <!--</div>-->
+    <!--<div class="cont-whole">-->
+    <!--<div class="cont-img">-->
+    <!--<picture>-->
+    <!--<img src="me2.jpg" class="img">-->
+    <!--</picture>-->
+    <!--</div>-->
+    <!--</div>-->
 </div>
-
-<!--<div class="cont-whole">-->
-
-    <!--<div class="cont-sidestream"></div>-->
-
-    <!--<div class="cont-stem">-->
-        <!--<div id="stem" class="stem"></div>-->
-    <!--</div>-->
-
-    <!--<div class="cont-content">-->
-
-    <!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;end cont-whole &ndash;&gt;-->
 
 
 </body>
 
+<!-- ==================================================
+Navigation Scripts
+================================================== -->
 <script>
 
+    // **** Overview ****
+//    var overview_w = $("#overview-active").outerWidth();
+//    console.log("overview_w =" + overview_w);
+//
+//    var overview_w_plus = overview_w + 5;
+//    console.log("overview_w =" + overview_w_plus);
 
-//    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-//    var h2 = h/2;
+    $("#overview-active").click(function(){
+//        $("#overview-active").hide();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#overview-inactive").animate({width: '73px'});
+    });
+
+    // **** portfolio ****
+    var portfolio_w = $("#portfolio-active").outerWidth();
+    console.log("portfolio_w =" + portfolio_w);
+
+    var portfolio_w_plus = portfolio_w + 5;
+    console.log("portfolio_w_plus =" + portfolio_w_plus);
+
+    $("#portfolio-active").click(function(){
+//        $("#portfolio-active").hide();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#portfolio-inactive").animate({width:'77px'});
+    });
+
+    // **** timeline ****
+//    var timeline_w = $("#timeline-active").outerWidth();
+//    console.log("timeline_w =" + timeline_w);
 //
-//    var h4 = $(window).height();
-//    console.log("h4 =" + h4);
+//    var timeline_w_plus = timeline_w + 5;
+//    console.log("timeline_w =" + timeline_w_plus);
+
+    $("#timeline-active").click(function(){
+//        $("#timeline-active").hide();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#timeline-inactive").animate({width: '67px'});
+    });
+
+    // **** contact ****
+//    var contact_w = $("#contact-active").outerWidth();
+//    console.log("contact_w =" + contact_w);
 //
-//    document.getElementById("stem").style.height = h4 + "px";
-//    console.log("h =" + h);
-//    console.log("h2 =" + h2);
+//    var contact_w_plus = contact_w + 5;
+//    console.log("contact_w =" + contact_w_plus);
+
+    $("#contact-active").click(function(){
+//        $("#contact-active").hide();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#contact-inactive").animate({width: '63px'});
+    });
+
+    //    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    //    var h2 = h/2;
+    //
+    //    var h4 = $(window).height();
+    //    console.log("h4 =" + h4);
+    //
+    //    document.getElementById("stem").style.height = h4 + "px";
+    //    console.log("h =" + h);
+    //    console.log("h2 =" + h2);
 
 
 </script>
