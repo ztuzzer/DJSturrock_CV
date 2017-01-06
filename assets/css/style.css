@@ -23,7 +23,8 @@ GLOBAL
 
 .stem {
     position: fixed;
-    height: 50%;
+    /* --- DO W/JS --- */
+    /*height: 50%;*/
     width: 30%;
     min-width: 294px;
 
@@ -116,13 +117,15 @@ ul.ul-simple {
 }
 
 
-
-
 h1.name {
     font-family:  "Permanent Marker", sans-serif;
     font-weight: 900;
     margin: 0px;
     padding: 0px 6px;
+
+    /* --- Fade in with JS --- */
+    display: none;
+    /*width: 0px;*/
 }
 
 h1.title {
@@ -130,6 +133,10 @@ h1.title {
     font-weight: 100;
     margin: 0px;
     padding: 0px 6px;
+
+    /* --- Fade in with JS --- */
+    display: none;
+    /*width: 0px;*/
 }
 
 /* ==================================================
@@ -153,7 +160,7 @@ HOVERS
 .nav-item:hover {
     text-decoration: none;
     color: #000;
-    font-family: "Permanent Marker", sans-serif;
+    /*font-family: "Permanent Marker", sans-serif;*/
 }
 
 .nav-item.inactive:hover {
@@ -166,6 +173,9 @@ HOVERS
     bottom: 3px;
     right: 5px;
     overflow: hidden;
+
+    /* --- reveal with JS --- */
+    width: 0px;
 }
 
 .nav-span-inactive {
