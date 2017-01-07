@@ -120,10 +120,7 @@
         </div>
     </div>
 
-    <!--<div class="cont-whole">-->
-        <!--<div class="cont-left"></div>-->
-        <!--<div class="cont-right"></div>-->
-    <!--</div>-->
+    <div class="cont-whole page-gap"></div>
 
     <!-- ==================================================
     CONTENT
@@ -131,40 +128,67 @@
     <div class="cont-whole">
         <div class="cont-img">
             <picture>
-                <img src="me1b.jpg" class="img">
+                <img src="me1b.jpg" class="img bubble">
             </picture>
         </div>
     </div>
 
     <div class="cont-whole">
         <div class="cont-right">
-            <div class="cont-title-right">
+            <div id="PerSumTitle" class="cont-title-right">
                 <h2>Personal Summary</h2>
             </div>
-            <div class="cont-paragraph-right">
+            <div id="PerSumParaCont" class="cont-paragraph-right">
                 <p class="paragraph-right scrollbar-thin">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed, tempore temporibus veniam vero?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed, tempore temporibus veniam vero?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed, tempore temporibus veniam vero?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed, tempore temporibus veniam vero?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed, tempore temporibus veniam vero?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
+                    expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,
+                    tempore temporibus veniam vero?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
+                    expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,
+                    tempore temporibus veniam vero?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
+                    expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,
+                    tempore temporibus veniam vero?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
+                    expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,
+                    tempore temporibus veniam vero?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
+                    expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,
+                    tempore temporibus veniam vero?
                 </p>
             </div>
         </div>
     </div>
 
-    <!--<div class="cont-whole page-gap"></div>-->
+    <div class="cont-whole page-gap"></div>
 
     <div class="cont-whole">
         <div class="cont-left">
-            <div class="cont-title-left">
-                <h2>
-Hobbies & Interests :
+            <div id="IntTitle" class="cont-title-left">
+                <h2 class="title-left">
+                    Hobbies & Interests :
                 </h2>
+            </div>
+        </div>
+        <div class="cont-right">
+            <div id="IntPara" class="cont-paragraph-right">
+                <div class="row cont-interests-icons">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="interest-icons" src="assets/icons/compass-with-white-needles.svg">
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="interest-icons" src="assets/icons/camera-diaphragm.svg">
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="interest-icons" src="assets/icons/pencil.svg">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="cont-whole page-gap"></div>
+    <div class="cont-whole page-gap"></div>
 </div>
 
 
@@ -275,11 +299,51 @@ PAGE OPEN ANIMATIONS
 SCROLLBAR SCRIPTS
 ================================================== -->
 <script>
-    $(".scrollbar-thin").mouseover(function(){
+    $(".scrollbar-thin").mouseover(function () {
         $(this).addClass("scrollbar-visible");
     });
-    $(".scrollbar-thin").mouseout(function(){
+    $(".scrollbar-thin").mouseout(function () {
         $(this).removeClass("scrollbar-visible");
+    });
+</script>
+<!-- ==================================================
+PERSONAL SUMMARY ANIMATIONS
+================================================== -->
+<script>
+
+    $("#overview-active > a").click(function () {
+        $(".bubble").addClass("animate");
+
+        setTimeout(function () {
+            $("#PerSumTitle").animate({width: '500px'}, 1000);
+            $("#PerSumParaCont").animate({width: '500px'}, 1000);
+
+        }, 1000);
+    });
+
+//    function PerSumAni() {
+//        $(".bubble").addClass("animate");
+//
+//        setTimeout(function () {
+//            $("#PerSumTitle").animate({width: '500px'}, 1000);
+//            $("#PerSumParaCont").animate({width: '500px'}, 1000);
+//
+//        }, 1000);
+//    }
+</script>
+<!-- ==================================================
+SCROLL TOP POSITION
+================================================== -->
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 340) {
+                $("#IntPara").animate({width: '500px'}, 1000);
+                $("#IntTitle").animate({width: '150px'}, 1000);
+
+            } else {
+            }
+        });
     });
 </script>
 
