@@ -135,22 +135,24 @@ Navigation Scripts
 
     // **** Overview ****
     $("#overview-active").click(function () {
-//        $("#overview-active").hide();
+        $(".nav-span-active").fadeIn();
+        $("#overview-active").fadeOut();
         $(".nav-span-inactive").animate({width: '0px'});
-        $("#overview-inactive").animate({width: '73px'});
+        $("#overview-inactive").animate({width: '184px'});
     });
 
     // **** portfolio ****
-    var portfolio_w = $("#portfolio-active").outerWidth();
-    console.log("portfolio_w =" + portfolio_w);
-
-    var portfolio_w_plus = portfolio_w + 5;
-    console.log("portfolio_w_plus =" + portfolio_w_plus);
+//    var portfolio_w = $("#portfolio-active").outerWidth();
+//    console.log("portfolio_w =" + portfolio_w);
+//
+//    var portfolio_w_plus = portfolio_w + 5;
+//    console.log("portfolio_w_plus =" + portfolio_w_plus);
 
     $("#portfolio-active").click(function () {
-//        $("#portfolio-active").hide();
+        $(".nav-span-active").fadeIn();
+        $("#portfolio-active").fadeOut();
         $(".nav-span-inactive").animate({width: '0px'});
-        $("#portfolio-inactive").animate({width: '77px'});
+        $("#portfolio-inactive").animate({width: '195px'});
     });
 
     // **** timeline ****
@@ -161,9 +163,10 @@ Navigation Scripts
     //    console.log("timeline_w =" + timeline_w_plus);
 
     $("#timeline-active").click(function () {
-//        $("#timeline-active").hide();
+        $(".nav-span-active").fadeIn();
+        $("#timeline-active").fadeOut();
         $(".nav-span-inactive").animate({width: '0px'});
-        $("#timeline-inactive").animate({width: '67px'});
+        $("#timeline-inactive").animate({width: '170px'});
     });
 
     // **** contact ****
@@ -174,9 +177,10 @@ Navigation Scripts
     //    console.log("contact_w =" + contact_w_plus);
 
     $("#contact-active").click(function () {
-//        $("#contact-active").hide();
+        $(".nav-span-active").fadeIn();
+        $("#contact-active").fadeOut();
         $(".nav-span-inactive").animate({width: '0px'});
-        $("#contact-inactive").animate({width: '63px'});
+        $("#contact-inactive").animate({width: '160px'});
     });
 
 
@@ -198,39 +202,6 @@ PAGE OPEN ANIMATIONS
 <script>
 
 
-//        function header_init(){
-//            stem_grow();
-//            // set timer to start next action a certain time after the sound starts
-//            setTimeout(function() {
-//                bigger(image);
-//            }, 1000);   // set the time here for how long you want to wait after starting the sound before making it bigger
-//        }
-
-
-function FindIt(image, id){
-    sound();
-    // set timer to start next action a certain time after the sound starts
-    setTimeout(function() {
-        bigger(image);
-        // set timer to start next action a certain time after making the image bigger
-        setTimeout (function() {
-            hide(image);
-        }, 1000);   // set this time for how long you want to wait after bigger, before hide
-    }, 1000);   // set the time here for how long you want to wait after starting the sound before making it bigger
-}
-
-    function header_init() {
-        stem_grow();
-
-        setTimeout(function () {
-            nameTitle_fadeIN();
-
-            setTimeout(function () {
-                NavReveal();
-
-            }, 500)
-        }, 500)
-    }
 
     function stem_grow() {
         $("#stem").animate({height: '50%'});
@@ -257,11 +228,22 @@ function FindIt(image, id){
 
                     }, 500);
                 }, 500);
-            }, 500)
-        }, 500)
+            }, 500);
+        }, 500);
     }
 
+    function header_init() {
+        stem_grow();
 
+        setTimeout(function () {
+            nameTitle_fadeIN();
+
+            setTimeout(function () {
+                NavReveal();
+
+            }, 500);
+        }, 500);
+    }
 
     $(document).ready(header_init());
 

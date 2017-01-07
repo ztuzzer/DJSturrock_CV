@@ -110,7 +110,7 @@ ul.ul-simple {
 }
 
 .li-header {
-    height: 42px;
+    height: 80px;
     position: relative;
     /*background-color: pink;*/
     margin: 0px;
@@ -121,22 +121,25 @@ h1.name {
     font-family:  "Permanent Marker", sans-serif;
     font-weight: 900;
     margin: 0px;
-    padding: 0px 6px;
+    padding: 0px 12px;
+    font-size: 72px;
+    color: #000;
 
     /* --- Fade in with JS --- */
     display: none;
-    /*width: 0px;*/
 }
 
 h1.title {
     font-family:  "Amatic SC", sans-serif;
     font-weight: 100;
     margin: 0px;
-    padding: 0px 6px;
+    padding: 0px 12px;
+    font-size: 72px;
+    color: #000;
 
     /* --- Fade in with JS --- */
     display: none;
-    /*width: 0px;*/
+
 }
 
 /* ==================================================
@@ -152,9 +155,10 @@ HOVERS
 
 
 .nav-item {
-    padding: 0px 5px;
+    padding: 0px 12px;
     color: #000;
     font-family: "Amatic SC", sans-serif;
+    font-size: 36px;
 }
 
 .nav-item:hover {
@@ -180,8 +184,9 @@ HOVERS
 
 .nav-span-inactive {
     background-color: black;
+
+    /* --- reveal with JS --- */
     width: 0px;
-    /*display: none;*/
 }
 
 .nav-span-inactive > .nav-item {
