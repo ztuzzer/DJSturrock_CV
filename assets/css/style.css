@@ -167,6 +167,12 @@ HOVERS
 /***********************************************************************/
 
 
+.cont-bullets-right {
+    text-align: left;
+}
+
+
+
 .cont-paragraph-right {
     text-align: right;
 
@@ -179,10 +185,13 @@ HOVERS
 .paragraph-right {
     width: 365px;
     height: 130px;
-    color: #000;
     float: right;
     overflow: auto;
     padding: 5px 12px;
+}
+
+.standard-character {
+    color: #000;
     font-size: 17px;
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -223,7 +232,11 @@ h2 {
 
 
 
-.page-gap {
+.page-gap-100 {
+    height: 100px;
+}
+
+.page-gap-200 {
     height: 200px;
 }
 
@@ -277,7 +290,8 @@ OVERFLOWS
 
 .nav-span-inactive, .nav-span-active,
 .cont-paragraph-right,
-.cont-title-right {
+.cont-title-right,
+.cont-bullets-right {
     overflow: hidden;
 }
 
@@ -360,7 +374,9 @@ PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
 }
 
 
-
+/* ********************
+HOBBIES & INTERESTS/
+******************** */
 .cont-title-left.no-width {
     width: 0px;
     transition: all 1s;
@@ -379,4 +395,25 @@ PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
 .cont-paragraph-right.no-width.reveal-width {
     width: 500px;
     transition: all 1s;
+}
+
+/*.cont-title-left.no-height {*/
+    /*height: 0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.cont-title-left.no-height.reveal-height {*/
+    /*height: 200px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+.cont-bullets-right.no-width {
+    width: 0px;
+    transition: all 1s;
+}
+
+.cont-bullets-right.no-width.reveal-width {
+    width: 500px;
+    transition: all 1s;
+    /*background-color: pink;*/
 }
