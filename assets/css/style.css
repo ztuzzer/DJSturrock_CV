@@ -1,4 +1,3 @@
-
 /* ==================================================
 GLOBAL
 ================================================== */
@@ -24,7 +23,6 @@ GLOBAL
 .stem {
     position: fixed;
 
-
     /* --- SET HEIGHT W/JS --- */
     /*height: 50%;*/
     width: 30%;
@@ -39,7 +37,7 @@ CONTENT CONTAINERS
 
 .container-content {
     height: 500px;
-    width:100%;
+    width: 100%;
     min-width: 980px;
 
     /*background-color: red;*/
@@ -54,22 +52,19 @@ CONTENT CONTAINERS
 }
 
 .cont-right {
-    float:right;
+    float: right;
 
-    width:70%;
+    width: 70%;
 
     /*background-color: green;*/
 }
 
 .cont-whole {
     clear: both;
-    width:100%;
+    width: 100%;
 
     /*background-color: orange;*/
 }
-
-
-
 
 /* ==================================================
 HEADER
@@ -99,7 +94,7 @@ ul.ul-simple {
 }
 
 h1.name {
-    font-family:  "Permanent Marker", sans-serif;
+    font-family: "Permanent Marker", sans-serif;
     font-weight: 900;
     margin: 0px;
     padding: 0px 12px;
@@ -111,7 +106,7 @@ h1.name {
 }
 
 h1.title {
-    font-family:  "Amatic SC", sans-serif;
+    font-family: "Amatic SC", sans-serif;
     font-weight: 100;
     margin: 0px;
     padding: 0px 12px;
@@ -140,12 +135,10 @@ h1.title {
     color: #fff;
 }
 
-
 .nav-span-active, .nav-span-inactive {
     position: absolute;
     bottom: 3px;
     right: 5px;
-
 
     /* --- reveal with JS --- */
     width: 0px;
@@ -171,17 +164,7 @@ HOVERS
     cursor: crosshair;
 }
 
-
-
-
-
 /***********************************************************************/
-
-
-
-
-
-
 
 .cont-img {
     width: 60%;
@@ -190,12 +173,9 @@ HOVERS
 
     text-align: center;
 
-
-
     /*margin-top: 500px;*/
     /*background-color: pink;*/
 }
-
 
 .img {
     width: 300px;
@@ -221,7 +201,7 @@ h2 {
 }
 
 .cont-paragraph-right {
-    width:0px;
+    width: 0px;
     text-align: right;
 
     height: 130px;
@@ -247,7 +227,7 @@ h2 {
     text-align: right;
 
     background-color: black;
-/* --- set to 150px with JS --- */
+    /* --- set to 150px with JS --- */
     width: 0px;
     /*height: 500px;*/
 }
@@ -268,7 +248,6 @@ h2.title-left {
     float: right;
 }
 
-
 .scrollbar-thin::-webkit-scrollbar {
     width: 5px;
 }
@@ -286,21 +265,18 @@ h2.title-left {
     background-color: #000;
 }
 
-
-
 .bubble {
     transform: scale(0);
     transition: all 1s;
 }
+
 .bubble.animate {
     transform: scale(1);
 }
 
-
 /* ==================================================
 POSITION RELATIVE
 ================================================== */
-
 
 /* ==================================================
 OVERFLOWS
@@ -309,7 +285,7 @@ OVERFLOWS
 .nav-span-inactive, .nav-span-active,
 .cont-paragraph-right,
 .cont-title-right {
-overflow: hidden;
+    overflow: hidden;
 }
 
 .cont-img {
@@ -319,7 +295,6 @@ overflow: hidden;
 .paragraph-right {
     overflow: auto;
 }
-
 
 /* ==================================================
 Z-INDEX
@@ -340,4 +315,22 @@ Z-INDEX
 .cont-img,
 .img {
     z-index: +10;
+}
+
+/* ==================================================
+reveal
+================================================== */
+.cont-paragraph-right, .cont-title-left {
+    width: 0px;
+    transition: all 1s;
+}
+
+.cont-paragraph-right.reveal {
+    width: 500px;
+    transition: all 1s;
+}
+
+.cont-title-left.reveal {
+    width: 150px;
+    transition: all 1s;
 }

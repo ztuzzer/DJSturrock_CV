@@ -174,13 +174,16 @@
             <div id="IntPara" class="cont-paragraph-right">
                 <div class="row cont-interests-icons">
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <img class="interest-icons" src="assets/icons/compass-with-white-needles.svg">
+                        <img class="interest-icons" src="assets/icons/compass-with-white-needles.svg"
+                             data-toggle="tooltip" data-placement="bottom" title="Navigation & travel">
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <img class="interest-icons" src="assets/icons/camera-diaphragm.svg">
+                        <img class="interest-icons" src="assets/icons/camera-diaphragm.svg"
+                             data-toggle="tooltip" data-placement="bottom" title="Photography & Cinematography">
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <img class="interest-icons" src="assets/icons/pencil.svg">
+                        <img class="interest-icons" src="assets/icons/pencil.svg"
+                             data-toggle="tooltip" data-placement="bottom" title="Writing & Drawing">
                     </div>
                 </div>
             </div>
@@ -311,7 +314,9 @@ PERSONAL SUMMARY ANIMATIONS
 ================================================== -->
 <script>
 
-    $("#overview-active > a").click(function () {
+    $("#overview-active > a").click(PerSumAnimation);
+
+    function PerSumAnimation() {
         $(".bubble").addClass("animate");
 
         setTimeout(function () {
@@ -319,33 +324,45 @@ PERSONAL SUMMARY ANIMATIONS
             $("#PerSumParaCont").animate({width: '500px'}, 1000);
 
         }, 1000);
-    });
-
-//    function PerSumAni() {
-//        $(".bubble").addClass("animate");
-//
-//        setTimeout(function () {
-//            $("#PerSumTitle").animate({width: '500px'}, 1000);
-//            $("#PerSumParaCont").animate({width: '500px'}, 1000);
-//
-//        }, 1000);
-//    }
+    }
 </script>
 <!-- ==================================================
 SCROLL TOP POSITION
 ================================================== -->
 <script>
-    $(document).ready(function(){
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 340) {
-                $("#IntPara").animate({width: '500px'}, 1000);
-                $("#IntTitle").animate({width: '150px'}, 1000);
+//    $(document).ready(function(){
+//        $(window).scroll(function() {
+//            if ($(document).scrollTop() > 40) {
+//                $("#IntPara").animate({width: '500px'}, 1000);
+//                $("#IntTitle").animate({width: '150px'}, 1000);
+//
+//            } else {
+//            }
+//        });
+//    });
 
-            } else {
-            }
-        });
+$(document).ready(function(){
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $("#IntPara").addClass("reveal");
+            $("#IntTitle").addClass("reveal");
+        } else {
+            $("#IntPara").removeClass("reveal");
+            $("#IntTitle").removeClass("reveal");
+        }
     });
-</script>
+});
 
+
+</script>
+<!-- ==================================================
+BS FUNCTIONALITY
+================================================== -->
+<script>
+    // *** TOOLTIP ***
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </html>
 
