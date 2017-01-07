@@ -118,27 +118,38 @@
                 </li>
             </ul>
         </div>
+        <!--end cont-mainTitle-->
     </div>
+    <!--end cont-right-->
 
     <div class="cont-whole page-gap"></div>
 
     <!-- ==================================================
     CONTENT
     ================================================== -->
+    <!-- ********************
+    PERSONAL SUMMARY
+    ******************** -->
+    <!-- --- IMAGE --- -->
     <div class="cont-whole">
         <div class="cont-img">
             <picture>
                 <img src="me1b.jpg" class="img bubble">
             </picture>
         </div>
+        <!--end cont-img-->
     </div>
+    <!--end cont-whole-->
 
+    <!-- --- TITLE/PARAGRAPH --- -->
     <div class="cont-whole">
         <div class="cont-right">
-            <div id="PerSumTitle" class="cont-title-right">
+
+            <div id="PerSumTitle" class="cont-title-right no-width">
                 <h2>Personal Summary</h2>
             </div>
-            <div id="PerSumParaCont" class="cont-paragraph-right">
+
+            <div id="PerSumParaCont" class="cont-paragraph-right no-height">
                 <p class="paragraph-right scrollbar-thin">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
                     expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,
@@ -157,43 +168,112 @@
                     tempore temporibus veniam vero?
                 </p>
             </div>
+
         </div>
+        <!--end cont-right-->
     </div>
+    <!--end cont-whole -->
 
     <div class="cont-whole page-gap"></div>
 
+    <!-- ********************
+    INTERESTS/HOBBIES
+    ******************** -->
     <div class="cont-whole">
+        
+        <!-- --- INT/HOB TITLE --- -->
         <div class="cont-left">
-            <div id="IntTitle" class="cont-title-left">
+            <div id="IntTitle" class="cont-title-left no-width">
                 <h2 class="title-left">
                     Hobbies & Interests :
                 </h2>
             </div>
+            <!-- end cont-title-left-->
         </div>
+        <!--end cont-left-->
+        
+        <!-- INT HOB ICONS -->
         <div class="cont-right">
-            <div id="IntPara" class="cont-paragraph-right">
+            <div id="IntPara" class="cont-paragraph-right no-width">
                 <div class="row cont-interests-icons">
+                    
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <img class="interest-icons" src="assets/icons/compass-with-white-needles.svg"
                              data-toggle="tooltip" data-placement="bottom" title="Navigation & travel">
                     </div>
+                    
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <img class="interest-icons" src="assets/icons/camera-diaphragm.svg"
                              data-toggle="tooltip" data-placement="bottom" title="Photography & Cinematography">
                     </div>
+                    
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <img class="interest-icons" src="assets/icons/pencil.svg"
                              data-toggle="tooltip" data-placement="bottom" title="Writing & Drawing">
                     </div>
+                    
                 </div>
+                <!--end cont-interests-icons -->
             </div>
+            <!--end cont-paragraph-right-->
         </div>
+        <!-- end cont-right -->
     </div>
 
     <div class="cont-whole page-gap"></div>
-    <div class="cont-whole page-gap"></div>
-</div>
+    
+    <!-- ********************
+    EDUCATIONAL BACKGROUND
+    ******************** -->
+    <!--&lt;!&ndash; -&#45;&#45; IMAGE -&#45;&#45; &ndash;&gt;-->
+    <!--<div class="cont-whole">-->
+        <!--<div class="cont-img">-->
+            <!--<picture>-->
+                <!--<img src="me1b.jpg" class="img bubble">-->
+            <!--</picture>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;end cont-img&ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash;end cont-whole&ndash;&gt;-->
 
+    <!--&lt;!&ndash; -&#45;&#45; TITLE/PARAGRAPH -&#45;&#45; &ndash;&gt;-->
+    <!--<div class="cont-whole">-->
+        <!--<div class="cont-right">-->
+
+            <!--<div id="" class="cont-title-right">-->
+                <!--<h2>Educational Background</h2>-->
+            <!--</div>-->
+
+            <!--<div id="" class="cont-paragraph-right">-->
+                <!--<p class="paragraph-right scrollbar-thin">-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus-->
+                    <!--expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,-->
+                    <!--tempore temporibus veniam vero?-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus-->
+                    <!--expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,-->
+                    <!--tempore temporibus veniam vero?-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus-->
+                    <!--expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,-->
+                    <!--tempore temporibus veniam vero?-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus-->
+                    <!--expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,-->
+                    <!--tempore temporibus veniam vero?-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus-->
+                    <!--expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem sed,-->
+                    <!--tempore temporibus veniam vero?-->
+                <!--</p>-->
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash;end cont-right&ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash;end cont-whole &ndash;&gt;-->
+
+    <!--<div class="cont-whole page-gap"></div>-->
+
+
+</div>
+<!--end container-content-->
 
 </body>
 
@@ -320,9 +400,12 @@ PERSONAL SUMMARY ANIMATIONS
         $(".bubble").addClass("animate");
 
         setTimeout(function () {
-            $("#PerSumTitle").animate({width: '500px'}, 1000);
-            $("#PerSumParaCont").animate({width: '500px'}, 1000);
+            $("#PerSumTitle").addClass("reveal-width");
 
+            setTimeout(function () {
+                $("#PerSumParaCont").addClass("reveal-height");
+
+            }, 1000);
         }, 1000);
     }
 </script>
@@ -343,12 +426,10 @@ SCROLL TOP POSITION
 
 $(document).ready(function(){
     $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-            $("#IntPara").addClass("reveal");
-            $("#IntTitle").addClass("reveal");
+        if ($(document).scrollTop() > 250) {
+            $("#IntPara, #IntTitle").addClass("reveal-width");
         } else {
-            $("#IntPara").removeClass("reveal");
-            $("#IntTitle").removeClass("reveal");
+            $("#IntPara, #IntTitle").removeClass("reveal-width");
         }
     });
 });
@@ -364,5 +445,20 @@ BS FUNCTIONALITY
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+<!-- ==================================================
+REVEAL IN SCROLL
+================================================== -->
+<script>
+    function OverviewBubbleAnimation() {
+        $(".bubble").addClass("animate");
+
+        setTimeout(function () {
+            $("#PerSumTitle").animate({width: '500px'}, 1000);
+            $("#PerSumParaCont").animate({width: '500px'}, 1000);
+
+        }, 1000);
+    }
+</script>
+
 </html>
 
