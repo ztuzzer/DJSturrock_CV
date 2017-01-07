@@ -4,7 +4,8 @@ GLOBAL
 
 /*temp until media queries*/
 .body {
-    min-width: 980px;
+    min-width: 720px;
+    overflow-x: hidden;
 }
 
 /*temp*/
@@ -26,7 +27,8 @@ GLOBAL
     /* --- SET HEIGHT W/JS --- */
     /*height: 50%;*/
     width: 30%;
-    min-width: 294px;
+    /*min-width: 294px;*/
+    left:2px;
 
     border-right: 5px solid #000;
 }
@@ -38,7 +40,7 @@ CONTENT CONTAINERS
 .container-content {
     height: 500px;
     width: 100%;
-    min-width: 980px;
+    /*min-width: 700px;*/
 
     /*background-color: red;*/
 }
@@ -166,6 +168,13 @@ HOVERS
 
 /***********************************************************************/
 
+ul.ul-bullets {
+    width: 500px;
+}
+
+.title-right {
+    width: 500px!important;
+}
 
 .cont-bullets-right {
     text-align: left;
@@ -336,7 +345,7 @@ PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
     -ms-transform:     scale(0);
     -o-transform:      scale(0);
     transform: scale(0);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .bubble.animate {
