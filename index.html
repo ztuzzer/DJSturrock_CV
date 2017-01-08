@@ -44,8 +44,14 @@
 </head>
 <body>
 
-
-<div id="stem" class="stem"></div>
+<div id="stem" class="stem">
+    <!--<div class="cont-scroll-to-top">-->
+    <!--<a>-->
+    <!--<img src="assets/icons/up-arrow.svg" id="scroll-to-top" class="scroll-to-top"-->
+    <!--data-toggle="tooltip" data-placement="bottom" title="Back To Top">-->
+    <!--</a>-->
+    <!--</div>-->
+</div>
 
 <div class="container-content">
 
@@ -124,10 +130,26 @@
 
     <div class="cont-whole page-gap-100"></div>
 
+
+    <!-- ==================================================
+    SCROLLDOWN ARROW
+    ================================================== -->
+    <div class="cont-whole">
+        <div class="cont-img-centerLine no-height">
+            <picture>
+                <img id="arrow-scroll-down" src="assets/icons/down-arrowB.svg" class="arrow-scroll-down"
+                     data-toggle="tooltip" data-placement="left" title="Scroll Down For More">
+            </picture>
+        </div>
+        <!--end cont-img-->
+    </div>
+    <!--end cont-whole-->
+
     <!-- ==================================================
     CONTENT *OVERVIEW
     ================================================== -->
     <div id="overview">
+
         <!-- ********************
         PERSONAL SUMMARY
         ******************** -->
@@ -423,117 +445,172 @@
     </div>
     <!--end #overview-->
 
-    <!-- ==================================================
-    FOOTER
-    ================================================== -->
-    <div id="footer" class="footer">
 
+    <!-- ==================================================
+    CONTACT
+    ================================================== -->
+    <div id="contact">
 
         <div class="cont-whole">
+            <div class="cont-img-centerLine height-50">
+                <a href="mailto:daniel.sturrock@hotmail.com?subject=Hello.&body=Dear Daniel,"><img
+                        data-toggle="tooltip" data-placement="left" title="Click To Send Email Message"
+                        id="contact-icon-email" class="contact-icon" src="assets/icons/at-logo.svg"></a>
+            </div>
             <div class="cont-right">
-
-                <div class="cont-quote">
-                    <h1 class="footer-quote font-black">
-                        When you think you have exhausted all possibilites<br><br>
-                        remember this:
-                    </h1>
+                <div id="cont-contact-email" class="cont-contactDetails">
+                    <h1 class="contactDetails">Daniel.Sturrock@hotmail.com</h1>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bckgrnd illuminated clearfix">
+        <div class="cont-whole  page-gap-100">
+            <div id="stem-stub-1" class="cont-left stem-stub"></div>
+        </div>
 
-            <div class="cont-whole cont-img-bulb">
-                <div class="cont-img-centerLine">
-                    <picture>
-                        <img id="" src="assets/icons/lightbulb-hand-drawn-symbolb.svg" class="img-lightbulb">
-                    </picture>
-                </div>
-                <!--end cont-img-->
+        <div class="cont-whole">
+            <div class="cont-img-centerLine height-50">
+                <a href="intent://send/07835175918#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"><img
+                        data-toggle="tooltip" data-placement="left" title="Click To Send Text Message"
+                        id="contact-icon-phone" class="contact-icon" src="assets/icons/whatsapp-logo.svg"></a>
             </div>
+            <div class="cont-right">
+                <div id="cont-contact-phone" class="cont-contactDetails">
+                    <h1 class="contactDetails">(+44) 7 835 17 59 18</h1>
+                </div>
+            </div>
+        </div>
 
-            <div id="footer-content-inv" class="invisible">
+        <div class="cont-whole  page-gap-100">
+            <div id="stem-stub-2" class="cont-left stem-stub"></div>
+        </div>
 
-                <div class="cont-whole">
-                    <div class="cont-right">
-                        <div class="cont-quote-pt2">
-                            <h1 class="footer-quote bold font-black">You <br>Haven't.</h1>
-                            <h3 class="tom-edi font-black">- Thomas Edison</h3>
-                        </div>
+        <div class="cont-whole">
+            <div class="cont-img-centerLine height-50">
+                <a href="http://www.linkedin.com/inviteFromProfile?from=92801b90profile&key=&firstName=Daniel&lastName=Sturrock"><img
+                        data-toggle="tooltip" data-placement="left" title="Click To Send A LinkedIn Invitation"
+                        id="contact-icon-linkedIn" class="contact-icon" src="assets/icons/linked-in-logo.svg"></a>
+            </div>
+        </div>
+
+        <div class="cont-whole  page-gap-200">
+        </div>
+        <!--end contact-->
+
+
+        <!-- ==================================================
+        FOOTER
+        ================================================== -->
+        <div id="footer" class="footer">
+
+
+            <div class="cont-whole">
+                <div class="cont-right">
+
+                    <div class="cont-quote">
+                        <h1 class="footer-quote font-black">
+                            When you think you have exhausted all possibilites<br><br>
+                            remember this:
+                        </h1>
                     </div>
                 </div>
+            </div>
 
-                <div class="cont-whole">
-                    <div class="cont-left">
-                        <div class="contOuter-footer-promo">
-                            <div class="contInner-footer-promo">
-                                <h3>
-                                    This website was designed and developed by yours truly.<br><br>
-                                    If you think I would make a great addition to your team,<br><br>
-                                    or you would like my assistance with anything else,<br><br>
-                                    here are my contact details: <br><br><br><br>
-                                    <a href="mailto:daniel.sturrock@hotmail.com?subject=Hello.&body=Dear Daniel,"><img
-                                            data-toggle="tooltip" data-placement="left"
-                                            title="Click To Send Email Message"
-                                            class="footer-contact-icon" src="assets/icons/at-logo.svg"></a>
-                                    Daniel.Sturrock@hotmail.com<br><br>
+            <div id="footer-bckgrnd" class="footer-bckgrnd clearfix">
 
-                                    <a href="intent://send/07835175918#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"><img
-                                            data-toggle="tooltip" data-placement="left"
-                                            title="Click To Send Text Message"
-                                            class="footer-contact-icon" src="assets/icons/whatsapp-logo.svg"></a>
-                                    (+44) 7 835 17 59 18<br><br>
+                <div class="cont-whole cont-img-bulb">
+                    <div class="cont-img-centerLine">
+                        <picture>
+                            <img id="" src="assets/icons/lightbulb-hand-drawn-symbolb.svg" class="img-lightbulb">
+                        </picture>
+                    </div>
+                    <!--end cont-img-->
+                </div>
+
+                <div id="footer-content-inv" class="invisible">
+
+                    <div class="cont-whole">
+                        <div class="cont-right">
+                            <div class="cont-quote-pt2">
+                                <h1 class="footer-quote bold font-black">You <br>Haven't.</h1>
+                                <h3 class="tom-edi font-black">- Thomas Edison</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cont-whole">
+                        <div class="cont-left">
+                            <div class="contOuter-footer-promo">
+                                <div class="contInner-footer-promo">
+                                    <h3 id="footer-promo-text" class="footer-promo-text">
+                                        This website was designed and developed by yours truly.<br><br>
+                                        If you think I would make a great addition to your team,<br><br>
+                                        or you would like my assistance with anything else,<br><br>
+                                        here are my contact details: <br><br><br><br>
+                                        <a href="mailto:daniel.sturrock@hotmail.com?subject=Hello.&body=Dear Daniel,"><img
+                                                data-toggle="tooltip" data-placement="left"
+                                                title="Click To Send Email Message"
+                                                class="footer-contact-icon" src="assets/icons/at-logo.svg"></a>
+                                        Daniel.Sturrock@hotmail.com<br><br>
+
+                                        <a href="intent://send/07835175918#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"><img
+                                                data-toggle="tooltip" data-placement="left"
+                                                title="Click To Send Text Message"
+                                                class="footer-contact-icon" src="assets/icons/whatsapp-logo.svg"></a>
+                                        (+44) 7 835 17 59 18<br><br>
 
 
-                                    <a href="http://www.linkedin.com/inviteFromProfile?from=92801b90profile&key=&firstName=Daniel&lastName=Sturrock"><img
-                                            data-toggle="tooltip" data-placement="left"
-                                            title="Click To Send A LinkedIn Invitation"
-                                            class="footer-contact-icon" src="assets/icons/linked-in-logo.svg"></a>
-                                    <br><br>
+                                        <a href="http://www.linkedin.com/inviteFromProfile?from=92801b90profile&key=&firstName=Daniel&lastName=Sturrock"><img
+                                                data-toggle="tooltip" data-placement="left"
+                                                title="Click To Send A LinkedIn Invitation"
+                                                class="footer-contact-icon" src="assets/icons/linked-in-logo.svg"></a>
+                                        <br><br>
 
-                                    <!--<img class="footer-contact-icon" src="assets/icons/facebook-logo.svg"> /ztuzzer1-->
-                                    <br><br>
+                                        <!--<img class="footer-contact-icon" src="assets/icons/facebook-logo.svg"> /ztuzzer1-->
+                                        <br><br>
 
-                                    Credit where credit is due: <a class="footer-credit-link" data-toggle="modal"
-                                                                   data-target=".modal-credit">resources used on this
-                                    website</a>
-                                    <div class="modal fade modal-credit" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close"><span aria-hidden="true"
-                                                                                     class="font-white">&times;</span>
-                                                    </button>
-                                                    <h4 class="modal-title">Resources</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>...</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
-                                                        Close
-                                                    </button>
-                                                </div>
-                                            </div><!-- /.modal-content -->
-                                        </div><!-- /.modal-dialog -->
-                                    </div><!-- /.modal -->
-                                </h3>
+                                        Credit where credit is due: <a class="footer-credit-link" data-toggle="modal"
+                                                                       data-target=".modal-credit">Resources used on
+                                        this
+                                        website</a>
+                                        <div class="modal fade modal-credit" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close"><span aria-hidden="true"
+                                                                                         class="font-white">&times;</span>
+                                                        </button>
+                                                        <h4 class="modal-title">Resources</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>...</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">
+                                                            Close
+                                                        </button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    </h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- invisible -->
             </div>
-            <!-- invisible -->
+            <!--end footer-bckgrnd-->
+
         </div>
-        <!--end footer-bckgrnd-->
+
+        <!--<div class="cont-whole page-gap-100"></div>-->
 
     </div>
-
-    <!--<div class="cont-whole page-gap-100"></div>-->
-
-</div>
-<!--end container-content-->
+    <!--end container-content-->
 
 </body>
 
@@ -544,12 +621,21 @@ Navigation Scripts
 
     // **** Overview ****
     $("#overview-active").click(function () {
+
+//        $("#contact").hide();
+//        contactAnimationReset();
+
         $(".nav-span-active").fadeIn();
         $("#overview-active").fadeOut();
         $(".nav-span-inactive").animate({width: '0px'});
         $("#overview-inactive").animate({width: '184px'});
 
-        $("#overview").show();
+        $("#overview, #footer").show();
+
+        setTimeout(function () {
+            arrowScrollDownAnimation();
+
+        }, 500);
     });
 
     // *** Portfolio ***
@@ -570,10 +656,17 @@ Navigation Scripts
 
     // *** Contact ***
     $("#contact-active").click(function () {
+
+//        $("#overview").hide();
+
         $(".nav-span-active").fadeIn();
         $("#contact-active").fadeOut();
         $(".nav-span-inactive").animate({width: '0px'});
         $("#contact-inactive").animate({width: '160px'});
+
+
+//        $("#contact").show;
+//        contactAnimation();
     });
 
     // **** document height ***
@@ -595,6 +688,64 @@ PAGE OPEN ANIMATIONS
 <script>
 
     $(document).ready(header_init());
+    //    $(document).ready(arrowScrollDownAnimation());
+
+    function contactAnimation() {
+        $("#overview").hide();
+
+        stemShrink();
+        setTimeout(function () {
+            $("#contact-icon-email").addClass("animate");
+            setTimeout(function () {
+                $("#stem-stub-1").addClass("animate");
+                $("#cont-contact-email").addClass("animate");
+
+                setTimeout(function () {
+                    $("#contact-icon-phone").addClass("animate");
+
+                    setTimeout(function () {
+                        $("#stem-stub-2").addClass("animate");
+                        $("#cont-contact-phone").addClass("animate");
+
+                        setTimeout(function () {
+                            $("#contact-icon-linkedIn").addClass("animate");
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 500);
+    }
+
+    function contactAnimationReset() {
+        stem_grow();
+        setTimeout(function () {
+            $("#contact-icon-linkedIn").removeClass("animate");
+
+
+
+            setTimeout(function () {
+                $("#stem-stub-2").removeClass("animate");
+                $("#cont-contact-phone").removeClass("animate");
+
+                setTimeout(function () {
+                    $("#contact-icon-phone").removeClass("animate");
+
+                    setTimeout(function () {
+                        $("#stem-stub-1").removeClass("animate");
+                        $("#cont-contact-email").removeClass("animate");
+
+                        setTimeout(function () {
+                            $("#contact-icon-email").removeClass("animate");
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 500);
+    }
+
+    function stemShrink() {
+        $("#stem").animate({height: '420px'});
+    }
 
     // *** HEADER INIT MAIN FUNCTION ***
     function header_init() {
@@ -658,7 +809,9 @@ BS FUNCTIONALITY
 <script>
     // *** TOOLTIP ***
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip({
+            container: 'body'
+        })
     })
 </script>
 <!-- ==================================================
@@ -727,8 +880,42 @@ REVEAL IN SCROLL
         $("#POIPara, #POITitle").removeClass("reveal-width");
     }
 
+    function FooterAnimation() {
+        $("#footer-bckgrnd").addClass("illuminated");
+        $("#footer-content-inv").removeClass("invisible");
+
+
+    }
+    function FooterAnimationReset() {
+        $("#footer-bckgrnd").removeClass("illuminated");
+        $("#footer-content-inv").addClass("invisible");
+    }
+
+    function arrowScrollDownAnimation() {
+        $("#arrow-scroll-down").addClass("reveal");
+    }
+    function arrowScrollDownAnimationReset() {
+        $("#arrow-scroll-down").removeClass("reveal");
+    }
+
+    function scrollToTopAnimation() {
+        $("#scroll-to-top").addClass("reveal");
+    }
+    function scrollToTopAnimationReset() {
+        $("#scroll-to-top").removeClass("reveal");
+    }
+
+
     $(document).ready(function () {
         $(window).scroll(function () {
+
+            if ($(document).scrollTop() >= 220) {
+                arrowScrollDownAnimationReset();
+                scrollToTopAnimation()
+            } else {
+                scrollToTopAnimationReset();
+            }
+
             if ($(document).scrollTop() >= 220) {
                 PerSumAnimation();
             } else {
@@ -755,7 +942,6 @@ REVEAL IN SCROLL
             }
 
             if ($(document).scrollTop() >= 1990) {
-//                837
                 CarStaAnimation();
             }
             else {
@@ -763,11 +949,28 @@ REVEAL IN SCROLL
             }
 
             if ($(document).scrollTop() >= 2220) {
-//                837
                 TecSkiAnimation();
             }
             else {
                 TecSkiAnimationReset();
+            }
+
+            if ($(document).scrollTop() >= 2981) {
+                FooterAnimation();
+            }
+            else {
+                FooterAnimationReset();
+            }
+
+            if ($(document).scrollTop() >= 3300) {
+//                setTimeout(function () {
+                $("#footer-promo-text").fadeIn();
+//                }, 1000);
+            }
+            else {
+//                setTimeout(function () {
+                $("#footer-promo-text").fadeOut();
+//                }, 1000);
             }
 
 
