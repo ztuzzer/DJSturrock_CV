@@ -74,11 +74,15 @@ HEADER
 
 .cont-nav {
     text-align: right;
+    position: relative;
+    left: 2px
 }
 
 .cont-mainTitle {
     text-align: left;
     padding: 0px;
+    position: relative;
+    left: 2px;
 }
 
 ul.ul-simple {
@@ -425,4 +429,9 @@ HOBBIES & INTERESTS/
     width: 500px;
     transition: all 1s;
     /*background-color: pink;*/
+}
+
+
+#overview {
+    display: none;
 }
