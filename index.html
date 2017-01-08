@@ -125,7 +125,7 @@
     <div class="cont-whole page-gap-100"></div>
 
     <!-- ==================================================
-    CONTENT OVERVIEW
+    CONTENT *OVERVIEW
     ================================================== -->
     <div id="overview">
         <!-- ********************
@@ -133,7 +133,7 @@
         ******************** -->
         <!-- --- IMAGE --- -->
         <div class="cont-whole">
-            <div class="cont-img-bubble">
+            <div class="cont-img-centerLine">
                 <picture>
                     <img id="PerSumImg" src="me1b.jpg" class="img-bubble bubble">
                 </picture>
@@ -233,7 +233,7 @@
         ******************** -->
         <!-- --- IMAGE --- -->
         <div class="cont-whole">
-            <div class="cont-img-bubble">
+            <div class="cont-img-centerLine">
                 <picture>
                     <img id="EduBacImg" src="me1b.jpg" class="img-bubble bubble">
                 </picture>
@@ -325,7 +325,7 @@
         ******************** -->
         <!-- --- IMAGE --- -->
         <div class="cont-whole">
-            <div class="cont-img-bubble">
+            <div class="cont-img-centerLine">
                 <picture>
                     <img id="CarStaImg" src="me1b.jpg" class="img-bubble bubble">
                 </picture>
@@ -426,17 +426,111 @@
     <!-- ==================================================
     FOOTER
     ================================================== -->
-    <div class="footer">
+    <div id="footer" class="footer">
+
+
         <div class="cont-whole">
             <div class="cont-right">
 
                 <div class="cont-quote">
-
+                    <h1 class="footer-quote font-black">
+                        When you think you have exhausted all possibilites<br><br>
+                        remember this:
+                    </h1>
                 </div>
-
             </div>
         </div>
+
+        <div class="footer-bckgrnd illuminated clearfix">
+
+            <div class="cont-whole cont-img-bulb">
+                <div class="cont-img-centerLine">
+                    <picture>
+                        <img id="" src="assets/icons/lightbulb-hand-drawn-symbolb.svg" class="img-lightbulb">
+                    </picture>
+                </div>
+                <!--end cont-img-->
+            </div>
+
+            <div id="footer-content-inv" class="invisible">
+
+                <div class="cont-whole">
+                    <div class="cont-right">
+                        <div class="cont-quote-pt2">
+                            <h1 class="footer-quote bold font-black">You <br>Haven't.</h1>
+                            <h3 class="tom-edi font-black">- Thomas Edison</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont-whole">
+                    <div class="cont-left">
+                        <div class="contOuter-footer-promo">
+                            <div class="contInner-footer-promo">
+                                <h3>
+                                    This website was designed and developed by yours truly.<br><br>
+                                    If you think I would make a great addition to your team,<br><br>
+                                    or you would like my assistance with anything else,<br><br>
+                                    here are my contact details: <br><br><br><br>
+                                    <a href="mailto:daniel.sturrock@hotmail.com?subject=Hello.&body=Dear Daniel,"><img
+                                            data-toggle="tooltip" data-placement="left"
+                                            title="Click To Send Email Message"
+                                            class="footer-contact-icon" src="assets/icons/at-logo.svg"></a>
+                                    Daniel.Sturrock@hotmail.com<br><br>
+
+                                    <a href="intent://send/07835175918#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"><img
+                                            data-toggle="tooltip" data-placement="left"
+                                            title="Click To Send Text Message"
+                                            class="footer-contact-icon" src="assets/icons/whatsapp-logo.svg"></a>
+                                    (+44) 7 835 17 59 18<br><br>
+
+
+                                    <a href="http://www.linkedin.com/inviteFromProfile?from=92801b90profile&key=&firstName=Daniel&lastName=Sturrock"><img
+                                            data-toggle="tooltip" data-placement="left"
+                                            title="Click To Send A LinkedIn Invitation"
+                                            class="footer-contact-icon" src="assets/icons/linked-in-logo.svg"></a>
+                                    <br><br>
+
+                                    <!--<img class="footer-contact-icon" src="assets/icons/facebook-logo.svg"> /ztuzzer1-->
+                                    <br><br>
+
+                                    Credit where credit is due: <a class="footer-credit-link" data-toggle="modal"
+                                                                   data-target=".modal-credit">resources used on this
+                                    website</a>
+                                    <div class="modal fade modal-credit" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span aria-hidden="true"
+                                                                                     class="font-white">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title">Resources</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>...</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- invisible -->
+        </div>
+        <!--end footer-bckgrnd-->
+
     </div>
+
+    <!--<div class="cont-whole page-gap-100"></div>-->
 
 </div>
 <!--end container-content-->
@@ -585,37 +679,11 @@ REVEAL IN SCROLL
         $("#PerSumParaCont").removeClass("reveal-height");
     }
 
-    //    function EduBacAnimation() {
-    //        $("#EduBacImg").addClass("animate");
-    //
-    //        setTimeout(function () {
-    //            $("#EduBacTitle").addClass("reveal-width");
-    //
-    //            setTimeout(function () {
-    //                $("#EduBacPara").addClass("reveal-height");
-    //
-    //            }, 1000);
-    //        }, 1000);
-    //    }
-
     function EduBacAnimation() {
         $("#EduBacImg").addClass("animate");
         $("#EduBacTitle").addClass("reveal-width");
         $("#EduBacPara").addClass("reveal-height");
     }
-
-    //    function EduBacAnimationReset() {
-    //        $("#EduBacPara").removeClass("reveal-height");
-    //
-    //        setTimeout(function () {
-    //            $("#EduBacTitle").removeClass("reveal-width");
-    //
-    //            setTimeout(function () {
-    //                $("#EduBacImg").removeClass("animate");
-    //
-    //            }, 1000);
-    //        }, 1000);
-    //    }
 
     function EduBacAnimationReset() {
         $("#EduBacPara").removeClass("reveal-height");
@@ -674,7 +742,6 @@ REVEAL IN SCROLL
             }
 
             if ($(document).scrollTop() >= 1100) {
-//                837
                 EduBacAnimation();
             }
             else {

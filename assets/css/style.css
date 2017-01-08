@@ -14,7 +14,10 @@ GLOBAL
 }
 
 * {
-    font-family: 'Lato', 'Open Sans', 'Open Sans Condensed', sans-serif;
+    font-family:
+            /*'Lato',*/
+            /*'Open Sans',*/
+            'Open Sans Condensed', sans-serif;
 }
 
 .cont-whole {
@@ -64,6 +67,9 @@ h2 {
     color: #fff;
 }
 
+.font-black {
+    color: #000;
+}
 
 
 /* ==================================================
@@ -202,14 +208,6 @@ CONTENT
 OVERVIEW BUBBLES IMAGES
 ******************** */
 
-.cont-img-bubble {
-    width: 60%;
-    height: 125px;
-
-    text-align: center;
-
-    /*background-color: pink;*/
-}
 
 .img-bubble {
     width: 300px;
@@ -330,7 +328,7 @@ OVERFLOWS
     overflow: hidden;
 }
 
-.cont-img-bubble {
+.cont-img-centerLine {
     overflow: visible;
 }
 
@@ -358,7 +356,7 @@ Z-INDEX
     z-index: 1;
 }
 
-.cont-img-bubble,
+.cont-img-centerLine,
 .img-bubble {
     z-index: +10;
 }
@@ -457,7 +455,99 @@ HOBBIES & INTERESTS/
     /*background-color: pink;*/
 }
 
+/* ==================================================
+JS
+================================================== */
 
-#overview {
+#overview, #footer {
     display: none;
+}
+
+/*****************************************************************************************/
+
+
+
+.cont-quote {
+    width: 500px;
+    text-align: right;
+
+    margin-bottom: 80px;
+}
+
+h1.footer-quote {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 72px;
+    margin: 0px;
+}
+
+h1.footer-quote.bold {
+    font-size: 90px;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+.cont-img-bulb {
+    /*background-color: red;*/
+    /*height:700px;*/
+}
+
+.img-lightbulb {
+    position: relative;
+    top: -140px;
+}
+.cont-img-centerLine {
+    width: 60%;
+    height: 125px;
+
+    text-align: center;
+
+    /*background-color: pink;*/
+}
+
+.cont-quote-pt2 {
+    width: 500px;
+    height: 250px;
+    text-align: right;
+
+    /*background-color: blue;*/
+}
+
+.footer-bckgrnd {
+    background-color: #fff;
+    clear: both;
+}
+
+.footer-bckgrnd.illuminated {
+    background-color: #FEF79D;
+}
+
+.contOuter-footer-promo {
+    float: right;
+    width: 150px;
+    /*background-color: blue;*/
+    height: 600px;
+    overflow: visible;
+}
+
+.contInner-footer-promo {
+    width: 650px;
+    /*height: 100px;*/
+    /*background-color: green;*/
+}
+
+.footer-contact-icon {
+    width: 50px;
+    margin-right: 12px;
+}
+
+.footer-credit-link {
+    /*color: #000;*/
+}
+
+.modal-header-adjust {
+    /*background-color: #000;*/
+    color: #fff;
+}
+
+.close-adjust {
+    opacity: 1;
 }
