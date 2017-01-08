@@ -469,7 +469,7 @@ HOBBIES & INTERESTS/
 JS
 ================================================== */
 
-#overview, #footer, .footer-promo-text {
+#overview, #footer, .footer-promo-text, #contact {
     display: none;
 }
 
@@ -713,8 +713,4 @@ h1.contactDetails {
 .cont-contactDetails.animate {
     width:500px;
     transition: all 1s;
-}
-
-.stem {
-
 }
