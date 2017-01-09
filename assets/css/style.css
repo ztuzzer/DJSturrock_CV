@@ -20,17 +20,13 @@ GLOBAL
             'Open Sans Condensed', sans-serif;
 }
 
-.cont-whole {
-    /*background-color: orange;*/
-}
-
+/* ********************
+~ STEM
+******************** */
 .stem {
-    position: fixed;
-
-    /* --- SET HEIGHT W/JS --- */
-    /*height: 50%;*/
     width: 30%;
-    /*min-width: 294px;*/
+
+    position: fixed;
     left:2px;
 
     border-right: 5px solid #000;
@@ -38,14 +34,13 @@ GLOBAL
 
 .stem-stub {
     border-right: 5px solid #000;
-    /*height: 100px;*/
+
     position: relative;
     left: 2px;
-    /*background-color: blue;*/
-    /*position: absolute;*/
-    /*top: 0px*/
 }
-
+/* ********************
+~ PAGE GAPS
+******************** */
 .page-gap-100 {
     height: 100px;
 }
@@ -55,7 +50,7 @@ GLOBAL
 }
 
 /* ********************
-FONTS
+~ FONTS
 ******************** */
 
 .standard-character {
@@ -81,15 +76,12 @@ h2 {
     color: #000;
 }
 
-
 /* ==================================================
-CONTENT CONTAINERS
+~ CONTENT CONTAINERS
 ================================================== */
 
 .container-content {
-    height: 500px;
     width: 100%;
-    /*min-width: 700px;*/
 
     /*background-color: red;*/
 }
@@ -117,10 +109,45 @@ CONTENT CONTAINERS
     /*background-color: orange;*/
 }
 
-/* ==================================================
-HEADER
-================================================== */
+/* ********************
+~ CONT IMG CENTERLINE
+******************** */
+.cont-img-centerLine {
+    width: 60%;
+    height: 125px;
 
+    text-align: center;
+
+    /*background-color: pink;*/
+}
+ /* ---ADJUSTS --- */
+.cont-img-centerLine.no-height {
+    height: 0px;
+}
+
+.cont-img-centerLine.height-50 {
+    height: 55px;
+}
+/* ==================================================
+~ HEADER
+================================================== */
+ul.ul-simple {
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.li-header {
+    height: 80px;
+    position: relative;
+    margin: 0px;
+
+    /*background-color: pink;*/
+}
+/* ********************
+~ NAV
+******************** */
 .cont-nav {
     text-align: right;
     position: relative;
@@ -134,44 +161,6 @@ HEADER
     left: 2px;
 }
 
-ul.ul-simple {
-    text-decoration: none;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-.li-header {
-    height: 80px;
-    position: relative;
-    /*background-color: pink;*/
-    margin: 0px;
-}
-
-h1.name {
-    font-family: "Permanent Marker", sans-serif;
-    font-weight: 900;
-    margin: 0px;
-    padding: 0px 12px;
-    font-size: 72px;
-    color: #000;
-
-    /* --- Fade in with JS --- */
-    display: none;
-}
-
-h1.title {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 100;
-    margin: 0px;
-    padding: 0px 12px;
-    font-size: 72px;
-    color: #000;
-
-    /* --- Fade in with JS --- */
-    display: none;
-
-}
 
 .nav-item {
     padding: 0px 12px;
@@ -194,16 +183,10 @@ h1.title {
     position: absolute;
     bottom: 3px;
     right: 5px;
-
-    /* --- reveal with JS --- */
-    width: 0px;
 }
 
 .nav-span-inactive {
     background-color: black;
-
-    /* --- reveal with JS --- */
-    width: 0px;
 }
 
 .nav-span-inactive > .nav-item {
@@ -211,13 +194,34 @@ h1.title {
     color: #fff;
 }
 
+/* ********************
+~ MAIN TITLE
+******************** */
+h1.name {
+    font-family: "Permanent Marker", sans-serif;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px 12px;
+    font-size: 72px;
+    color: #000;
+}
+
+h1.title {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 100;
+    margin: 0px;
+    padding: 0px 12px;
+    font-size: 72px;
+    color: #000;
+}
+
+
 /* ==================================================
-CONTENT
+~ CONTENT OVERVIEW
 ================================================== */
 /* ********************
-OVERVIEW BUBBLES IMAGES
+~ OVERVIEW BUBBLES IMAGES
 ******************** */
-
 
 .img-bubble {
     width: 300px;
@@ -227,7 +231,7 @@ OVERVIEW BUBBLES IMAGES
 }
 
 /* ********************
-OVERVIEW BUBBLES TEXT
+~ OVERVIEW BUBBLES TEXT
 ******************** */
 .cont-title-right {
     width: 0px;
@@ -248,18 +252,21 @@ OVERVIEW BUBBLES TEXT
     text-align: right;
 }
 
+/* --- CONT-PARAGRAPGH-RIGHT ADJUST --- */
+.cont-paragraph-right.unset-height {
+    height: auto;
+}
+
 .paragraph-right {
     width: 365px;
     height: 130px;
 
     float: right;
     padding: 5px 12px;
-
-    overflow: auto;
 }
 
 /* ********************
-OVERVIEW INFO ROW
+~ OVERVIEW INFO ROW
 ******************** */
 
 .cont-title-left {
@@ -273,8 +280,13 @@ h2.title-left {
     width: 150px;
 }
 
-/* --- INTEREST ICONS --- */
-.cont-interests-icons {
+.cont-cols-icons {
+    text-align: center;
+    margin-bottom: 25px;
+    /*background-color: blue;*/
+}
+
+.cont-overview-icons {
     width: 500px;
 
     float: right;
@@ -295,6 +307,27 @@ h2.title-left {
 
 ul.ul-bullets {
     width: 500px;
+}
+
+/* ==================================================
+~ CONTENT CONTACT
+================================================== */
+
+.cont-contactDetails {
+    height: 40px;
+
+    padding-left: 90px;
+    margin-bottom: 55px;
+}
+
+.contact-icon {
+    width: 150px;
+}
+
+h1.contactDetails {
+    width: 410px;
+    margin: 0px;
+    font-size: 38px;
 }
 
 /* ==================================================
@@ -334,11 +367,14 @@ OVERFLOWS
 .nav-span-inactive, .nav-span-active,
 .cont-paragraph-right,
 .cont-title-right,
-.cont-bullets-right {
+.cont-bullets-right,
+.container-content,
+.cont-title-left,
+.cont-contactDetails {
     overflow: hidden;
 }
 
-.cont-img-centerLine {
+.cont-img-centerLine, .contOuter-footer-promo {
     overflow: visible;
 }
 
@@ -372,11 +408,38 @@ Z-INDEX
 }
 
 /* ==================================================
-reveal
+SCROLL TO TOP (INACTIVE)
+================================================== */
+
+.cont-scroll-to-top {
+    width: 60px;
+    height: 60px;
+    float: right;
+    margin-right: 150px;
+
+    /*background-color: red;*/
+}
+
+.scroll-to-top {
+    width: 50px;
+    position: relative;
+}
+
+/* ==================================================
+Animations
 ================================================== */
 /* ********************
-PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
+REVEAL IN JS
 ******************** */
+
+.nav-span-active, .nav-span-inactive {
+    width: 0px;
+}
+
+/* ********************
+REVEAL IN CSS (add class JS)
+******************** */
+/* --- BUBBLE --- */
 .bubble {
     -webkit-transform: scale(0);
     -moz-transform:    scale(0);
@@ -395,6 +458,7 @@ PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
     transition: all 1s;
 }
 
+/* --- CONT-TITLE-RIGHT --- */
 .cont-title-right.no-width {
     width: 0px;
     transition: all 1s;
@@ -405,7 +469,7 @@ PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
     transition: all 1s;
 }
 
-
+/* --- CONT PARAGRAPH RIGHT --- */
 .cont-paragraph-right.no-height {
     height: 0px;
     transition: all 1s;
@@ -420,20 +484,6 @@ PERSONAL SUMMARY/EDUCATIONAL BACKGROUND/CAREER STATEMENT
     margin-bottom: 0px;
 }
 
-
-/* ********************
-HOBBIES & INTERESTS/
-******************** */
-.cont-title-left.no-width {
-    width: 0px;
-    transition: all 1s;
-}
-
-.cont-title-left.no-width.reveal-width {
-    width: 150px;
-    transition: all 1s;
-}
-
 .cont-paragraph-right.no-width {
     width: 0px;
     transition: all 1s;
@@ -444,16 +494,18 @@ HOBBIES & INTERESTS/
     transition: all 1s;
 }
 
-/*.cont-title-left.no-height {*/
-    /*height: 0px;*/
-    /*transition: all 1s;*/
-/*}*/
+/* --- CONT TITLE-LEFT --- */
+.cont-title-left.no-width {
+    width: 0px;
+    transition: all 1s;
+}
 
-/*.cont-title-left.no-height.reveal-height {*/
-    /*height: 200px;*/
-    /*transition: all 1s;*/
-/*}*/
+.cont-title-left.no-width.reveal-width {
+    width: 150px;
+    transition: all 1s;
+}
 
+/* --- CONT-BULLETS --- */
 .cont-bullets-right.no-width {
     width: 0px;
     transition: all 1s;
@@ -465,61 +517,7 @@ HOBBIES & INTERESTS/
     /*background-color: pink;*/
 }
 
-/* ==================================================
-JS
-================================================== */
-
-#overview, #footer, .footer-promo-text, #contact {
-    display: none;
-}
-
-/*****************************************************************************************/
-
-
-
-.cont-quote {
-    width: 500px;
-    text-align: right;
-
-    margin-bottom: 80px;
-}
-
-h1.footer-quote {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 72px;
-    margin: 0px;
-}
-
-h1.footer-quote.bold {
-    font-size: 90px;
-    font-family: "Permanent Marker", sans-serif;
-}
-
-.cont-img-bulb {
-    /*background-color: red;*/
-    /*height:700px;*/
-}
-
-.img-lightbulb {
-    position: relative;
-    top: -140px;
-}
-.cont-img-centerLine {
-    width: 60%;
-    height: 125px;
-
-    text-align: center;
-
-    /*background-color: pink;*/
-}
-
-.cont-quote-pt2 {
-    width: 500px;
-    height: 250px;
-    text-align: right;
-
-    /*background-color: blue;*/
-}
+/* --- FOOTER BCKG COLOR--- */
 
 .footer-bckgrnd {
     background-color: #fff;
@@ -530,63 +528,7 @@ h1.footer-quote.bold {
     background-color: #FEF79D;
 }
 
-.contOuter-footer-promo {
-    float: right;
-    width: 150px;
-    /*background-color: blue;*/
-    height: 600px;
-    overflow: visible;
-}
-
-.contInner-footer-promo {
-    width: 650px;
-    height: 566px;
-    /*height: 100px;*/
-    /*background-color: green;*/
-}
-
-.footer-contact-icon {
-    width: 50px;
-    margin-right: 12px;
-}
-
-.footer-credit-link {
-    /*color: #000;*/
-}
-
-.modal-header-adjust {
-    /*background-color: #000;*/
-    color: #fff;
-}
-
-.close-adjust {
-    opacity: 1;
-}
-
-/*.arrow-scroll-down {*/
-    /*display: block;*/
-    /*width: 40px;*/
-    /*float: right;*/
-    /*!*position: relative;*!*/
-    /*left: 23px;*/
-    /*bottom: 0px;*/
-
-    /*margin-top: 400px;*/
-/*}*/
-
-/*.cont-arrow-scroll-down.arrow-bottom {*/
-/*height: 100%;*/
-/*}*/
-
-/*.cont-arrow-scroll-down {*/
-    /*background-color: red;*/
-    /*width: 40px;*/
-    /*height: 26px;*/
-    /*overflow: visible;*/
-    /*float: right;*/
-    /*position: relative;*/
-/*}*/
-
+/* --- ARROW SCROLL DOWN --- */
 .arrow-scroll-down {
     position: relative;
     bottom: 425px;
@@ -609,68 +551,7 @@ h1.footer-quote.bold {
     transition: all 1s;
 }
 
-/*.scroll-to-top {*/
-    /*-webkit-transform: scale(0);*/
-    /*-moz-transform:    scale(0);*/
-    /*-ms-transform:     scale(0);*/
-    /*-o-transform:      scale(0);*/
-    /*transform: scale(0);*/
-    /*transition: all 1s;*/
-/*}*/
-
-/*.scroll-to-top.reveal {*/
-    /*-webkit-transform: scale(1);*/
-    /*-moz-transform:    scale(1);*/
-    /*-ms-transform:     scale(1);*/
-    /*-o-transform:      scale(1);*/
-    /*transform: scale(1);*/
-    /*transition: all 1s;*/
-/*}*/
-
-.cont-scroll-to-top {
-    width: 60px;
-    height: 60px;
-    float: right;
-    margin-right: 150px;
-
-    /*position: absolute;*/
-    /*background-color: red;*/
-}
-
-.scroll-to-top {
-    width: 50px;
-    position: relative;
-}
-
-
-.contact-icon {
-    width: 150px;
-}
-
-.cont-img-centerLine.no-height {
-    height: 0px;
-}
-
-
-.cont-img-centerLine.height-50 {
-    height: 55px;
-}
-
-.cont-contactDetails {
-    padding-left: 90px;
-    /*width:500px;*/
-    height: 40px;
-    /*background-color: red;*/
-    margin-bottom: 55px;
-}
-
-h1.contactDetails {
-    width: 410px;
-    margin: 0px;
-    font-size: 38px;
-}
-
-
+/* --- CONTACT REVEAL --- */
 .contact-icon {
     position: relative;
     bottom: 250px;
@@ -693,6 +574,7 @@ h1.contactDetails {
     transition: all 1s;
 }
 
+/* --- CONTACT STEM-STUB GROW --- */
 .stem-stub {
     height: 0px;
     transition: all 1s;
@@ -703,11 +585,10 @@ h1.contactDetails {
     transition: all 1s;
 }
 
+/* --- CONTACT DETAILS REVEAL WIDTH --- */
 .cont-contactDetails {
     width:0px;
     transition: all 1s;
-
-    overflow: hidden;
 }
 
 .cont-contactDetails.animate {
@@ -716,16 +597,90 @@ h1.contactDetails {
 }
 
 
-.skillset-text {
-/*background-color: red;*/
+/* ==================================================
+HIDE ITEMS
+================================================== */
+
+#overview, #footer, .footer-promo-text, #contact, h1.name, h1.title {
+    display: none;
 }
 
-.icon-cols {
-    text-align: center;
-    margin-bottom: 25px;
+/* ==================================================
+FOOTER
+================================================== */
+
+.cont-quote {
+    width: 500px;
+    text-align: right;
+
+    margin-bottom: 80px;
+}
+
+.cont-quote-pt2 {
+    width: 500px;
+    height: 250px;
+    text-align: right;
+
     /*background-color: blue;*/
 }
 
-.cont-paragraph-right.unset-height {
-    height: auto;
+
+.contOuter-footer-promo {
+    width: 150px;
+    height: 600px;
+
+    float: right;
+
+    /*background-color: blue;*/
 }
+
+.contInner-footer-promo {
+    width: 650px;
+    height: 566px;
+
+    /*background-color: green;*/
+}
+
+
+/* ********************
+FONT STYLE
+******************** */
+h1.footer-quote {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 72px;
+    margin: 0px;
+}
+
+h1.footer-quote.bold {
+    font-size: 90px;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+/* ********************
+LIGHTBULB
+******************** */
+.img-lightbulb {
+    position: relative;
+    top: -140px;
+}
+
+/* ********************
+FOOTER CONTACT
+******************** */
+
+
+.footer-contact-icon {
+    width: 50px;
+    margin-right: 12px;
+}
+
+
+
+
+/********************************************************************************/
+
+
+
+
+
+
