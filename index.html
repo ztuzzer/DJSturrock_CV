@@ -648,11 +648,10 @@
 </body>
 
 <!-- ==================================================
-Navigation Scripts
+ ~ NAV SCRIPTS
 ================================================== -->
 <script>
-
-    // **** Overview ****
+    // ****  ~ Overview ****
     $("#overview-active").click(function () {
 
         $("#contact").hide();
@@ -671,7 +670,7 @@ Navigation Scripts
         }, 500);
     });
 
-    // *** Portfolio ***
+    // ***  ~ Portfolio ***
     $("#portfolio-active").click(function () {
         $(".nav-span-active").fadeIn();
         $("#portfolio-active").fadeOut();
@@ -679,7 +678,7 @@ Navigation Scripts
         $("#portfolio-inactive").animate({width: '195px'});
     });
 
-    // *** Timeline ***
+    // ***  ~ Timeline ***
     $("#timeline-active").click(function () {
         $(".nav-span-active").fadeIn();
         $("#timeline-active").fadeOut();
@@ -687,7 +686,7 @@ Navigation Scripts
         $("#timeline-inactive").animate({width: '170px'});
     });
 
-    // *** Contact ***
+    // ***  ~ Contact ***
     $("#contact-active").click(function () {
 
         arrowScrollDownAnimationReset()
@@ -724,68 +723,13 @@ Navigation Scripts
 
 </script>
 <!-- ==================================================
-PAGE OPEN ANIMATIONS
+ ~ HEADER INITIATE
 ================================================== -->
 <script>
-
     $(document).ready(header_init());
     //    $(document).ready(arrowScrollDownAnimation());
 
-    function contactAnimation() {
-        stemShrink();
-        setTimeout(function () {
-            $("#contact-icon-email").addClass("animate");
-            setTimeout(function () {
-                $("#stem-stub-1").addClass("animate");
-                $("#cont-contact-email").addClass("animate");
-
-                setTimeout(function () {
-                    $("#contact-icon-phone").addClass("animate");
-
-                    setTimeout(function () {
-                        $("#stem-stub-2").addClass("animate");
-                        $("#cont-contact-phone").addClass("animate");
-
-                        setTimeout(function () {
-                            $("#contact-icon-linkedIn").addClass("animate");
-                        }, 1000);
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 500);
-    }
-
-    function contactAnimationReset() {
-        stem_grow();
-        setTimeout(function () {
-            $("#contact-icon-linkedIn").removeClass("animate");
-
-
-            setTimeout(function () {
-                $("#stem-stub-2").removeClass("animate");
-                $("#cont-contact-phone").removeClass("animate");
-
-                setTimeout(function () {
-                    $("#contact-icon-phone").removeClass("animate");
-
-                    setTimeout(function () {
-                        $("#stem-stub-1").removeClass("animate");
-                        $("#cont-contact-email").removeClass("animate");
-
-                        setTimeout(function () {
-                            $("#contact-icon-email").removeClass("animate");
-                        }, 1000);
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 500);
-    }
-
-    function stemShrink() {
-        $("#stem").animate({height: '420px'});
-    }
-
-    // *** HEADER INIT MAIN FUNCTION ***
+    // ***  ~ HEADER INIT MAIN FUNCTION ***
     function header_init() {
         stem_grow();
 
@@ -799,8 +743,7 @@ PAGE OPEN ANIMATIONS
         }, 500);
     }
 
-
-    // *** HEADER INIT INDIVIDUAL FUNCTIONS ***
+    // ***  ~ HEADER INIT REVEAL ANIMATION ***
     function stem_grow() {
         $("#stem").animate({height: '100%'});
     }
@@ -831,120 +774,9 @@ PAGE OPEN ANIMATIONS
     }
 </script>
 <!-- ==================================================
-SCROLLBAR SCRIPTS
+ ~ INDIVIDUAL FUNCTIONS
 ================================================== -->
 <script>
-    $(".scrollbar-thin").mouseover(function () {
-        $(this).addClass("scrollbar-visible");
-    });
-    $(".scrollbar-thin").mouseout(function () {
-        $(this).removeClass("scrollbar-visible");
-    });
-</script>
-
-<!-- ==================================================
-BS FUNCTIONALITY
-================================================== -->
-<script>
-    // *** TOOLTIP ***
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip({
-            container: 'body'
-        })
-    })
-</script>
-<!-- ==================================================
-REVEAL IN SCROLL
-================================================== -->
-<script>
-
-
-    function PerSumAnimation() {
-        $("#PerSumImg").addClass("animate");
-        $("#PerSumTitle").addClass("reveal-width");
-        $("#PerSumParaCont").addClass("reveal-height");
-    }
-
-    function PerSumAnimationReset() {
-        $("#PerSumImg").removeClass("animate");
-        $("#PerSumTitle").removeClass("reveal-width");
-        $("#PerSumParaCont").removeClass("reveal-height");
-    }
-
-    function EduBacAnimation() {
-        $("#EduBacImg").addClass("animate");
-        $("#EduBacTitle").addClass("reveal-width");
-        $("#EduBacPara").addClass("reveal-height");
-    }
-
-    function EduBacAnimationReset() {
-        $("#EduBacPara").removeClass("reveal-height");
-        $("#EduBacTitle").removeClass("reveal-width");
-        $("#EduBacImg").removeClass("animate");
-    }
-
-    function CarStaAnimation() {
-        $("#CarStaImg").addClass("animate");
-        $("#CarStaTitle").addClass("reveal-width");
-        $("#CarStaPara").addClass("reveal-height");
-    }
-
-    function CarStaAnimationReset() {
-        $("#CarStaPara").removeClass("reveal-height");
-        $("#CarStaTitle").removeClass("reveal-width");
-        $("#CarStaImg").removeClass("animate");
-    }
-
-    function TecSkiAnimation() {
-        $("#TecSkiPara, #TecSkiTitle").addClass("reveal-width");
-    }
-
-    function TecSkiAnimationReset() {
-        $("#TecSkiPara, #TecSkiTitle").removeClass("reveal-width");
-    }
-
-    function IntAnimation() {
-        $("#IntPara, #IntTitle").addClass("reveal-width");
-    }
-
-    function IntAnimationReset() {
-        $("#IntPara, #IntTitle").removeClass("reveal-width");
-    }
-
-    function POIAnimation() {
-        $("#POIPara, #POITitle").addClass("reveal-width");
-    }
-
-    function POIAnimationReset() {
-        $("#POIPara, #POITitle").removeClass("reveal-width");
-    }
-
-    function FooterAnimation() {
-        $("#footer-bckgrnd").addClass("illuminated");
-        $("#footer-content-inv").removeClass("invisible");
-
-
-    }
-    function FooterAnimationReset() {
-        $("#footer-bckgrnd").removeClass("illuminated");
-        $("#footer-content-inv").addClass("invisible");
-    }
-
-    function arrowScrollDownAnimation() {
-        $("#arrow-scroll-down").addClass("reveal");
-    }
-    function arrowScrollDownAnimationReset() {
-        $("#arrow-scroll-down").removeClass("reveal");
-    }
-
-    function scrollToTopAnimation() {
-        $("#scroll-to-top").addClass("reveal");
-    }
-    function scrollToTopAnimationReset() {
-        $("#scroll-to-top").removeClass("reveal");
-    }
-
-
     $(document).ready(function () {
         $(window).scroll(function () {
 
@@ -1002,14 +834,10 @@ REVEAL IN SCROLL
             }
 
             if ($(document).scrollTop() >= 3300) {
-//                setTimeout(function () {
                 $("#footer-promo-text").fadeIn();
-//                }, 1000);
             }
             else {
-//                setTimeout(function () {
                 $("#footer-promo-text").fadeOut();
-//                }, 1000);
             }
 
 
@@ -1022,15 +850,180 @@ REVEAL IN SCROLL
         });
     });
 
-    //    function OverviewBubbleAnimation() {
-    //        $(".bubble").addClass("animate");
-    //
-    //        setTimeout(function () {
-    //            $("#PerSumTitle").animate({width: '500px'}, 1000);
-    //            $("#PerSumParaCont").animate({width: '500px'}, 1000);
-    //
-    //        }, 1000);
-    //    }
+    // ***  ~ CONTACT ANIMATION REVEAL ANIMATION ***
+    function contactAnimation() {
+        stemShrink();
+        setTimeout(function () {
+            $("#contact-icon-email").addClass("animate");
+            setTimeout(function () {
+                $("#stem-stub-1").addClass("animate");
+                $("#cont-contact-email").addClass("animate");
+
+                setTimeout(function () {
+                    $("#contact-icon-phone").addClass("animate");
+
+                    setTimeout(function () {
+                        $("#stem-stub-2").addClass("animate");
+                        $("#cont-contact-phone").addClass("animate");
+
+                        setTimeout(function () {
+                            $("#contact-icon-linkedIn").addClass("animate");
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 500);
+    }
+
+    function contactAnimationReset() {
+        stem_grow();
+        setTimeout(function () {
+            $("#contact-icon-linkedIn").removeClass("animate");
+
+
+            setTimeout(function () {
+                $("#stem-stub-2").removeClass("animate");
+                $("#cont-contact-phone").removeClass("animate");
+
+                setTimeout(function () {
+                    $("#contact-icon-phone").removeClass("animate");
+
+                    setTimeout(function () {
+                        $("#stem-stub-1").removeClass("animate");
+                        $("#cont-contact-email").removeClass("animate");
+
+                        setTimeout(function () {
+                            $("#contact-icon-email").removeClass("animate");
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 500);
+    }
+
+    function stemShrink() {
+        $("#stem").animate({height: '420px'});
+    }
+
+
+    // ***  ~ PERSONAL SUMMARY REVEAL ANIMATION ***
+    function PerSumAnimation() {
+        $("#PerSumImg").addClass("animate");
+        $("#PerSumTitle").addClass("reveal-width");
+        $("#PerSumParaCont").addClass("reveal-height");
+    }
+
+    function PerSumAnimationReset() {
+        $("#PerSumImg").removeClass("animate");
+        $("#PerSumTitle").removeClass("reveal-width");
+        $("#PerSumParaCont").removeClass("reveal-height");
+    }
+
+    // ***  ~ INTEREST REVEAL ANIMATION ***
+    function IntAnimation() {
+        $("#IntPara, #IntTitle").addClass("reveal-width");
+    }
+
+    function IntAnimationReset() {
+        $("#IntPara, #IntTitle").removeClass("reveal-width");
+    }
+
+    // ***  ~ EDUCATIONAL BACKGROUND REVEAL ANIMATION ***
+    function EduBacAnimation() {
+        $("#EduBacImg").addClass("animate");
+        $("#EduBacTitle").addClass("reveal-width");
+        $("#EduBacPara").addClass("reveal-height");
+    }
+
+    function EduBacAnimationReset() {
+        $("#EduBacPara").removeClass("reveal-height");
+        $("#EduBacTitle").removeClass("reveal-width");
+        $("#EduBacImg").removeClass("animate");
+    }
+
+    // ***  ~ CAREER STATEMENT REVEAL ANIMATION ***
+    function CarStaAnimation() {
+        $("#CarStaImg").addClass("animate");
+        $("#CarStaTitle").addClass("reveal-width");
+        $("#CarStaPara").addClass("reveal-height");
+    }
+
+    function CarStaAnimationReset() {
+        $("#CarStaPara").removeClass("reveal-height");
+        $("#CarStaTitle").removeClass("reveal-width");
+        $("#CarStaImg").removeClass("animate");
+    }
+
+    // *** ~ TECHNICAL SKILLSET REVEAL ANIMATION ***
+    function TecSkiAnimation() {
+        $("#TecSkiPara, #TecSkiTitle").addClass("reveal-width");
+    }
+
+    function TecSkiAnimationReset() {
+        $("#TecSkiPara, #TecSkiTitle").removeClass("reveal-width");
+    }
+
+
+    // *** ~ POI REVEAL ANIMATION ***
+    function POIAnimation() {
+        $("#POIPara, #POITitle").addClass("reveal-width");
+    }
+
+    function POIAnimationReset() {
+        $("#POIPara, #POITitle").removeClass("reveal-width");
+    }
+
+    // *** ~ FOOTER REVEAL ANIMATION ***
+
+    function FooterAnimation() {
+        $("#footer-bckgrnd").addClass("illuminated");
+        $("#footer-content-inv").removeClass("invisible");
+
+    }
+    function FooterAnimationReset() {
+        $("#footer-bckgrnd").removeClass("illuminated");
+        $("#footer-content-inv").addClass("invisible");
+    }
+
+    // *** ~ ARROW SCROLL DOWN REVEAL ANIMATION ***
+    function arrowScrollDownAnimation() {
+        $("#arrow-scroll-down").addClass("reveal");
+    }
+    function arrowScrollDownAnimationReset() {
+        $("#arrow-scroll-down").removeClass("reveal");
+    }
+
+    // *** ~ SCROLL TOP REVEAL ANIMATION ***
+    function scrollToTopAnimation() {
+        $("#scroll-to-top").addClass("reveal");
+    }
+    function scrollToTopAnimationReset() {
+        $("#scroll-to-top").removeClass("reveal");
+    }
+
+</script>
+<!-- ==================================================
+ ~ SCROLLBAR SCRIPTS
+================================================== -->
+<script>
+    $(".scrollbar-thin").mouseover(function () {
+        $(this).addClass("scrollbar-visible");
+    });
+    $(".scrollbar-thin").mouseout(function () {
+        $(this).removeClass("scrollbar-visible");
+    });
+</script>
+
+<!-- ==================================================
+ ~ BS FUNCTIONALITY
+================================================== -->
+<script>
+    // *** TOOLTIP ***
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            container: 'body'
+        })
+    })
 </script>
 
 </html>
