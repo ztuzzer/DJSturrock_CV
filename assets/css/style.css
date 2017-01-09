@@ -832,7 +832,7 @@ text-align: center;
     border-radius: 100%;
     width: 20px;
     height:20px;
-    background-color: red;
+    background-color: #fff;
     float: right;
     text-align: center;
     border: solid 1px black;
@@ -875,6 +875,20 @@ text-align: center;
     height: 3098px;
 }
 
+.cont-sidelines.GD {
+    height: 900px;
+}
+
+.cont-sidelines.KM {
+    height: 2734px;
+}
+
+
+
 .sideline.pos-2 {
     margin-right:20px;
+}
+
+.sideline.pos-3 {
+    margin-right:40px;
 }
