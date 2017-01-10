@@ -786,7 +786,7 @@ line-height: 50px;
     /*height: 130px;*/
 
     text-align: justify;
-    text-align-last: center;
+    text-align-last: left;
     width: 500px;
     float: right;
     padding: 5px 12px;
@@ -819,12 +819,13 @@ line-height: 50px;
 .sideline-top {
     /*margin-top:15px;*/
     border-radius: 100%;
-    width: 20px;
-    height:20px;
-    background-color: white;
+    width: 50px;
+    height:50px;
+    background-color: red;
     float: right;
-text-align: center;
+    text-align: center;
     border: solid 1px black;
+    position: relative;
 }
 
 .sideline-bottom {
@@ -833,26 +834,40 @@ text-align: center;
     width: 20px;
     height:20px;
     background-color: #fff;
-    float: right;
-    text-align: center;
+    /*float: right;*/
+    /*display: inline-block;*/
     border: solid 1px black;
     position: absolute;
+    left: 15px;
     bottom:0px;
+
 }
 
 .small-character {
-    font-size: 12px;
-    line-height: 20px;
+font-size: 25px;
+    line-height: 10px;
+    /*background-color: red;*/
+    position: relative;
+    top:10px;
+}
 
+.sideline-months {
+    font-size: 15px;
+    line-height: 10px;
+    position: relative;
+    top:3px;
+    /*background-color: blue;*/
 }
 
 .sideline {
-    width: 20px;
+    width: 50px;
     height: 100%;
 
     float: right;
     position: relative;
-    top: 15px;
+    /*text-align: center;*/
+    /*right: 10px;*/
+    /*top: 15px;*/
     /*background-color: blue;*/
 }
 
@@ -868,20 +883,20 @@ text-align: center;
     width: 60px;
     float: right;
     /*height: 1500px;*/
-    /*background-color: orange;*/
+    background-color: orange;
 }
 
-.cont-sidelines.GH {
-    height: 3098px;
-}
+/*.cont-sidelines.GH {*/
+    /*height: 3098px;*/
+/*}*/
 
-.cont-sidelines.GD {
-    height: 900px;
-}
+/*.cont-sidelines.GD {*/
+    /*height: 900px;*/
+/*}*/
 
-.cont-sidelines.KM {
-    height: 2734px;
-}
+/*.cont-sidelines.KM {*/
+    /*height: 2734px;*/
+/*}*/
 
 
 
