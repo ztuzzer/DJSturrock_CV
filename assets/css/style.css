@@ -619,8 +619,8 @@ HIDE ITEMS
 , #contact
 , h1.name
 , h1.title
-, #timeline
-/*, .sideline-bottom*/
+/*, #timeline*/
+, .sideline-bottom
 {
     display: none;
 }
@@ -815,14 +815,26 @@ line-height: 50px;
 .cont-dateAndSidelines {
     height: 50px;
     overflow: visible;
+    background-color: orange;
 }
+
+/*.cont-dateAndSidelines.no-width {*/
+    /*width: 0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.cont-dateAndSidelines.no-width.reveal-width {*/
+    /*width: 350px;*/
+    /*transition: all 1s;*/
+/*}*/
+
 
 .sideline-top {
     /*margin-top:15px;*/
     border-radius: 100%;
     width: 50px;
     height:50px;
-    background-color: red;
+    background-color: #fff;
     float: right;
     text-align: center;
     border: solid 1px black;
@@ -884,7 +896,7 @@ font-size: 25px;
     width: 200px;
     float: right;
     /*height: 1500px;*/
-    background-color: orange;
+    /*background-color: orange;*/
 }
 
 /*.cont-sidelines.GH {*/
@@ -927,7 +939,7 @@ font-size: 25px;
     -ms-transform:     scale(0);
     -o-transform:      scale(0);
     transform: scale(0);
-    transition: all 1s;
+    /*transition: all 1s;*/
 }
 
 .sideline-top.reveal {
@@ -940,8 +952,8 @@ font-size: 25px;
 }
 
 .cont-sidelines.fl, .cont-sidelines.gh, .cont-sidelines.gd, .cont-sidelines.km, .cont-sidelines.lsa, .cont-sidelines.sg, .cont-sidelines.uoe, .cont-sidelines.sa {
-    height: 20px;
-    transition: all 1s;
+    height: 0px;
+    /*transition: all 1s;*/
 }
 
 .cont-sidelines.fl.reveal {
@@ -987,3 +999,29 @@ font-size: 25px;
 
 
 
+.cont-timeline-year-bubble {
+    -webkit-transform: scale(0);
+    -moz-transform:    scale(0);
+    -ms-transform:     scale(0);
+    -o-transform:      scale(0);
+    transform: scale(0);
+    transition: all 1s;
+}
+
+.cont-timeline-year-bubble.reveal {
+    -webkit-transform: scale(1);
+    -moz-transform:    scale(1);
+    -ms-transform:     scale(1);
+    -o-transform:      scale(1);
+    transform: scale(1);
+    transition: all 1s;
+}
+
+#cont-sideline-FL.hide-away {
+    -webkit-transform: scale(0);
+    -moz-transform:    scale(0);
+    -ms-transform:     scale(0);
+    -o-transform:      scale(0);
+    transform: scale(0);
+    transition: all 1s;
+}
