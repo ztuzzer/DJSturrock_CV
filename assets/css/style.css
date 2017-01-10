@@ -881,7 +881,7 @@ font-size: 25px;
 }
 
 .cont-sidelines {
-    width: 100px;
+    width: 200px;
     float: right;
     /*height: 1500px;*/
     background-color: orange;
@@ -939,7 +939,7 @@ font-size: 25px;
     transition: all 1s;
 }
 
-.cont-sidelines.fl, .cont-sidelines.gh, .cont-sidelines.gd, .cont-sidelines.km, .cont-sidelines.lsa {
+.cont-sidelines.fl, .cont-sidelines.gh, .cont-sidelines.gd, .cont-sidelines.km, .cont-sidelines.lsa, .cont-sidelines.sg, .cont-sidelines.uoe, .cont-sidelines.sa {
     height: 20px;
     transition: all 1s;
 }
@@ -960,14 +960,30 @@ font-size: 25px;
 }
 
 .cont-sidelines.km.reveal {
-    height: 3175px;
+    height: 2278px;
     transition: all 1s;
 }
 
 .cont-sidelines.lsa.reveal {
-    height: 4659px;
+    height: 2871px;
     transition: all 1s;
 }
+
+.cont-sidelines.sg.reveal {
+    height: 50px;
+    transition: all 1s;
+}
+
+.cont-sidelines.uoe.reveal {
+    height: 856px;
+    transition: all 1s;
+}
+
+.cont-sidelines.sa.reveal {
+    height: 1033px;
+    transition: all 1s;
+}
+
 
 
 
