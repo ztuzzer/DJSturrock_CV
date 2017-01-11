@@ -45,7 +45,7 @@
 <body>
 
 <div id="stem" class="stem">
-    <div class="measure"></div>
+    <!--<div class="measure"></div>-->
 
 
     <!--<div class="cont-scroll-to-top">-->
@@ -1775,7 +1775,7 @@ SCRIPTS
 
         $("#timeline, #footer").show();
         timelineScroll();
-        footerScroll(10740, 11259);
+        footerScroll(10740, 11250);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
@@ -1803,6 +1803,44 @@ SCRIPTS
             contactAnimation();
         }, 500);
     });
+
+    // ============================================================================================ ~ FOOTER SCRIPTS
+
+    function footerScroll(distIllumination) {
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > distIllumination) {
+                FooterAnimation();
+//                console.log("animation activated")
+            }
+            else {
+                FooterAnimationReset();
+//                console.log("reset being called");
+            }
+
+
+            if ($(document).scrollTop() == 11250) {
+                $("#footer-promo-text").fadeIn();
+                console.log("fade-in");
+            }
+            else {
+                $("#footer-promo-text").fadeOut();
+                console.log("fade-out");
+            }
+        });
+    }
+
+    //    ****************************************************************************FOOTER REVEAL FUNCTIONS
+
+
+    function FooterAnimation() {
+        $("#footer-bckgrnd").addClass("illuminated");
+        $("#footer-content-inv").removeClass("invisible");
+
+    }
+    function FooterAnimationReset() {
+        $("#footer-bckgrnd").removeClass("illuminated");
+        $("#footer-content-inv").addClass("invisible");
+    }
 
     // **** document height ***
     //    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -1919,6 +1957,8 @@ SCRIPTS
 
         });
     }
+
+
 
     //    ****************************************************************************OVERVIEW REVEAL/RESET FUNCTIONS
 
@@ -2249,40 +2289,7 @@ SCRIPTS
         $("#stem").animate({height: '420px'});
     }
 
-    // ============================================================================================ ~ FOOTER SCRIPTS
 
-    function footerScroll(distIllumination, distPromo) {
-        if ($(document).scrollTop() > distIllumination) {
-//            2981
-            FooterAnimation();
-        }
-        else {
-            FooterAnimationReset();
-        }
-
-
-        if ($(document).scrollTop() > distPromo) {
-//            3300
-            $("#footer-promo-text").fadeIn();
-        }
-        else {
-            $("#footer-promo-text").fadeOut();
-        }
-
-    }
-
-    //    ****************************************************************************FOOTER REVEAL FUNCTIONS
-
-
-    function FooterAnimation() {
-        $("#footer-bckgrnd").addClass("illuminated");
-        $("#footer-content-inv").removeClass("invisible");
-
-    }
-    function FooterAnimationReset() {
-        $("#footer-bckgrnd").removeClass("illuminated");
-        $("#footer-content-inv").addClass("invisible");
-    }
 
     // ============================================================================================ ~ MINOR SCRIPTS
 
