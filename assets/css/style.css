@@ -38,6 +38,7 @@ GLOBAL
     position: relative;
     left: 2px;
 }
+
 /* ********************
 ~ PAGE GAPS
 ******************** */
@@ -48,6 +49,30 @@ GLOBAL
 
 .page-gap-200 {
     height: 200px;
+}
+
+/* ********************
+alignments
+******************** */
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/* ********************
+CONTAINER HEIGHTS
+******************** */
+
+.height-50 {
+    height: 50px;
 }
 
 /* ********************
@@ -318,6 +343,168 @@ ul.ul-bullets {
     width: 500px;
 }
 
+
+/* ==================================================
+CONTENTS TIMELINE
+================================================== */
+/* ********************
+~ TIMELINE BUBBLE
+******************** */
+.timeline-year-bubble {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 100%;
+    background-color: #000;
+    display: inline-block;
+}
+
+h1.timeline-year-text {
+    line-height: 150px;
+    width:150px;
+    margin: 0px;
+
+    font-size: 72px;
+    font-family: 'Open Sans Condensed';
+    font-weight: 900;
+}
+
+/* ********************
+~ TIMELINE INFORMATION BLOCK
+******************** */
+
+/*DATE*/
+.cont-dateAndSidelines {
+    height: 50px;
+    overflow: visible;
+    /*background-color: orange;*/
+}
+
+.cont-timeline-month {
+    height: 50px;
+
+    float: right;
+    text-align: right;
+    overflow: hidden;
+    /*background-color: red;*/
+}
+
+h2.timeline-month {
+    line-height: 50px;
+    font-size: 50px;
+    font-family: lato;
+    font-weight: 900;
+    text-transform: uppercase;
+    overflow: hidden;
+
+}
+
+/*PARAGRAPH*/
+.timeline-cont-paragraph-right {
+    width: 500px;
+    float: left;
+    overflow: hidden;
+    /*background-color: blue;*/
+}
+
+p.timeline-paragraph-right {
+    text-align: justify;
+    text-align-last: left;
+    width: 500px;
+    float: right;
+    padding: 5px 12px;
+}
+
+/* ********************
+~ TIMELINE SIDELINES
+******************** */
+
+.cont-sidelines {
+    width: 200px;
+    float: right;
+}
+
+/* --- sideline structure --- */
+.sideline {
+    width: 50px;
+    height: 100%;
+
+    float: right;
+    position: relative;
+}
+
+.sideline-top {
+    width: 50px;
+    height:50px;
+
+    border-radius: 100%;
+    background-color: #fff;
+    text-align: center;
+    border: solid 1px black;
+
+    float: right;
+    position: relative;
+}
+.sideline-stem {
+    width: 50%;
+    height: 100%;
+
+    border-right: dashed 1px black;
+}
+
+.sideline-bottom {
+    width: 20px;
+    height:20px;
+
+    border-radius: 100%;
+    background-color: #fff;
+    border: solid 1px black;
+
+    position: absolute;
+    left: 15px;
+    bottom:0px;
+}
+
+/* --- SIDELINE TEXT --- */
+span.sideline-number {
+    font-size: 25px;
+    line-height: 10px;
+
+    position: relative;
+    top:10px;
+}
+
+span.sideline-months {
+    font-size: 15px;
+    line-height: 10px;
+
+    position: relative;
+    top:3px;
+}
+
+
+/* --- SIDELINE POSITIONS --- */
+.sideline-pos1 {
+    margin-right:0px;
+    transition: all 1s;
+}
+
+
+.sideline-pos1.sideline-pos2 {
+    margin-right:27px;
+    transition: all 1s;
+}
+
+.sideline-pos1.sideline-pos2.sideline-pos3 {
+    margin-right:54px;
+    transition: all 1s;
+}
+
+.sideline-pos1.sideline-pos2.sideline-pos3.sideline-pos4 {
+    margin-right:81px;
+    transition: all 1s;
+}
+
 /* ==================================================
 ~ CONTENT CONTACT
 ================================================== */
@@ -337,6 +524,75 @@ h1.contactDetails {
     width: 410px;
     margin: 0px;
     font-size: 38px;
+}
+
+/* ==================================================
+FOOTER
+================================================== */
+
+.cont-quote {
+    width: 500px;
+    text-align: right;
+
+    margin-bottom: 80px;
+}
+
+.cont-quote-pt2 {
+    width: 500px;
+    height: 250px;
+    text-align: right;
+
+    /*background-color: blue;*/
+}
+
+
+.contOuter-footer-promo {
+    width: 150px;
+    height: 600px;
+
+    float: right;
+
+    /*background-color: blue;*/
+}
+
+.contInner-footer-promo {
+    width: 650px;
+    height: 566px;
+
+    /*background-color: green;*/
+}
+
+
+/* ********************
+FONT STYLE
+******************** */
+h1.footer-quote {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 72px;
+    margin: 0px;
+}
+
+h1.footer-quote.bold {
+    font-size: 90px;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+/* ********************
+LIGHTBULB
+******************** */
+.img-lightbulb {
+    position: relative;
+    top: -140px;
+}
+
+/* ********************
+FOOTER CONTACT
+******************** */
+
+
+.footer-contact-icon {
+    width: 50px;
+    margin-right: 12px;
 }
 
 /* ==================================================
@@ -435,6 +691,22 @@ SCROLL TO TOP (INACTIVE)
 .scroll-to-top {
     width: 50px;
     position: relative;
+}
+
+/* ==================================================
+HIDE ITEMS
+================================================== */
+
+#overview
+, #footer
+, .footer-promo-text
+, #contact
+, h1.name
+, h1.title
+, #timeline
+, .sideline-bottom
+{
+    display: none;
 }
 
 /* ==================================================
@@ -611,329 +883,9 @@ REVEAL IN CSS (add class JS)
 }
 
 
-/* ==================================================
-HIDE ITEMS
-================================================== */
-
-#overview
-, #footer
-, .footer-promo-text
-, #contact
-, h1.name
-, h1.title
-, #timeline
-, .sideline-bottom
-{
-    display: none;
-}
-
-/* ==================================================
-FOOTER
-================================================== */
-
-.cont-quote {
-    width: 500px;
-    text-align: right;
-
-    margin-bottom: 80px;
-}
-
-.cont-quote-pt2 {
-    width: 500px;
-    height: 250px;
-    text-align: right;
-
-    /*background-color: blue;*/
-}
-
-
-.contOuter-footer-promo {
-    width: 150px;
-    height: 600px;
-
-    float: right;
-
-    /*background-color: blue;*/
-}
-
-.contInner-footer-promo {
-    width: 650px;
-    height: 566px;
-
-    /*background-color: green;*/
-}
-
-
 /* ********************
-FONT STYLE
+SIDELINE ANIMATIONS
 ******************** */
-h1.footer-quote {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 72px;
-    margin: 0px;
-}
-
-h1.footer-quote.bold {
-    font-size: 90px;
-    font-family: "Permanent Marker", sans-serif;
-}
-
-/* ********************
-LIGHTBULB
-******************** */
-.img-lightbulb {
-    position: relative;
-    top: -140px;
-}
-
-/* ********************
-FOOTER CONTACT
-******************** */
-
-
-.footer-contact-icon {
-    width: 50px;
-    margin-right: 12px;
-}
-
-
-
-
-/********************************************************************************/
-
-
-.timeline-year-bubble {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    background-color: #000;
-
-    display: inline-block;
-}
-
-h1.timeline-year-text {
-    line-height: 150px;
-    width:150px;
-    margin: 0px;
-    font-size: 72px;
-    font-family: 'Open Sans Condensed';
-    font-weight: 900;
-}
-
-
-
-.cont-title-right.align-left {
-    text-align: left;
-}
-
-.cont-timeline-month {
-    float: right;
-    text-align: right;
-    height: 50px;
-
-    overflow: hidden;
-    /*background-color: red;*/
-}
-
-.timeline-month {
-line-height: 50px;
-    font-size: 50px;
-    font-family: lato;
-    font-weight: 900;
-    text-transform: uppercase;
-    overflow: hidden;
-
-}
-
-.cont-timeline-month.no-width {
-    width: 0px;
-    transition: all 1s;
-}
-
-.cont-timeline-month.no-width.reveal-width {
-    width: 150px;
-    transition: all 1s;
-}
-
-.timeline-cont-paragraph-right.no-width {
-    width:0px;
-    /*bottom: 0px;*/
-    /*-webkit-transform: scale(0);*/
-    /*-moz-transform:    scale(0);*/
-    /*-ms-transform:     scale(0);*/
-    /*-o-transform:      scale(0);*/
-    /*transform: scale(0);*/
-    transition: all 1s;
-}
-
-.timeline-cont-paragraph-right.no-width.reveal-width {
-    width: 500px;
-    /*bottom: 0px;*/
-    /*-webkit-transform: scale(1);*/
-    /*-moz-transform:    scale(1);*/
-    /*-ms-transform:     scale(1);*/
-    /*-o-transform:      scale(1);*/
-    /*transform: scale(1);*/
-    transition: all 1s;
-}
-
-.timeline-cont-paragraph-right {
-    float: left;
-    width: 500px;
-    /*background-color: blue;*/
-    overflow: hidden;
-}
-
-.timeline-paragraph-right {
-    /*width: 365px;*/
-    /*height: 130px;*/
-
-    text-align: justify;
-    text-align-last: left;
-    width: 500px;
-    float: right;
-    padding: 5px 12px;
-}
-
-
-.align-left {
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
-}
-
-.align-center {
-    text-align: center;
-}
-
-.height-50 {
-    height: 50px;
-}
-
-
-
-.cont-dateAndSidelines {
-    height: 50px;
-    overflow: visible;
-    /*background-color: orange;*/
-}
-
-/*.cont-dateAndSidelines.no-width {*/
-    /*width: 0px;*/
-    /*transition: all 1s;*/
-/*}*/
-
-/*.cont-dateAndSidelines.no-width.reveal-width {*/
-    /*width: 350px;*/
-    /*transition: all 1s;*/
-/*}*/
-
-
-.sideline-top {
-    /*margin-top:15px;*/
-    border-radius: 100%;
-    width: 50px;
-    height:50px;
-    background-color: #fff;
-    float: right;
-    text-align: center;
-    border: solid 1px black;
-    position: relative;
-}
-
-.sideline-bottom {
-    /*margin-top:15px;*/
-    border-radius: 100%;
-    width: 20px;
-    height:20px;
-    background-color: #fff;
-    /*float: right;*/
-    /*display: inline-block;*/
-    border: solid 1px black;
-    position: absolute;
-    left: 15px;
-    bottom:0px;
-
-}
-
-.small-character {
-font-size: 25px;
-    line-height: 10px;
-    /*background-color: red;*/
-    position: relative;
-    top:10px;
-}
-
-.sideline-months {
-    font-size: 15px;
-    line-height: 10px;
-    position: relative;
-    top:3px;
-    /*background-color: blue;*/
-}
-
-.sideline {
-    width: 50px;
-    height: 100%;
-
-    float: right;
-    position: relative;
-    /*text-align: center;*/
-    /*right: 10px;*/
-    /*top: 15px;*/
-    /*background-color: blue;*/
-}
-
-.sideline-stem {
-    width: 50%;
-    border-right: dashed 1px black;
-    height: 100%;
-    /*margin-top: 25px;*/
-    /*margin-bottom: 25px;*/
-}
-
-.cont-sidelines {
-    width: 200px;
-    float: right;
-    /*height: 1500px;*/
-    /*background-color: orange;*/
-}
-
-/*.cont-sidelines.GH {*/
-    /*height: 3098px;*/
-/*}*/
-
-/*.cont-sidelines.GD {*/
-    /*height: 900px;*/
-/*}*/
-
-/*.cont-sidelines.KM {*/
-    /*height: 2734px;*/
-/*}*/
-
-.sideline-pos1 {
-    margin-right:0px;
-    transition: all 1s;
-}
-
-
-.sideline-pos1.sideline-pos2 {
-    margin-right:27px;
-    transition: all 1s;
-}
-
-.sideline-pos1.sideline-pos2.sideline-pos3 {
-    margin-right:54px;
-    transition: all 1s;
-}
-
-.sideline-pos1.sideline-pos2.sideline-pos3.sideline-pos4 {
-    margin-right:81px;
-    transition: all 1s;
-}
-
 
 .sideline-top {
     -webkit-transform: scale(0);
@@ -953,9 +905,16 @@ font-size: 25px;
     transition: all 1s;
 }
 
-.cont-sidelines.fl, .cont-sidelines.gh, .cont-sidelines.gd, .cont-sidelines.km, .cont-sidelines.lsa, .cont-sidelines.sg, .cont-sidelines.uoe, .cont-sidelines.sa {
+.cont-sidelines.fl
+, .cont-sidelines.gh
+, .cont-sidelines.gd
+, .cont-sidelines.km
+, .cont-sidelines.lsa
+, .cont-sidelines.sg
+, .cont-sidelines.uoe
+, .cont-sidelines.sa
+{
     height: 0px;
-    /*transition: all 1s;*/
 }
 
 .cont-sidelines.fl.reveal {
@@ -998,9 +957,6 @@ font-size: 25px;
     transition: all 1s;
 }
 
-
-
-
 .cont-timeline-year-bubble {
     -webkit-transform: scale(0);
     -moz-transform:    scale(0);
@@ -1028,11 +984,41 @@ font-size: 25px;
     transition: all 1s;
 }
 
+/* ********************
+TIMELINE INFO BLOCK ANIMATIONS
+******************** */
+
+.cont-title-right.align-left {
+    text-align: left;
+}
+
+.cont-timeline-month.no-width {
+    width: 0px;
+    transition: all 1s;
+}
+
+.cont-timeline-month.no-width.reveal-width {
+    width: 150px;
+    transition: all 1s;
+}
+
+.timeline-cont-paragraph-right.no-width {
+    width:0px;
+    transition: all 1s;
+}
+
+.timeline-cont-paragraph-right.no-width.reveal-width {
+    width: 500px;
+    transition: all 1s;
+}
+
+/* ==================================================
+MEASUREMENT TOOL
+================================================== */
+
 .measure {
     width: 100%;
     background-color: red;
     opacity: 0.5;
     height: 50%;
 }
-
-
