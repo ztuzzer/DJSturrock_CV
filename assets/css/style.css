@@ -723,7 +723,10 @@ REVEAL IN JS
 /* ********************
 REVEAL IN CSS (add class JS)
 ******************** */
-/* --- BUBBLE --- */
+
+/* ********************
+SCALE ONLY
+******************** */
 .bubble {
     -webkit-transform: scale(0);
     -moz-transform:    scale(0);
@@ -742,18 +745,53 @@ REVEAL IN CSS (add class JS)
     transition: all 1s;
 }
 
-/* --- CONT-TITLE-RIGHT --- */
-.cont-title-right.no-width {
+/* ********************
+REVEAL WIDTH
+******************** */
+.no-width {
     width: 0px;
     transition: all 1s;
 }
 
-.cont-title-right.no-width.reveal-width {
+.cont-title-right.no-width.reveal-width, .overview-cont-paragraph-right.no-width.reveal-width, .cont-bullets-right.no-width.reveal-width {
     width: 500px;
     transition: all 1s;
 }
 
-/* --- CONT PARAGRAPH RIGHT --- */
+/*.overview-cont-paragraph-right.no-width {*/
+    /*width: 0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.overview-cont-paragraph-right.no-width.reveal-width {*/
+    /*width: 500px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.cont-title-left.no-width {*/
+    /*width: 0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+.cont-title-left.no-width.reveal-width {
+    width: 150px;
+    transition: all 1s;
+}
+
+/*.cont-bullets-right.no-width {*/
+    /*width: 0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.cont-bullets-right.no-width.reveal-width {*/
+    /*width: 500px;*/
+    /*transition: all 1s;*/
+    /*!*background-color: pink;*!*/
+/*}*/
+
+/* ********************
+REVEAL HEIGHT
+******************** */
 .overview-cont-paragraph-right.no-height {
     height: 0px;
     transition: all 1s;
@@ -769,42 +807,9 @@ REVEAL IN CSS (add class JS)
 }
 
 
-
-.overview-cont-paragraph-right.no-width {
-    width: 0px;
-    transition: all 1s;
-}
-
-.overview-cont-paragraph-right.no-width.reveal-width {
-    width: 500px;
-    transition: all 1s;
-}
-
-/* --- CONT TITLE-LEFT --- */
-.cont-title-left.no-width {
-    width: 0px;
-    transition: all 1s;
-}
-
-.cont-title-left.no-width.reveal-width {
-    width: 150px;
-    transition: all 1s;
-}
-
-/* --- CONT-BULLETS --- */
-.cont-bullets-right.no-width {
-    width: 0px;
-    transition: all 1s;
-}
-
-.cont-bullets-right.no-width.reveal-width {
-    width: 500px;
-    transition: all 1s;
-    /*background-color: pink;*/
-}
-
-/* --- FOOTER BCKG COLOR--- */
-
+/* ********************
+FOOTER COLOR IN
+******************** */
 .footer-bckgrnd {
     background-color: #fff;
     clear: both;
@@ -814,7 +819,9 @@ REVEAL IN CSS (add class JS)
     background-color: #FEF79D;
 }
 
-/* --- ARROW SCROLL DOWN --- */
+/* ********************
+ARROW SCALE AND MOVE
+******************** */
 .arrow-scroll-down {
     position: relative;
     bottom: 425px;
@@ -837,7 +844,10 @@ REVEAL IN CSS (add class JS)
     transition: all 1s;
 }
 
-/* --- CONTACT REVEAL --- */
+/* ********************
+CONTACT ANIMATION
+******************** */
+/* --- CONTACT ICON MOVE AND SCALE --- */
 .contact-icon {
     position: relative;
     bottom: 250px;
