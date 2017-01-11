@@ -736,7 +736,25 @@ SCALE ONLY
     transition: all 2s;
 }
 
-.bubble.animate {
+.cont-timeline-year-bubble, .cont-sidelines.hide-away {
+    -webkit-transform: scale(0);
+    -moz-transform:    scale(0);
+    -ms-transform:     scale(0);
+    -o-transform:      scale(0);
+    transform: scale(0);
+    transition: all 1s;
+}
+
+.sideline-top {
+    -webkit-transform: scale(0);
+    -moz-transform:    scale(0);
+    -ms-transform:     scale(0);
+    -o-transform:      scale(0);
+    transform: scale(0);
+    /*transition: all 1s;*/
+}
+
+.bubble.animate, .sideline-top.reveal, .cont-timeline-year-bubble.reveal {
     -webkit-transform: scale(1);
     -moz-transform:    scale(1);
     -ms-transform:     scale(1);
@@ -744,6 +762,35 @@ SCALE ONLY
     transform: scale(1);
     transition: all 1s;
 }
+
+
+/*.cont-sidelines.hide-away {*/
+    /*-webkit-transform: scale(0);*/
+    /*-moz-transform:    scale(0);*/
+    /*-ms-transform:     scale(0);*/
+    /*-o-transform:      scale(0);*/
+    /*transform: scale(0);*/
+    /*transition: all 1s;*/
+/*}*/
+
+
+/*.cont-timeline-year-bubble.reveal {*/
+    /*-webkit-transform: scale(1);*/
+    /*-moz-transform:    scale(1);*/
+    /*-ms-transform:     scale(1);*/
+    /*-o-transform:      scale(1);*/
+    /*transform: scale(1);*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.sideline-top.reveal {*/
+    /*-webkit-transform: scale(1);*/
+    /*-moz-transform:    scale(1);*/
+    /*-ms-transform:     scale(1);*/
+    /*-o-transform:      scale(1);*/
+    /*transform: scale(1);*/
+    /*transition: all 1s;*/
+/*}*/
 
 /* ********************
 REVEAL WIDTH
@@ -753,7 +800,31 @@ REVEAL WIDTH
     transition: all 1s;
 }
 
-.cont-title-right.no-width.reveal-width, .overview-cont-paragraph-right.no-width.reveal-width, .cont-bullets-right.no-width.reveal-width {
+/*.cont-timeline-month.no-width {*/
+    /*width: 0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.cont-timeline-month.no-width.reveal-width {*/
+    /*width: 150px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.timeline-cont-paragraph-right.no-width {*/
+    /*width:0px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+/*.timeline-cont-paragraph-right.no-width.reveal-width {*/
+    /*width: 500px;*/
+    /*transition: all 1s;*/
+/*}*/
+
+.cont-title-right.no-width.reveal-width
+, .overview-cont-paragraph-right.no-width.reveal-width
+, .cont-bullets-right.no-width.reveal-width
+, .timeline-cont-paragraph-right.no-width.reveal-width
+{
     width: 500px;
     transition: all 1s;
 }
@@ -773,7 +844,7 @@ REVEAL WIDTH
     /*transition: all 1s;*/
 /*}*/
 
-.cont-title-left.no-width.reveal-width {
+.cont-title-left.no-width.reveal-width, .cont-timeline-month.no-width.reveal-width {
     width: 150px;
     transition: all 1s;
 }
@@ -804,6 +875,59 @@ REVEAL HEIGHT
     transition: all 1s;
     /*remove adjust*/
     margin-bottom: 0px;
+}
+
+/* --- SIDELINE REVEAL HEIGHT ANIMATIONS --- */
+.cont-sidelines.fl
+, .cont-sidelines.gh
+, .cont-sidelines.gd
+, .cont-sidelines.km
+, .cont-sidelines.lsa
+, .cont-sidelines.sg
+, .cont-sidelines.uoe
+, .cont-sidelines.sa
+{
+    height: 0px;
+}
+
+.cont-sidelines.fl.reveal {
+    height: 2444px;
+    transition: all 1s;
+}
+
+.cont-sidelines.gh.reveal {
+    height: 3785px;
+    transition: all 1s;
+}
+
+.cont-sidelines.gd.reveal {
+    height: 1227px;
+    transition: all 1s;
+}
+
+.cont-sidelines.km.reveal {
+    height: 2278px;
+    transition: all 1s;
+}
+
+.cont-sidelines.lsa.reveal {
+    height: 2871px;
+    transition: all 1s;
+}
+
+.cont-sidelines.sg.reveal {
+    height: 50px;
+    transition: all 1s;
+}
+
+.cont-sidelines.uoe.reveal {
+    height: 856px;
+    transition: all 1s;
+}
+
+.cont-sidelines.sa.reveal {
+    height: 1033px;
+    transition: all 1s;
 }
 
 
@@ -893,134 +1017,9 @@ CONTACT ANIMATION
 }
 
 
-/* ********************
-SIDELINE ANIMATIONS
-******************** */
 
-.sideline-top {
-    -webkit-transform: scale(0);
-    -moz-transform:    scale(0);
-    -ms-transform:     scale(0);
-    -o-transform:      scale(0);
-    transform: scale(0);
-    /*transition: all 1s;*/
-}
 
-.sideline-top.reveal {
-    -webkit-transform: scale(1);
-    -moz-transform:    scale(1);
-    -ms-transform:     scale(1);
-    -o-transform:      scale(1);
-    transform: scale(1);
-    transition: all 1s;
-}
 
-.cont-sidelines.fl
-, .cont-sidelines.gh
-, .cont-sidelines.gd
-, .cont-sidelines.km
-, .cont-sidelines.lsa
-, .cont-sidelines.sg
-, .cont-sidelines.uoe
-, .cont-sidelines.sa
-{
-    height: 0px;
-}
-
-.cont-sidelines.fl.reveal {
-    height: 2444px;
-    transition: all 1s;
-}
-
-.cont-sidelines.gh.reveal {
-    height: 3785px;
-    transition: all 1s;
-}
-
-.cont-sidelines.gd.reveal {
-    height: 1227px;
-    transition: all 1s;
-}
-
-.cont-sidelines.km.reveal {
-    height: 2278px;
-    transition: all 1s;
-}
-
-.cont-sidelines.lsa.reveal {
-    height: 2871px;
-    transition: all 1s;
-}
-
-.cont-sidelines.sg.reveal {
-    height: 50px;
-    transition: all 1s;
-}
-
-.cont-sidelines.uoe.reveal {
-    height: 856px;
-    transition: all 1s;
-}
-
-.cont-sidelines.sa.reveal {
-    height: 1033px;
-    transition: all 1s;
-}
-
-.cont-timeline-year-bubble {
-    -webkit-transform: scale(0);
-    -moz-transform:    scale(0);
-    -ms-transform:     scale(0);
-    -o-transform:      scale(0);
-    transform: scale(0);
-    transition: all 1s;
-}
-
-.cont-timeline-year-bubble.reveal {
-    -webkit-transform: scale(1);
-    -moz-transform:    scale(1);
-    -ms-transform:     scale(1);
-    -o-transform:      scale(1);
-    transform: scale(1);
-    transition: all 1s;
-}
-
-.cont-sidelines.hide-away {
-    -webkit-transform: scale(0);
-    -moz-transform:    scale(0);
-    -ms-transform:     scale(0);
-    -o-transform:      scale(0);
-    transform: scale(0);
-    transition: all 1s;
-}
-
-/* ********************
-TIMELINE INFO BLOCK ANIMATIONS
-******************** */
-
-.cont-title-right.align-left {
-    text-align: left;
-}
-
-.cont-timeline-month.no-width {
-    width: 0px;
-    transition: all 1s;
-}
-
-.cont-timeline-month.no-width.reveal-width {
-    width: 150px;
-    transition: all 1s;
-}
-
-.timeline-cont-paragraph-right.no-width {
-    width:0px;
-    transition: all 1s;
-}
-
-.timeline-cont-paragraph-right.no-width.reveal-width {
-    width: 500px;
-    transition: all 1s;
-}
 
 /* ==================================================
 MEASUREMENT TOOL
