@@ -45,7 +45,7 @@
 <body>
 
 <div id="stem" class="stem">
-    <!--<div class="measure"></div>-->
+    <div class="measure"></div>
 
 
     <!--<div class="cont-scroll-to-top">-->
@@ -1729,256 +1729,6 @@
 SCRIPTS
 ================================================== -->
 <script>
-    // ============================================================================================ ~ TIMELINE SCRIPTS
-
-
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 50) {
-
-            console.log($("body").scrollTop() + " px");
-        } else {
-        }
-
-        if ($(document).scrollTop() > 134) {
-            arrowScrollDownAnimationReset();
-
-            revealYearBubble("#2017-bubble");
-        } else {
-            revealYearBubbleReset("#2017-bubble")
-        }
-
-
-        if ($(document).scrollTop() > 330) {
-            revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
-        } else {
-            resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
-        }
-
-
-        if ($(document).scrollTop() > 1020) {
-            revealYearBubble("#2016-bubble");
-        } else {
-            revealYearBubbleReset("#2016-bubble");
-        }
-
-        if ($(document).scrollTop() > 1210) {
-            revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
-
-            moveToPos2("#sideline-fl");
-        } else {
-            resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
-
-            moveToPos2Reset("#sideline-fl");
-        }
-
-        if ($(document).scrollTop() > 1990) {
-            revealYearBubble("#2015-bubble");
-        } else {
-            revealYearBubbleReset("#2015-bubble");
-        }
-
-        if ($(document).scrollTop() > 2190) {
-            revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
-
-            moveToPos2("#sideline-gh");
-            moveToPos3("#sideline-fl");
-        } else {
-            resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
-
-            moveToPos2Reset("#sideline-gh");
-            moveToPos3Reset("#sideline-fl");
-        }
-
-        if ($(document).scrollTop() > 2740) {
-            revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
-
-        } else {
-            resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
-        }
-
-        if ($(document).scrollTop() > 3180) {
-            revealYearBubble("#2014-bubble");
-        } else {
-            revealYearBubbleReset("#2014-bubble");
-        }
-
-        if ($(document).scrollTop() > 3380) {
-            revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
-
-        } else {
-            resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
-        }
-
-        if ($(document).scrollTop() > 3670) {
-            revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
-        } else {
-            resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
-        }
-
-        if ($(document).scrollTop() > 4220) {
-            revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
-
-
-            moveToPos2("#sideline-km");
-            moveToPos3("#sideline-gh");
-        } else {
-            resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
-
-            moveToPos2Reset("#sideline-km");
-            moveToPos3Reset("#sideline-gh");
-        }
-
-        if ($(document).scrollTop() > 4965) {
-            revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
-        } else {
-            resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
-        }
-
-        if ($(document).scrollTop() > 5715) {
-            revealYearBubble("#2013-bubble");
-        } else {
-            revealYearBubbleReset("#2013-bubble")
-        }
-
-        if ($(document).scrollTop() > 5915) {
-            revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
-        } else {
-            resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
-        }
-
-        if ($(document).scrollTop() > 6200) {
-            revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
-
-            moveToPos2("#sideline-lsa");
-            moveToPos3("#sideline-km");
-        } else {
-            resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
-
-            moveToPos2Reset("#sideline-lsa");
-            moveToPos3Reset("#sideline-km");
-        }
-
-        if ($(document).scrollTop() > 6860) {
-            revealYearBubble("#2011-bubble");
-        } else {
-            revealYearBubbleReset("#2011-bubble");
-        }
-
-
-        if ($(document).scrollTop() > 7060) {
-            revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
-        } else {
-            resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
-        }
-
-        if ($(document).scrollTop() > 7360) {
-            revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
-        } else {
-            resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
-        }
-
-        if ($(document).scrollTop() > 7970) {
-            revealYearBubble("#2010-bubble");
-        } else {
-            revealYearBubbleReset("#2010-bubble");
-        }
-
-        if ($(document).scrollTop() > 8170) {
-            revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
-        } else {
-            resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
-        }
-
-        if ($(document).scrollTop() > 8422) {
-            revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
-        } else {
-            resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
-        }
-
-        if ($(document).scrollTop() > 9221) {
-            revealYearBubble("#2009-bubble");
-        } else {
-            revealYearBubbleReset("#2009-bubble");
-        }
-
-        if ($(document).scrollTop() > 9420) {
-            revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
-        } else {
-            resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
-        }
-
-        if ($(document).scrollTop() > 9710) {
-            revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
-        } else {
-            resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
-        }
-
-        if ($(document).scrollTop() > 10050) {
-            revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
-        } else {
-            resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
-        }
-    });
-
-    //****************************************************************************REVEAL/RESET TIMELINE ITEM FUNCTIONS
-
-    function revealTimelineItem(DateTitlePara, contSideline, sidelineTop, sidelineBottom) {
-        $(DateTitlePara).addClass("reveal-width");
-        $(contSideline).removeClass("hide-away");
-
-        setTimeout(function () {
-            $(contSideline).show();
-            $(sidelineTop).addClass("reveal");
-
-            setTimeout(function () {
-                $(sidelineBottom).show();
-                $(contSideline).addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-
-    function resetTimelineItem(DateTitlePara, contSideline) {
-        $(DateTitlePara).removeClass("reveal-width");
-        $(contSideline).addClass("hide-away");
-    }
-
-    //*************************************************************************************SIDELINE MOVE POS FUNCTIONS
-
-    function moveToPos2(id) {
-        $(id).addClass("sideline-pos2");
-    }
-
-    function moveToPos3(id) {
-        $(id).addClass("sideline-pos3");
-    }
-
-    function moveToPos4(id) {
-        $(id).addClass("sideline-pos4");
-    }
-
-    function moveToPos2Reset(id) {
-        $(id).removeClass("sideline-pos2");
-    }
-
-    function moveToPos3Reset(id) {
-        $(id).removeClass("sideline-pos3");
-    }
-
-    function moveToPos4Reset(id) {
-        $(id).removeClass("sideline-pos4");
-    }
-
-    //*************************************************************************************REVEAL YEAR BUBBLE
-
-    function revealYearBubble(id) {
-        $(id).addClass("reveal");
-    }
-
-    function revealYearBubbleReset(id) {
-        $(id).removeClass("reveal");
-    }
-
     // =========================================================================================== ~ NAVIGATION SCRIPTS
 
 
@@ -1996,6 +1746,7 @@ SCRIPTS
         $("#overview, #footer").show();
 
         overviewScroll();
+        footerScroll(2981, 3300);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
@@ -2023,6 +1774,8 @@ SCRIPTS
         $("#timeline-inactive").animate({width: '170px'});
 
         $("#timeline, #footer").show();
+        timelineScroll();
+        footerScroll(10740, 11259);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
@@ -2125,60 +1878,44 @@ SCRIPTS
                 scrollToTopAnimationReset();
             }
 
-            if ($(document).scrollTop() >= 220) {
+            if ($(document).scrollTop() > 220) {
                 revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
             }
             else {
                 resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
             }
 
-            if ($(document).scrollTop() >= 560) {
+            if ($(document).scrollTop() > 560) {
                 revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
             }
             else {
                 resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
             }
 
-            if ($(document).scrollTop() >= 1100) {
+            if ($(document).scrollTop() > 1100) {
                 revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
             } else {
                 resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
             }
 
-            if ($(document).scrollTop() >= 1500) {
+            if ($(document).scrollTop() > 1500) {
                 revealOverviewInformationBlock("#POIPara, #POITitle");
             } else {
                 resetOverviewInformationBlock("#POIPara, #POITitle");
             }
 
 
-            if ($(document).scrollTop() >= 1990) {
+            if ($(document).scrollTop() > 1990) {
                 revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
             } else {
                 resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
             }
 
-            if ($(document).scrollTop() >= 2220) {
+            if ($(document).scrollTop() > 2220) {
                 revealOverviewInformationBlock("#IntPara, #IntTitle");
             } else {
                 resetOverviewInformationBlock("#IntPara, #IntTitle");
             }
-
-
-            if ($(document).scrollTop() >= 2981) {
-                FooterAnimation();
-            }
-            else {
-                FooterAnimationReset();
-            }
-
-            if ($(document).scrollTop() >= 3300) {
-                $("#footer-promo-text").fadeIn();
-            }
-            else {
-                $("#footer-promo-text").fadeOut();
-            }
-
 
         });
     }
@@ -2205,13 +1942,266 @@ SCRIPTS
         $(paraAndTitle).removeClass("reveal-width");
     }
 
+    // ============================================================================================ ~ TIMELINE SCRIPTS
+
+    function timelineScroll() {
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+
+                console.log($("body").scrollTop() + " px");
+            } else {
+            }
+
+            if ($(document).scrollTop() > 134) {
+                arrowScrollDownAnimationReset();
+
+                revealYearBubble("#2017-bubble");
+            } else {
+                revealYearBubbleReset("#2017-bubble")
+            }
+
+
+            if ($(document).scrollTop() > 330) {
+                revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
+            } else {
+                resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
+            }
+
+
+            if ($(document).scrollTop() > 1020) {
+                revealYearBubble("#2016-bubble");
+            } else {
+                revealYearBubbleReset("#2016-bubble");
+            }
+
+            if ($(document).scrollTop() > 1210) {
+                revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
+
+                moveToPos2("#sideline-fl");
+            } else {
+                resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
+
+                moveToPos2Reset("#sideline-fl");
+            }
+
+            if ($(document).scrollTop() > 1990) {
+                revealYearBubble("#2015-bubble");
+            } else {
+                revealYearBubbleReset("#2015-bubble");
+            }
+
+            if ($(document).scrollTop() > 2190) {
+                revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
+
+                moveToPos2("#sideline-gh");
+                moveToPos3("#sideline-fl");
+            } else {
+                resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
+
+                moveToPos2Reset("#sideline-gh");
+                moveToPos3Reset("#sideline-fl");
+            }
+
+            if ($(document).scrollTop() > 2740) {
+                revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
+
+            } else {
+                resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
+            }
+
+            if ($(document).scrollTop() > 3180) {
+                revealYearBubble("#2014-bubble");
+            } else {
+                revealYearBubbleReset("#2014-bubble");
+            }
+
+            if ($(document).scrollTop() > 3380) {
+                revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
+
+            } else {
+                resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
+            }
+
+            if ($(document).scrollTop() > 3670) {
+                revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
+            } else {
+                resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
+            }
+
+            if ($(document).scrollTop() > 4220) {
+                revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
+
+
+                moveToPos2("#sideline-km");
+                moveToPos3("#sideline-gh");
+            } else {
+                resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
+
+                moveToPos2Reset("#sideline-km");
+                moveToPos3Reset("#sideline-gh");
+            }
+
+            if ($(document).scrollTop() > 4965) {
+                revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
+            } else {
+                resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
+            }
+
+            if ($(document).scrollTop() > 5715) {
+                revealYearBubble("#2013-bubble");
+            } else {
+                revealYearBubbleReset("#2013-bubble")
+            }
+
+            if ($(document).scrollTop() > 5915) {
+                revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
+            } else {
+                resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
+            }
+
+            if ($(document).scrollTop() > 6200) {
+                revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
+
+                moveToPos2("#sideline-lsa");
+                moveToPos3("#sideline-km");
+            } else {
+                resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
+
+                moveToPos2Reset("#sideline-lsa");
+                moveToPos3Reset("#sideline-km");
+            }
+
+            if ($(document).scrollTop() > 6860) {
+                revealYearBubble("#2011-bubble");
+            } else {
+                revealYearBubbleReset("#2011-bubble");
+            }
+
+
+            if ($(document).scrollTop() > 7060) {
+                revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
+            } else {
+                resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
+            }
+
+            if ($(document).scrollTop() > 7360) {
+                revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
+            } else {
+                resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
+            }
+
+            if ($(document).scrollTop() > 7970) {
+                revealYearBubble("#2010-bubble");
+            } else {
+                revealYearBubbleReset("#2010-bubble");
+            }
+
+            if ($(document).scrollTop() > 8170) {
+                revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
+            } else {
+                resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
+            }
+
+            if ($(document).scrollTop() > 8422) {
+                revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
+            } else {
+                resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
+            }
+
+            if ($(document).scrollTop() > 9221) {
+                revealYearBubble("#2009-bubble");
+            } else {
+                revealYearBubbleReset("#2009-bubble");
+            }
+
+            if ($(document).scrollTop() > 9420) {
+                revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
+            } else {
+                resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
+            }
+
+            if ($(document).scrollTop() > 9710) {
+                revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
+            } else {
+                resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
+            }
+
+            if ($(document).scrollTop() > 10050) {
+                revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
+            } else {
+                resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
+            }
+        });
+    }
+
+    //****************************************************************************REVEAL/RESET TIMELINE ITEM FUNCTIONS
+
+    function revealTimelineItem(DateTitlePara, contSideline, sidelineTop, sidelineBottom) {
+        $(DateTitlePara).addClass("reveal-width");
+        $(contSideline).removeClass("hide-away");
+
+        setTimeout(function () {
+            $(contSideline).show();
+            $(sidelineTop).addClass("reveal");
+
+            setTimeout(function () {
+                $(sidelineBottom).show();
+                $(contSideline).addClass("reveal");
+            }, 1000);
+        }, 1000);
+    }
+
+
+    function resetTimelineItem(DateTitlePara, contSideline) {
+        $(DateTitlePara).removeClass("reveal-width");
+        $(contSideline).addClass("hide-away");
+    }
+
+    //*************************************************************************************SIDELINE MOVE POS FUNCTIONS
+
+    function moveToPos2(id) {
+        $(id).addClass("sideline-pos2");
+    }
+
+    function moveToPos3(id) {
+        $(id).addClass("sideline-pos3");
+    }
+
+    function moveToPos4(id) {
+        $(id).addClass("sideline-pos4");
+    }
+
+    function moveToPos2Reset(id) {
+        $(id).removeClass("sideline-pos2");
+    }
+
+    function moveToPos3Reset(id) {
+        $(id).removeClass("sideline-pos3");
+    }
+
+    function moveToPos4Reset(id) {
+        $(id).removeClass("sideline-pos4");
+    }
+
+    //*************************************************************************************REVEAL YEAR BUBBLE
+
+    function revealYearBubble(id) {
+        $(id).addClass("reveal");
+    }
+
+    function revealYearBubbleReset(id) {
+        $(id).removeClass("reveal");
+    }
+
     // ============================================================================================ ~ CONTACT SCRIPTS
 
 
     //    ****************************************************************************CONTACT ANIMATIONS/RESET
 
+
     // ***  ~ CONTACT ANIMATION REVEAL ANIMATION ***
     function contactAnimation() {
+        contactAnimationReset();
         stemShrink();
         setTimeout(function () {
             $("#contact-icon-email").addClass("animate");
@@ -2237,35 +2227,49 @@ SCRIPTS
 
     function contactAnimationReset() {
         stem_grow();
-        setTimeout(function () {
-            $("#contact-icon-linkedIn").removeClass("animate");
+        $("#contact-icon-linkedIn").removeClass("animate");
 
 
-            setTimeout(function () {
-                $("#stem-stub-2").removeClass("animate");
-                $("#cont-contact-phone").removeClass("animate");
+        $("#stem-stub-2").removeClass("animate");
+        $("#cont-contact-phone").removeClass("animate");
 
-                setTimeout(function () {
-                    $("#contact-icon-phone").removeClass("animate");
 
-                    setTimeout(function () {
-                        $("#stem-stub-1").removeClass("animate");
-                        $("#cont-contact-email").removeClass("animate");
+        $("#contact-icon-phone").removeClass("animate");
 
-                        setTimeout(function () {
-                            $("#contact-icon-email").removeClass("animate");
-                        }, 1000);
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 500);
+
+        $("#stem-stub-1").removeClass("animate");
+        $("#cont-contact-email").removeClass("animate");
+
+
+        $("#contact-icon-email").removeClass("animate");
+
     }
 
     function stemShrink() {
         $("#stem").animate({height: '420px'});
     }
 
+    // ============================================================================================ ~ FOOTER SCRIPTS
 
+    function footerScroll(distIllumination, distPromo) {
+        if ($(document).scrollTop() > distIllumination) {
+//            2981
+            FooterAnimation();
+        }
+        else {
+            FooterAnimationReset();
+        }
+
+
+        if ($(document).scrollTop() > distPromo) {
+//            3300
+            $("#footer-promo-text").fadeIn();
+        }
+        else {
+            $("#footer-promo-text").fadeOut();
+        }
+
+    }
 
     //    ****************************************************************************FOOTER REVEAL FUNCTIONS
 
