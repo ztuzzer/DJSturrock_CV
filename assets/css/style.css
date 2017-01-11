@@ -1017,7 +1017,7 @@ font-size: 25px;
     transition: all 1s;
 }
 
-#cont-sideline-FL.hide-away {
+.cont-sidelines.hide-away {
     -webkit-transform: scale(0);
     -moz-transform:    scale(0);
     -ms-transform:     scale(0);
