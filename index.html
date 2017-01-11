@@ -45,6 +45,9 @@
 <body>
 
 <div id="stem" class="stem">
+    <!--<div class="measure"></div>-->
+
+
     <!--<div class="cont-scroll-to-top">-->
     <!--<a>-->
     <!--<img src="assets/icons/up-arrow.svg" id="scroll-to-top" class="scroll-to-top"-->
@@ -58,75 +61,78 @@
     <!-- ==================================================
     HEADER
     ================================================== -->
-    <!-- ********************
-    NAV
-    ******************** -->
-    <div class="cont-left">
-        <div class="cont-nav">
+    <div id="header">
+        <!-- ********************
+        NAV
+        ******************** -->
+        <div class="cont-left">
+            <div class="cont-nav">
 
-            <ul class="ul-simple">
-                <li class="li-header">
+                <ul class="ul-simple">
+                    <li class="li-header">
                     <span id="overview-active" class="nav-span-active">
                         <a class="nav-item">Overview</a>
                     </span>
-                    <span id="overview-inactive" class="nav-span-inactive">
+                        <span id="overview-inactive" class="nav-span-inactive">
                         <a class="nav-item inactive">Overview</a>
                     </span>
-                </li>
-                <li class="li-header">
+                    </li>
+                    <li class="li-header">
                     <span id="portfolio-active" class="nav-span-active">
                         <a class="nav-item">portfolio</a>
                     </span>
-                    <span id="portfolio-inactive" class="nav-span-inactive">
+                        <span id="portfolio-inactive" class="nav-span-inactive">
                         <a class="nav-item inactive">portfolio</a>
                     </span>
-                </li>
-                <li class="li-header">
+                    </li>
+                    <li class="li-header">
                     <span id="timeline-active" class="nav-span-active">
                         <a class="nav-item">timeline</a>
                     </span>
-                    <span id="timeline-inactive" class="nav-span-inactive">
+                        <span id="timeline-inactive" class="nav-span-inactive">
                         <a class="nav-item inactive">timeline</a>
                     </span>
-                </li>
-                <li class="li-header">
+                    </li>
+                    <li class="li-header">
                     <span id="contact-active" class="nav-span-active">
                         <a class="nav-item">contact</a>
                     </span>
-                    <span id="contact-inactive" class="nav-span-inactive">
+                        <span id="contact-inactive" class="nav-span-inactive">
                         <a class="nav-item inactive">contact</a>
                     </span>
-                </li>
-            </ul>
+                    </li>
+                </ul>
 
+            </div>
+            <!--end cont-nav-->
         </div>
-        <!--end cont-nav-->
-    </div>
-    <!-- end cont left-->
+        <!-- end cont left-->
 
-    <!-- ********************
-    MAIN TITLE
-    ******************** -->
-    <div class="cont-right">
-        <div class="cont-mainTitle">
-            <ul class="ul-simple">
-                <li class="li-header">
-                    <h1 id="daniel" class="name">Daniel</h1>
-                </li>
-                <li class="li-header">
-                    <h1 id="sturrock" class="name">Sturrock</h1>
-                </li>
-                <li class="li-header">
-                    <h1 id="ux-designer" class="title">UX Designer &</h1>
-                </li>
-                <li class="li-header">
-                    <h1 id="front-end-developer" class="title">Front End Developer</h1>
-                </li>
-            </ul>
+        <!-- ********************
+        MAIN TITLE
+        ******************** -->
+        <div class="cont-right">
+            <div class="cont-mainTitle">
+                <ul class="ul-simple">
+                    <li class="li-header">
+                        <h1 id="daniel" class="name">Daniel</h1>
+                    </li>
+                    <li class="li-header">
+                        <h1 id="sturrock" class="name">Sturrock</h1>
+                    </li>
+                    <li class="li-header">
+                        <h1 id="ux-designer" class="title">UX Designer &</h1>
+                    </li>
+                    <li class="li-header">
+                        <h1 id="front-end-developer" class="title">Front End Developer</h1>
+                    </li>
+                </ul>
+            </div>
+            <!--end cont-mainTitle-->
         </div>
-        <!--end cont-mainTitle-->
+        <!--end cont-right-->
     </div>
-    <!--end cont-right-->
+    <!--end #header -->
 
     <div class="cont-whole page-gap-100"></div>
 
@@ -511,7 +517,7 @@
                 <div class="cont-left cont-dateAndSidelines">
 
                     <!-- --- DATE --- -->
-                    <div id="2017-now-date" class="cont-timeline-month no-width reveal-width">
+                    <div id="2017-now-date" class="cont-timeline-month no-width">
                         <h2 class="timeline-month font-black">
                             now
                         </h2>
@@ -529,7 +535,8 @@
                                         class="sideline-months">Months</span>
                                 </p>
                             </div>
-                            <div class="sideline-stem">
+                            <div class="sideline-stem"
+                                 alt="Freelance Web Design & Development">
                             </div>
                         </div>
                         <!--end sideline-->
@@ -607,12 +614,12 @@
                     <!-- end cont-title-left-->
 
                     <!-- --- SIDELINE --- -->
-                    <div id="cont-sideline-gh" class="cont-sidelines gh reveal">
-                        <div id="sideline-gh" class="sideline sideline-pos1 sideline-pos2 sideline-pos3">
+                    <div id="cont-sideline-gh" class="cont-sidelines gh">
+                        <div id="sideline-gh" class="sideline sideline-pos1">
 
                             <div id="sideline-bottom-gh" class="sideline-bottom">
                             </div>
-                            <div id="sideline-top-gh" class="sideline-top reveal">
+                            <div id="sideline-top-gh" class="sideline-top">
                                 <p class=""><span class="small-character">30</span><br><span class="sideline-months">Months</span>
                                 </p>
                             </div>
@@ -757,35 +764,35 @@
                         </h2>
                     </div>
                     <!-- end cont-title-left-->
-
-
                 </div>
                 <!--end cont-dateAndSidelines-->
-            </div>
-            <!--end cont-left-->
 
-            <div class="cont-right">
-                <div id="2015-jan-title" class="cont-title-right align-center no-width">
-                    <h2 class="title-right font-white">Start Freelance Web Design & Development </h2>
+
+                <div class="cont-right">
+                    <div id="2015-jan-title" class="cont-title-right align-center no-width">
+                        <h2 class="title-right font-white">Start Freelance Web Design & Development </h2>
+                    </div>
+                    <!--end cont-title-right-->
+
+                    <!--<div id="" class="timeline-cont-paragraph-right no-width">-->
+                    <!--<p class="timeline-paragraph-right scrollbar-thin standard-character">-->
+                    <!--Setup as a Community Interest Company, Global Hands aims to tackle issues regarding local-->
+                    <!--and global inequality by raising consciousness about local and global issues through-->
+                    <!--community engagement.-->
+                    <!--After working with Global Hands for a short while as a graphic designer and website-->
+                    <!--developer, I was promptly promoted to head of my department and became one of the key-->
+                    <!--members of the organisation as their Communications Director. My role was to ensure that-->
+                    <!--both internal and external communications were consistent, efficient and engaging. As such I-->
+                    <!--had to manage numerous people and projects simultaneously and work to deadlines whilst-->
+                    <!--maintaining compassionate and empathetic relationships with those I worked with.-->
+                    <!--</p>-->
+                    <!--</div>-->
+                    <!--end timeline-cont-paragraph-right-->
                 </div>
-                <!--end cont-title-right-->
-
-                <!--<div id="" class="timeline-cont-paragraph-right no-width">-->
-                <!--<p class="timeline-paragraph-right scrollbar-thin standard-character">-->
-                <!--Setup as a Community Interest Company, Global Hands aims to tackle issues regarding local-->
-                <!--and global inequality by raising consciousness about local and global issues through-->
-                <!--community engagement.-->
-                <!--After working with Global Hands for a short while as a graphic designer and website-->
-                <!--developer, I was promptly promoted to head of my department and became one of the key-->
-                <!--members of the organisation as their Communications Director. My role was to ensure that-->
-                <!--both internal and external communications were consistent, efficient and engaging. As such I-->
-                <!--had to manage numerous people and projects simultaneously and work to deadlines whilst-->
-                <!--maintaining compassionate and empathetic relationships with those I worked with.-->
-                <!--</p>-->
-                <!--</div>-->
-                <!--end timeline-cont-paragraph-right-->
+                <!--end cont-right-->
             </div>
-            <!--end cont-right-->
+            <!--end cont-whole-->
+
         </div>
         <!--end cont-whole-->
 
@@ -870,7 +877,7 @@
 
                 <!-- --- SIDELINE --- -->
                 <div id="cont-sideline-km" class="cont-sidelines km">
-                    <div id="sideline-km" class="sideline sideline-pos1 sideline-pos2">
+                    <div id="sideline-km" class="sideline sideline-pos1">
 
                         <div id="sideline-bottom-km" class="sideline-bottom">
                         </div>
@@ -1114,15 +1121,15 @@
                 <div id="cont-sideline-sg" class="cont-sidelines sg">
                     <div id="sideline-sg" class="sideline sideline-pos1">
 
-                        <div id="sideline-bottom-sg" class="sideline-bottom">
-                        </div>
+                        <!--<div id="sideline-bottom-sg" class="sideline-bottom">-->
+                        <!--</div>-->
                         <div id="sideline-top-sg" class="sideline-top">
                             <p class=""><span class="small-character">1</span><br><span
                                     class="sideline-months">Month</span>
                             </p>
                         </div>
-                        <div class="sideline-stem">
-                        </div>
+                        <!--<div class="sideline-stem">-->
+                        <!--</div>-->
                     </div>
                     <!--end sideline-->
                 </div>
@@ -1224,7 +1231,7 @@
 
         <div class="cont-whole">
             <div class="cont-left cont-dateAndSidelines">
-                <div id="2011-sep-date" class="cont-timeline-month no-width">
+                <div id="2011-jul-date" class="cont-timeline-month no-width">
                     <h2 class="timeline-month font-black">
                         jul
                     </h2>
@@ -1252,14 +1259,14 @@
             <!--end cont-left-->
 
             <div class="cont-right">
-                <div id="2011-sep-title" class="cont-title-right align-center no-width">
+                <div id="2011-jul-title" class="cont-title-right align-center no-width">
                     <h2 class="title-right font-white">Graduate Foundation Degree In Art & Architecture From
                         University of
                         Edinburgh</h2>
                 </div>
                 <!--end cont-title-right-->
 
-                <div id="2011-sep-para" class="timeline-cont-paragraph-right no-width">
+                <div id="2011-jul-para" class="timeline-cont-paragraph-right no-width">
                     <p class="timeline-paragraph-right scrollbar-thin standard-character">
                         I studied four art and architecture modules: “How Art Works”, “Art & Architecture in
                         Europe”, “Understanding Post-Modernism” and “Classical Architecture”, which I achieved all
@@ -1711,7 +1718,6 @@ FOOTER
 <!--end container-content-->
 
 
-</div>
 </body>
 
 <!-- ==================================================
@@ -1726,103 +1732,125 @@ FOOTER
         } else {
         }
 
-        if ($(document).scrollTop() > 200) {
+        if ($(document).scrollTop() > 330) {
             revealFL();
         } else {
             revealFLReset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 1210) {
             revealGH();
+
+            moveToPos2("#sideline-fl");
         } else {
             revealGHReset();
+
+            moveToPos2Reset("#sideline-fl");
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 2190) {
             revealGD();
+
+            moveToPos2("#sideline-gh");
+            moveToPos3("#sideline-fl");
         } else {
             revealGDReset();
+
+            moveToPos2Reset("#sideline-gh");
+            moveToPos3Reset("#sideline-fl");
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 2740) {
             revealFL2();
         } else {
             revealFL2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 3380) {
             revealGD2();
         } else {
             revealGD2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 3670) {
             revealKM();
         } else {
             revealKMReset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 4220) {
             revealLSA();
+
+            moveToPos2("#sideline-km");
+            moveToPos3("#sideline-gh");
         } else {
             revealLSAReset();
+
+            moveToPos2Reset("#sideline-km");
+            moveToPos3Reset("#sideline-gh");
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 4965) {
             revealGH2();
         } else {
             revealGH2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 5915) {
             revealKM2();
         } else {
             revealKM2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 6200) {
             revealSG();
+
+            moveToPos2("#sideline-lsa");
+            moveToPos3("#sideline-km");
         } else {
             revealSGReset();
+
+            moveToPos2Reset("#sideline-lsa");
+            moveToPos3Reset("#sideline-km");
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 7060) {
             revealLSA2();
         } else {
             revealLSA2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 7360) {
             revealUOE();
         } else {
             revealUOEReset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 8170) {
             revealUOE2();
         } else {
             revealUOE2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 8422) {
             revealSA();
         } else {
             revealSAReset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 9420) {
             revealSA2();
         } else {
             revealSA2Reset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 9710) {
             revealPL();
         } else {
             revealPLReset();
         }
 
-        if ($(document).scrollTop() > 400) {
+        if ($(document).scrollTop() > 10050) {
             revealSCH();
         } else {
             revealSCHReset();
@@ -2170,11 +2198,35 @@ FOOTER
         $("#cont-sideline-sch").addClass("hide-away");
     }
 
+    //*************************************************************************************SIDELINE MOVE POS
 
-    //                    setTimeout(function () {
-    //                        $("#sideline-FL").addClass("sideline-pos2");
-    //
-    //                    }, 1000);
+    //    moveToPos2("#overview, #timeline");
+
+
+    function moveToPos2(id) {
+        $(id).addClass("sideline-pos2");
+    }
+
+    function moveToPos3(id) {
+        $(id).addClass("sideline-pos3");
+    }
+
+    function moveToPos4(id) {
+        $(id).addClass("sideline-pos4");
+    }
+
+    function moveToPos2Reset(id) {
+        $(id).removeClass("sideline-pos2");
+    }
+
+    function moveToPos3Reset(id) {
+        $(id).removeClass("sideline-pos3");
+    }
+
+    function moveToPos4Reset(id) {
+        $(id).removeClass("sideline-pos4");
+    }
+
 
     // ****  ~ Overview ****
     $("#overview-active").click(function () {

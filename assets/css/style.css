@@ -83,9 +83,9 @@ h2 {
 .container-content {
     width: 100%;
     overflow-x: hidden;
-height: auto;
+/*height: auto;*/
 
-    /*background-color: red;*/
+    background-color: red;
 }
 
 .cont-left {
@@ -619,7 +619,7 @@ HIDE ITEMS
 , #contact
 , h1.name
 , h1.title
-/*, #timeline*/
+, #timeline
 , .sideline-bottom
 {
     display: none;
@@ -815,7 +815,7 @@ line-height: 50px;
 .cont-dateAndSidelines {
     height: 50px;
     overflow: visible;
-    background-color: orange;
+    /*background-color: orange;*/
 }
 
 /*.cont-dateAndSidelines.no-width {*/
@@ -1024,4 +1024,24 @@ font-size: 25px;
     -o-transform:      scale(0);
     transform: scale(0);
     transition: all 1s;
+}
+
+.measure {
+    width: 100%;
+    background-color: red;
+    opacity: 0.5;
+    height: 50%;
+}
+
+
+#timeline {
+    background-color: orange;
+    height: auto;
+    width: 100%;
+}
+
+#header {
+    background-color: blue;
+    height: auto;
+    width: 100%;
 }
