@@ -1748,23 +1748,24 @@
 
 
         if ($(document).scrollTop() > 330) {
-            revealFL();
+            revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
         } else {
-            revealFLReset();
+            resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
         }
+
 
         if ($(document).scrollTop() > 1020) {
             revealYearBubble("#2016-bubble");
         } else {
-            revealYearBubbleReset("#2016-bubble")
+            revealYearBubbleReset("#2016-bubble");
         }
 
         if ($(document).scrollTop() > 1210) {
-            revealGH();
+            revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
 
             moveToPos2("#sideline-fl");
         } else {
-            revealGHReset();
+            resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
 
             moveToPos2Reset("#sideline-fl");
         }
@@ -1772,61 +1773,64 @@
         if ($(document).scrollTop() > 1990) {
             revealYearBubble("#2015-bubble");
         } else {
-            revealYearBubbleReset("#2015-bubble")
+            revealYearBubbleReset("#2015-bubble");
         }
 
         if ($(document).scrollTop() > 2190) {
-            revealGD();
-
+            revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
+            
             moveToPos2("#sideline-gh");
             moveToPos3("#sideline-fl");
         } else {
-            revealGDReset();
-
+            resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
+            
             moveToPos2Reset("#sideline-gh");
             moveToPos3Reset("#sideline-fl");
         }
 
         if ($(document).scrollTop() > 2740) {
-            revealFL2();
+            revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
+
         } else {
-            revealFL2Reset();
+            resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
         }
 
         if ($(document).scrollTop() > 3180) {
             revealYearBubble("#2014-bubble");
         } else {
-            revealYearBubbleReset("#2014-bubble")
+            revealYearBubbleReset("#2014-bubble");
         }
 
         if ($(document).scrollTop() > 3380) {
-            revealGD2();
+            revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
+
         } else {
-            revealGD2Reset();
+            resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
         }
 
         if ($(document).scrollTop() > 3670) {
-            revealKM();
+            revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
         } else {
-            revealKMReset();
+            resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
         }
 
         if ($(document).scrollTop() > 4220) {
-            revealLSA();
+            revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
+
 
             moveToPos2("#sideline-km");
             moveToPos3("#sideline-gh");
         } else {
-            revealLSAReset();
+            resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
 
             moveToPos2Reset("#sideline-km");
             moveToPos3Reset("#sideline-gh");
         }
 
         if ($(document).scrollTop() > 4965) {
-            revealGH2();
+            revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
         } else {
-            revealGH2Reset();
+            resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
         }
 
         if ($(document).scrollTop() > 5715) {
@@ -1836,18 +1840,18 @@
         }
 
         if ($(document).scrollTop() > 5915) {
-            revealKM2();
+            revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
         } else {
-            revealKM2Reset();
+            resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
         }
 
         if ($(document).scrollTop() > 6200) {
-            revealSG();
+            revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
 
             moveToPos2("#sideline-lsa");
             moveToPos3("#sideline-km");
         } else {
-            revealSGReset();
+            resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
 
             moveToPos2Reset("#sideline-lsa");
             moveToPos3Reset("#sideline-km");
@@ -1856,404 +1860,85 @@
         if ($(document).scrollTop() > 6860) {
             revealYearBubble("#2011-bubble");
         } else {
-            revealYearBubbleReset("#2011-bubble")
+            revealYearBubbleReset("#2011-bubble");
         }
 
 
         if ($(document).scrollTop() > 7060) {
-            revealLSA2();
+            revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
         } else {
-            revealLSA2Reset();
+            resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
         }
 
         if ($(document).scrollTop() > 7360) {
-            revealUOE();
+            revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
         } else {
-            revealUOEReset();
+            resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
         }
 
         if ($(document).scrollTop() > 7970) {
             revealYearBubble("#2010-bubble");
         } else {
-            revealYearBubbleReset("#2010-bubble")
+            revealYearBubbleReset("#2010-bubble");
         }
 
         if ($(document).scrollTop() > 8170) {
-            revealUOE2();
+            revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
         } else {
-            revealUOE2Reset();
+            resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
         }
 
         if ($(document).scrollTop() > 8422) {
-            revealSA();
+            revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
         } else {
-            revealSAReset();
+            resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
         }
 
         if ($(document).scrollTop() > 9221) {
             revealYearBubble("#2009-bubble");
         } else {
-            revealYearBubbleReset("#2009-bubble")
+            revealYearBubbleReset("#2009-bubble");
         }
 
         if ($(document).scrollTop() > 9420) {
-            revealSA2();
+            revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
         } else {
-            revealSA2Reset();
+            resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
         }
 
         if ($(document).scrollTop() > 9710) {
-            revealPL();
+            revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
         } else {
-            revealPLReset();
+            resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
         }
 
         if ($(document).scrollTop() > 10050) {
-            revealSCH();
+            revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
         } else {
-            revealSCHReset();
+            resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
         }
     });
 
 
-    function revealFL() {
-        $("#2017-now-date, #2017-now-title, #2017-now-para").addClass("reveal-width");
-        $("#cont-sideline-fl").removeClass("hide-away");
+    function revealTimelineItem (DateTitlePara, contSideline, sidelineTop, sidelineBottom) {
+        $(DateTitlePara).addClass("reveal-width");
+        $(contSideline).removeClass("hide-away");
 
         setTimeout(function () {
-            $("#cont-sideline-fl").show();
-            $("#sideline-top-fl").addClass("reveal");
+            $(contSideline).show();
+            $(sidelineTop).addClass("reveal");
 
             setTimeout(function () {
-                $("#sideline-bottom-fl").show();
-                $("#cont-sideline-fl").addClass("reveal");
+                $(sidelineBottom).show();
+                $(contSideline).addClass("reveal");
             }, 1000);
         }, 1000);
     }
 
-    function revealFLReset() {
-        $("#2017-now-date, #2017-now-title, #2017-now-para").removeClass("reveal-width");
-        $("#cont-sideline-fl").addClass("hide-away");
-    }
 
-    function revealGH() {
-        $("#2016-dec-date, #2016-dec-title, #2016-dec-para").addClass("reveal-width");
-        $("#cont-sideline-gh").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-gh").show();
-            $("#sideline-top-gh").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-gh").show();
-                $("#cont-sideline-gh").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealGHReset() {
-        $("#2016-dec-date, #2016-dec-title, #2016-dec-para").removeClass("reveal-width");
-        $("#cont-sideline-gh").addClass("hide-away");
-    }
-
-    function revealGD() {
-        $("#2015-sep-date, #2015-sep-title, #2015-sep-para").addClass("reveal-width");
-        $("#cont-sideline-gd").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-gd").show();
-            $("#sideline-top-gd").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-gd").show();
-                $("#cont-sideline-gd").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealGDReset() {
-        $("#2015-sep-date, #2015-sep-title, #2015-sep-para").removeClass("reveal-width");
-        $("#cont-sideline-gd").addClass("hide-away");
-    }
-
-    function revealFL2() {
-        $("#2015-jan-date, #2015-jan-title, #2015-jan-para").addClass("reveal-width");
-        $("#cont-sideline-fl2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-fl2").show();
-            $("#sideline-top-fl2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-fl2").show();
-                $("#cont-sideline-fl2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealFL2Reset() {
-        $("#2015-jan-date, #2015-jan-title, #2015-jan-para").removeClass("reveal-width");
-        $("#cont-sideline-fl2").addClass("hide-away");
-    }
-
-    function revealGD2() {
-        $("#2014-oct-date, #2014-oct-title, #2014-oct-para").addClass("reveal-width");
-        $("#cont-sideline-gd2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-gd2").show();
-            $("#sideline-top-gd2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-gd2").show();
-                $("#cont-sideline-gd2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealGD2Reset() {
-        $("#2014-oct-date, #2014-oct-title, #2014-oct-para").removeClass("reveal-width");
-        $("#cont-sideline-gd2").addClass("hide-away");
-    }
-
-    function revealKM() {
-        $("#2014-sep-date, #2014-sep-title, #2014-sep-para").addClass("reveal-width");
-        $("#cont-sideline-km").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-km").show();
-            $("#sideline-top-km").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-km").show();
-                $("#cont-sideline-km").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealKMReset() {
-        $("#2014-sep-date, #2014-sep-title, #2014-sep-para").removeClass("reveal-width");
-        $("#cont-sideline-km").addClass("hide-away");
-    }
-
-    function revealLSA() {
-        $("#2014-aug-date, #2014-aug-title, #2014-aug-para").addClass("reveal-width");
-        $("#cont-sideline-lsa").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-lsa").show();
-            $("#sideline-top-lsa").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-lsa").show();
-                $("#cont-sideline-lsa").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealLSAReset() {
-        $("#2014-aug-date, #2014-aug-title, #2014-aug-para").removeClass("reveal-width");
-        $("#cont-sideline-lsa").addClass("hide-away");
-    }
-
-    function revealGH2() {
-        $("#2014-jul-date, #2014-jul-title, #2014-jul-para").addClass("reveal-width");
-        $("#cont-sideline-gh2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-gh2").show();
-            $("#sideline-top-gh2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-gh2").show();
-                $("#cont-sideline-gh2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealGH2Reset() {
-        $("#2014-jul-date, #2014-jul-title, #2014-jul-para").removeClass("reveal-width");
-        $("#cont-sideline-gh2").addClass("hide-away");
-    }
-
-    function revealKM2() {
-        $("#2013-aug-date, #2013-aug-title, #2013-aug-para").addClass("reveal-width");
-        $("#cont-sideline-km2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-km2").show();
-            $("#sideline-top-km2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-km2").show();
-                $("#cont-sideline-km2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealKM2Reset() {
-        $("#2013-aug-date, #2013-aug-title, #2013-aug-para").removeClass("reveal-width");
-        $("#cont-sideline-km2").addClass("hide-away");
-    }
-
-    function revealSG() {
-        $("#2013-jul-date, #2013-jul-title, #2013-jul-para").addClass("reveal-width");
-        $("#cont-sideline-sg").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-sg").show();
-            $("#sideline-top-sg").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-sg").show();
-                $("#cont-sideline-sg").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealSGReset() {
-        $("#2013-jul-date, #2013-jul-title, #2013-jul-para").removeClass("reveal-width");
-        $("#cont-sideline-sg").addClass("hide-away");
-    }
-
-    function revealLSA2() {
-        $("#2011-sep-date, #2011-sep-title, #2011-sep-para").addClass("reveal-width");
-        $("#cont-sideline-lsa2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-lsa2").show();
-            $("#sideline-top-lsa2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-lsa2").show();
-                $("#cont-sideline-lsa2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealLSA2Reset() {
-        $("#2011-sep-date, #2011-sep-title, #2011-sep-para").removeClass("reveal-width");
-        $("#cont-sideline-lsa2").addClass("hide-away");
-    }
-
-    function revealUOE() {
-        $("#2011-jul-date, #2011-jul-title, #2011-jul-para").addClass("reveal-width");
-        $("#cont-sideline-uoe").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-uoe").show();
-            $("#sideline-top-uoe").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-uoe").show();
-                $("#cont-sideline-uoe").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealUOEReset() {
-        $("#2011-jul-date, #2011-jul-title, #2011-jul-para").removeClass("reveal-width");
-        $("#cont-sideline-uoe").addClass("hide-away");
-    }
-
-    function revealUOE2() {
-        $("#2010-sep-date, #2010-sep-title, #2010-sep-para").addClass("reveal-width");
-        $("#cont-sideline-uoe2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-uoe2").show();
-            $("#sideline-top-uoe2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-uoe2").show();
-                $("#cont-sideline-uoe2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealUOE2Reset() {
-        $("#2010-sep-date, #2010-sep-title, #2010-sep-para").removeClass("reveal-width");
-        $("#cont-sideline-uoe2").addClass("hide-away");
-    }
-
-    function revealSA() {
-        $("#2010-jun-date, #2010-jun-title, #2010-jun-para").addClass("reveal-width");
-        $("#cont-sideline-sa").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-sa").show();
-            $("#sideline-top-sa").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-sa").show();
-                $("#cont-sideline-sa").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealSAReset() {
-        $("#2010-jun-date, #2010-jun-title, #2010-jun-para").removeClass("reveal-width");
-        $("#cont-sideline-sa").addClass("hide-away");
-    }
-
-    function revealSA2() {
-        $("#2009-sep-date, #2009-sep-title, #2009-sep-para").addClass("reveal-width");
-        $("#cont-sideline-sa2").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-sa2").show();
-            $("#sideline-top-sa2").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-sa2").show();
-                $("#cont-sideline-sa2").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealSA2Reset() {
-        $("#2009-sep-date, #2009-sep-title, #2009-sep-para").removeClass("reveal-width");
-        $("#cont-sideline-sa2").addClass("hide-away");
-    }
-
-    function revealPL() {
-        $("#2009-aug-date, #2009-aug-title, #2009-aug-para").addClass("reveal-width");
-        $("#cont-sideline-pl").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-pl").show();
-            $("#sideline-top-pl").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-pl").show();
-                $("#cont-sideline-pl").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealPLReset() {
-        $("#2009-aug-date, #2009-aug-title, #2009-aug-para").removeClass("reveal-width");
-        $("#cont-sideline-pl").addClass("hide-away");
-    }
-
-    function revealSCH() {
-        $("#2009-jul-date, #2009-jul-title, #2009-jul-para").addClass("reveal-width");
-        $("#cont-sideline-sch").removeClass("hide-away");
-
-        setTimeout(function () {
-            $("#cont-sideline-sch").show();
-            $("#sideline-top-sch").addClass("reveal");
-
-            setTimeout(function () {
-                $("#sideline-bottom-sch").show();
-                $("#cont-sideline-sch").addClass("reveal");
-            }, 1000);
-        }, 1000);
-    }
-
-    function revealSCHReset() {
-        $("#2009-jul-date, #2009-jul-title, #2009-jul-para").removeClass("reveal-width");
-        $("#cont-sideline-sch").addClass("hide-away");
+    function resetTimelineItem (DateTitlePara, contSideline) {
+        $(DateTitlePara).removeClass("reveal-width");
+        $(contSideline).addClass("hide-away");
     }
 
     //*************************************************************************************SIDELINE MOVE POS
@@ -2465,43 +2150,44 @@
             }
 
             if ($(document).scrollTop() >= 220) {
-                CarStaAnimation();
+                revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
             }
             else {
-                CarStaAnimationReset();
+                resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
             }
 
             if ($(document).scrollTop() >= 560) {
-                TecSkiAnimation();
+                revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
             }
             else {
-                TecSkiAnimationReset();
+                resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
             }
 
             if ($(document).scrollTop() >= 1100) {
-                EduBacAnimation();
-            }
-            else {
-                EduBacAnimationReset();
+                revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
+            } else {
+               resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
             }
 
             if ($(document).scrollTop() >= 1500) {
-                POIAnimation();
+                revealOverviewInformationBlock("#POIPara, #POITitle");
             } else {
-                POIAnimationReset();
+                resetOverviewInformationBlock("#POIPara, #POITitle");
             }
 
+
             if ($(document).scrollTop() >= 1990) {
-                PerSumAnimation();
+                revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
             } else {
-                PerSumAnimationReset();
+                resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
             }
 
             if ($(document).scrollTop() >= 2220) {
-                IntAnimation();
+                revealOverviewInformationBlock("#IntPara, #IntTitle");
             } else {
-                IntAnimationReset();
+                resetOverviewInformationBlock("#IntPara, #IntTitle");
             }
+
 
             if ($(document).scrollTop() >= 2981) {
                 FooterAnimation();
@@ -2521,14 +2207,29 @@
         });
     }
 
-    //    $(document).ready(function () {
-    //
-    //    });
+//    ****************************************************************************OVERVIEW REVEAL/RESET FUNCTIONS
 
-    // *** SCROLL DOWN BTN ***
-    $("#arrow-scroll-down").click(function () {
-        $("body").animate({"scrollTop": window.scrollY + 350}, 500);
-    });
+    function revealOverviewBubble (imgBubble, title, paraCont) {
+        $(imgBubble).addClass("animate");
+        $(title).addClass("reveal-width");
+        $(paraCont).addClass("reveal-height");
+    }
+
+    function resetOverviewBubble (imgBubble, title, paraCont) {
+        $(imgBubble).removeClass("animate");
+        $(title).removeClass("reveal-width");
+        $(paraCont).removeClass("reveal-height");
+    }
+
+    function revealOverviewInformationBlock (paraAndTitle) {
+        $(paraAndTitle).addClass("reveal-width");
+    }
+
+    function resetOverviewInformationBlock (paraAndTitle) {
+        $(paraAndTitle).removeClass("reveal-width");
+    }
+
+    //    ****************************************************************************CONTACT ANIMATIONS/RESET
 
     // ***  ~ CONTACT ANIMATION REVEAL ANIMATION ***
     function contactAnimation() {
@@ -2585,73 +2286,8 @@
         $("#stem").animate({height: '420px'});
     }
 
+    //    ****************************************************************************FOOTER REVEAL FUNCTIONS
 
-    // ***  ~ PERSONAL SUMMARY REVEAL ANIMATION ***
-    function PerSumAnimation() {
-        $("#PerSumImg").addClass("animate");
-        $("#PerSumTitle").addClass("reveal-width");
-        $("#PerSumParaCont").addClass("reveal-height");
-    }
-
-    function PerSumAnimationReset() {
-        $("#PerSumImg").removeClass("animate");
-        $("#PerSumTitle").removeClass("reveal-width");
-        $("#PerSumParaCont").removeClass("reveal-height");
-    }
-
-    // ***  ~ INTEREST REVEAL ANIMATION ***
-    function IntAnimation() {
-        $("#IntPara, #IntTitle").addClass("reveal-width");
-    }
-
-    function IntAnimationReset() {
-        $("#IntPara, #IntTitle").removeClass("reveal-width");
-    }
-
-    // ***  ~ EDUCATIONAL BACKGROUND REVEAL ANIMATION ***
-    function EduBacAnimation() {
-        $("#EduBacImg").addClass("animate");
-        $("#EduBacTitle").addClass("reveal-width");
-        $("#EduBacPara").addClass("reveal-height");
-    }
-
-    function EduBacAnimationReset() {
-        $("#EduBacPara").removeClass("reveal-height");
-        $("#EduBacTitle").removeClass("reveal-width");
-        $("#EduBacImg").removeClass("animate");
-    }
-
-    // ***  ~ CAREER STATEMENT REVEAL ANIMATION ***
-    function CarStaAnimation() {
-        $("#CarStaImg").addClass("animate");
-        $("#CarStaTitle").addClass("reveal-width");
-        $("#CarStaPara").addClass("reveal-height");
-    }
-
-    function CarStaAnimationReset() {
-        $("#CarStaPara").removeClass("reveal-height");
-        $("#CarStaTitle").removeClass("reveal-width");
-        $("#CarStaImg").removeClass("animate");
-    }
-
-    // *** ~ TECHNICAL SKILLSET REVEAL ANIMATION ***
-    function TecSkiAnimation() {
-        $("#TecSkiPara, #TecSkiTitle").addClass("reveal-width");
-    }
-
-    function TecSkiAnimationReset() {
-        $("#TecSkiPara, #TecSkiTitle").removeClass("reveal-width");
-    }
-
-
-    // *** ~ POI REVEAL ANIMATION ***
-    function POIAnimation() {
-        $("#POIPara, #POITitle").addClass("reveal-width");
-    }
-
-    function POIAnimationReset() {
-        $("#POIPara, #POITitle").removeClass("reveal-width");
-    }
 
     // *** ~ FOOTER REVEAL ANIMATION ***
 
@@ -2665,6 +2301,13 @@
         $("#footer-content-inv").addClass("invisible");
     }
 
+    //    ****************************************************************************SCROLL DOWN BUTTON FUNCTION
+
+    // *** SCROLL DOWN BTN ***
+    $("#arrow-scroll-down").click(function () {
+        $("body").animate({"scrollTop": window.scrollY + 350}, 500);
+    });
+
     // *** ~ ARROW SCROLL DOWN REVEAL ANIMATION ***
     function arrowScrollDownAnimation() {
         $("#arrow-scroll-down").addClass("reveal");
@@ -2673,6 +2316,8 @@
         $("#arrow-scroll-down").removeClass("reveal");
     }
 
+    //    ****************************************************************************SCROLL TO TOP FUNCTION
+
     // *** ~ SCROLL TOP REVEAL ANIMATION ***
     function scrollToTopAnimation() {
         $("#scroll-to-top").addClass("reveal");
@@ -2680,6 +2325,7 @@
     function scrollToTopAnimationReset() {
         $("#scroll-to-top").removeClass("reveal");
     }
+
 
 </script>
 <!-- ==================================================
