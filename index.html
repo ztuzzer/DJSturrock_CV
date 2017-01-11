@@ -1726,9 +1726,10 @@
 </body>
 
 <!-- ==================================================
- ~ NAV SCRIPTS
+SCRIPTS
 ================================================== -->
 <script>
+    // ============================================================================================ ~ TIMELINE SCRIPTS
 
 
     $(window).scroll(function () {
@@ -1778,12 +1779,12 @@
 
         if ($(document).scrollTop() > 2190) {
             revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
-            
+
             moveToPos2("#sideline-gh");
             moveToPos3("#sideline-fl");
         } else {
             resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
-            
+
             moveToPos2Reset("#sideline-gh");
             moveToPos3Reset("#sideline-fl");
         }
@@ -1919,8 +1920,9 @@
         }
     });
 
+    //****************************************************************************REVEAL/RESET TIMELINE ITEM FUNCTIONS
 
-    function revealTimelineItem (DateTitlePara, contSideline, sidelineTop, sidelineBottom) {
+    function revealTimelineItem(DateTitlePara, contSideline, sidelineTop, sidelineBottom) {
         $(DateTitlePara).addClass("reveal-width");
         $(contSideline).removeClass("hide-away");
 
@@ -1936,12 +1938,12 @@
     }
 
 
-    function resetTimelineItem (DateTitlePara, contSideline) {
+    function resetTimelineItem(DateTitlePara, contSideline) {
         $(DateTitlePara).removeClass("reveal-width");
         $(contSideline).addClass("hide-away");
     }
 
-    //*************************************************************************************SIDELINE MOVE POS
+    //*************************************************************************************SIDELINE MOVE POS FUNCTIONS
 
     function moveToPos2(id) {
         $(id).addClass("sideline-pos2");
@@ -1969,45 +1971,15 @@
 
     //*************************************************************************************REVEAL YEAR BUBBLE
 
-    function revealYearBubble (id) {
+    function revealYearBubble(id) {
         $(id).addClass("reveal");
     }
 
-    function revealYearBubbleReset (id) {
+    function revealYearBubbleReset(id) {
         $(id).removeClass("reveal");
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // =========================================================================================== ~ NAVIGATION SCRIPTS
 
 
     // ****  ~ Overview ****
@@ -2090,6 +2062,8 @@
     //    console.log("h =" + h);
     //    console.log("h2 =" + h2);
 
+    // ========================================================================================== ~ HEADER INIT SCRIPTS
+
 
     $(document).ready(header_init());
     //    $(document).ready(arrowScrollDownAnimation());
@@ -2138,6 +2112,8 @@
         }, 500);
     }
 
+    // ============================================================================================ ~ OVERVIEW SCRIPTS
+
 
     function overviewScroll() {
         $(window).scroll(function () {
@@ -2166,7 +2142,7 @@
             if ($(document).scrollTop() >= 1100) {
                 revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
             } else {
-               resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
+                resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
             }
 
             if ($(document).scrollTop() >= 1500) {
@@ -2207,27 +2183,30 @@
         });
     }
 
-//    ****************************************************************************OVERVIEW REVEAL/RESET FUNCTIONS
+    //    ****************************************************************************OVERVIEW REVEAL/RESET FUNCTIONS
 
-    function revealOverviewBubble (imgBubble, title, paraCont) {
+    function revealOverviewBubble(imgBubble, title, paraCont) {
         $(imgBubble).addClass("animate");
         $(title).addClass("reveal-width");
         $(paraCont).addClass("reveal-height");
     }
 
-    function resetOverviewBubble (imgBubble, title, paraCont) {
+    function resetOverviewBubble(imgBubble, title, paraCont) {
         $(imgBubble).removeClass("animate");
         $(title).removeClass("reveal-width");
         $(paraCont).removeClass("reveal-height");
     }
 
-    function revealOverviewInformationBlock (paraAndTitle) {
+    function revealOverviewInformationBlock(paraAndTitle) {
         $(paraAndTitle).addClass("reveal-width");
     }
 
-    function resetOverviewInformationBlock (paraAndTitle) {
+    function resetOverviewInformationBlock(paraAndTitle) {
         $(paraAndTitle).removeClass("reveal-width");
     }
+
+    // ============================================================================================ ~ CONTACT SCRIPTS
+
 
     //    ****************************************************************************CONTACT ANIMATIONS/RESET
 
@@ -2286,10 +2265,10 @@
         $("#stem").animate({height: '420px'});
     }
 
+
+
     //    ****************************************************************************FOOTER REVEAL FUNCTIONS
 
-
-    // *** ~ FOOTER REVEAL ANIMATION ***
 
     function FooterAnimation() {
         $("#footer-bckgrnd").addClass("illuminated");
@@ -2300,6 +2279,9 @@
         $("#footer-bckgrnd").removeClass("illuminated");
         $("#footer-content-inv").addClass("invisible");
     }
+
+    // ============================================================================================ ~ MINOR SCRIPTS
+
 
     //    ****************************************************************************SCROLL DOWN BUTTON FUNCTION
 
@@ -2326,30 +2308,26 @@
         $("#scroll-to-top").removeClass("reveal");
     }
 
+    //    ****************************************************************************SCROLLBAR HOVER FUNCTION
 
-</script>
-<!-- ==================================================
- ~ SCROLLBAR SCRIPTS
-================================================== -->
-<script>
+
     $(".scrollbar-thin").mouseover(function () {
         $(this).addClass("scrollbar-visible");
     });
     $(".scrollbar-thin").mouseout(function () {
         $(this).removeClass("scrollbar-visible");
     });
-</script>
 
-<!-- ==================================================
- ~ BS FUNCTIONALITY
-================================================== -->
-<script>
+    // ============================================================================================ ~ BOOTSTRAP SCRIPTS
+
+
     // *** TOOLTIP ***
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({
             container: 'body'
         })
     })
+
 </script>
 
 </html>

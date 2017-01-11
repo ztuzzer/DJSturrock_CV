@@ -43,6 +43,7 @@ GLOBAL
 ******************** */
 .page-gap-100 {
     height: 100px;
+    /*background-color: orange;*/
 }
 
 .page-gap-200 {
@@ -83,6 +84,7 @@ h2 {
 .container-content {
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     height: auto;
 
     /*background-color: red;*/
