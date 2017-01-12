@@ -1775,7 +1775,7 @@ SCRIPTS
 
         $("#timeline, #footer").show();
         timelineScroll();
-        footerScroll(10740, 11250);
+        footerScroll(10740, 11060);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
@@ -1806,7 +1806,7 @@ SCRIPTS
 
     // ============================================================================================ ~ FOOTER SCRIPTS
 
-    function footerScroll(distIllumination) {
+    function footerScroll(distIllumination, distPromoText) {
         $(window).scroll(function () {
             if ($(document).scrollTop() > distIllumination) {
                 FooterAnimation();
@@ -1817,15 +1817,26 @@ SCRIPTS
 //                console.log("reset being called");
             }
 
-
-            if ($(document).scrollTop() == 11250) {
-                $("#footer-promo-text").fadeIn();
+            if ($(document).scrollTop() >= distPromoText) {
+//                $("#footer-promo-text").removeClass("invisible");
+                $("#footer-promo-text").addClass("fade-in");
+//                $("#footer-promo-text").fadeIn();
                 console.log("fade-in");
             }
             else {
-                $("#footer-promo-text").fadeOut();
+                $("#footer-promo-text").removeClass("fade-in");
+//                $("#footer-promo-text").fadeOut();
                 console.log("fade-out");
             }
+
+//            if ($(document).scrollTop() > promoText && ($("#footer-promo-text").css("opacity") >= 0 || $("#footer-promo-text").css("display") == "none" )) {
+//                $("#footer-promo-text").fadeIn();
+//                console.log("fade-in");
+//            }
+//            else if ($(document).scrollTop() <= promoText && ($("#footer-promo-text").css("opacity") <= 1 || $("#footer-promo-text").css("display") != "none" )) {
+//                $("#footer-promo-text").fadeOut();
+//                console.log("fade-out");
+//            }
         });
     }
 
@@ -1840,6 +1851,7 @@ SCRIPTS
     function FooterAnimationReset() {
         $("#footer-bckgrnd").removeClass("illuminated");
         $("#footer-content-inv").addClass("invisible");
+//        $("#footer-promo-text").addClass("invisible");
     }
 
     // **** document height ***

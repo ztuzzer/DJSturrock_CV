@@ -699,7 +699,7 @@ HIDE ITEMS
 
 #overview
 , #footer
-, .footer-promo-text
+/*, .footer-promo-text*/
 , #contact
 , h1.name
 , h1.title
@@ -953,4 +953,14 @@ MEASUREMENT TOOL
     background-color: red;
     opacity: 0.5;
     height: 50%;
+}
+
+.footer-promo-text {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.footer-promo-text.fade-in {
+    opacity: 1;
+    transition: all 0.5s;
 }
