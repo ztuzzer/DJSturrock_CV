@@ -269,12 +269,11 @@ h1.title {
 ******************** */
 .cont-title-right {
     width: 0px;
-
     background-color: #000;
 }
 
 .title-right {
-    width: 500px!important;
+    width: 350px!important;
     padding-bottom: 9px;
     /*line-height: 50px;*/
 }
@@ -964,3 +963,76 @@ MEASUREMENT TOOL
     opacity: 1;
     transition: all 0.5s;
 }
+
+
+/**********************************************************************************************************************/
+
+.port-sectionBubble {
+    display: inline-table;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 100%;
+    background-color: #000;
+    /*display: inline-block;*/
+
+    text-align: center;
+
+    transition: all 1s;
+}
+
+.port-sectionBubble.small {
+    display: inline-table;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 100%;
+    background-color: #000;
+    /*display: inline-block;*/
+
+    text-align: center;
+
+    transition: all 1s;
+}
+
+
+
+h1.port-sectionBubble-text {
+    display: table-cell;
+    vertical-align: middle;
+    /*line-height: 150px;*/
+    width:300px;
+    margin: 0px;
+
+    font-size: 50px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+
+    transition: all 1s;
+}
+
+h1.port-sectionBubble-text.small {
+    display: table-cell;
+    vertical-align: middle;
+    /*line-height: 150px;*/
+    width:150px;
+    margin: 0px;
+
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+
+    transition: all 1s;
+}
+
+/*h1.port-sectionBubble-text.architecture {*/
+    /*line-height: 300px;*/
+    /*width:300px;*/
+    /*margin: 0px;*/
+
+    /*font-size: 72px;*/
+    /*font-family: 'Open Sans Condensed';*/
+    /*font-weight: 900;*/
+/*}*/
