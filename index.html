@@ -2038,25 +2038,26 @@ SCRIPTS
 <script>
 
     $("#empowerhack-maskover-btn").click(function () {
-        $("#mask-over1").show();
-//                $("#mask-over1").addClass("show-item");
-        setTimeout(function () {
-            $("#mask-over1").addClass("fade-in");
-//            $("#body").addClass("scroll-none");
-        });
+        revealMaskOver("#mask-over1");
     });
 
+    function revealMaskOver(maskOverID) {
+        $(maskOverID).show();
+
+        setTimeout(function () {
+            $(maskOverID).addClass("fade-in");
+            $("#body").addClass("scroll-none");
+        });
+    }
+
     $(".mask-over-close").click(function () {
+        $("#body").removeClass("scroll-none");
         $(".portfolio-mask-over").removeClass("fade-in");
 
         setTimeout(function () {
-//            $("#mask-over1").removeClass("show-item");
             $("#mask-over1").hide();
-//            $("#body").removeClass("scroll-none");
-
         }, 1000);
     });
-
 
 
     $('#carouselHacked').carousel();

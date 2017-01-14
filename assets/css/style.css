@@ -622,11 +622,14 @@ SCROLLBARS
 .scrollbar-thin::-webkit-scrollbar {
     width: 5px;
 }
+
 body::-webkit-scrollbar {
     width: 10px;
 }
 
-.scrollbar-thin::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+.scrollbar-thin::-webkit-scrollbar-track
+, body::-webkit-scrollbar-track
+{
     background-color: #fff;
 }
 
@@ -635,7 +638,9 @@ body::-webkit-scrollbar {
 }
 
 /* --- scrollbar-visible class added with JS --- */
-.scrollbar-thin.scrollbar-visible::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+.scrollbar-thin.scrollbar-visible::-webkit-scrollbar-thumb
+, body::-webkit-scrollbar-thumb
+{
     background-color: #000;
 }
 
@@ -1216,4 +1221,18 @@ h2.caption-imageTitle {
 
 .scroll-none {
     overflow: hidden;
+
+    transition: all 1s;
+    /*padding-right: 5px;*/
+    /*margin-right: 5px;*/
+    /*background-color: red;*/
 }
+
+body::-webkit-scrollbar {
+    /*width: 10px;*/
+}
+
+/*body.scroll-none > .stem {*/
+    /*position: fixed;*/
+    /*left:0px;*/
+/*}*/
