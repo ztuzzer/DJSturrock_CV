@@ -623,9 +623,9 @@ SCROLLBARS
     width: 5px;
 }
 
-body::-webkit-scrollbar {
-    width: 10px;
-}
+/*body::-webkit-scrollbar {*/
+    /*width: 10px;*/
+/*}*/
 
 .scrollbar-thin::-webkit-scrollbar-track
 , body::-webkit-scrollbar-track
