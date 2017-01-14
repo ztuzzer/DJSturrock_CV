@@ -1132,8 +1132,21 @@ body,
     /*height: 500px!important;*/
 }
 
+#carouselHacked {
+    height: 100%;
+    width: 100%;
+}
+
 .test {
     margin: auto;
     display: inline-block;
     height: 100%;
+}
+
+.carousel {
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*bottom: 0px;*/
+    /*left: 0px;*/
+    /*right: 0px;*/
 }
