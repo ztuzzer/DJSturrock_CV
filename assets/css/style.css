@@ -339,11 +339,17 @@ h2.title-left {
 
     padding: 0px;
     margin: 0px;
+
+    /*background-color: red;*/
 }
+
+
 
 .overview-icons {
     height: 82px;
 }
+
+
 
 
 /* --- POI BULLETS --- */
