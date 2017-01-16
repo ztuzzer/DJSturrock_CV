@@ -148,14 +148,6 @@
 
     console.log("Container One Height =" + containerOneHeight);
 
-    var containerThreePositionTop = $("#container-three").position().top;
-
-    console.log("Container Three Pos Top =" + containerThreePositionTop);
-
-    var containerFourPositionTop = $("#container-four").position().top;
-
-    console.log("Container Four Pos Top =" + containerFourPositionTop);
-
 
     $("#measure2").animate({height: halfWindowHeight});
 
@@ -172,17 +164,24 @@
 
 
     $("#initScrollTop").click(function () {
+        $("#container-content-one").show();
         initScrollTop();
-//        $("#container-content-one").show();
     });
 
     function initScrollTop() {
+
+        var containerThreePositionTop = $("#container-three").position().top;
+
+        console.log("Container Three Pos Top =" + containerThreePositionTop);
+
+        var containerFourPositionTop = $("#container-four").position().top;
+
+        console.log("Container Four Pos Top =" + containerFourPositionTop);
+
         $(window).scroll(function () {
 
 
             var scrollTop = $(document).scrollTop();
-
-
 
 
             var scrollTopPlusHalf = scrollTop + halfWindowHeight;

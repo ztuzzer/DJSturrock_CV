@@ -53,6 +53,6 @@ h1 {
     float: right;
 }
 
-/*.container-content-one {*/
-    /*display: none;*/
-/*}*/
+.container-content-one {
+    display: none;
+}
