@@ -48,3 +48,11 @@ h1 {
     /*height: 50%;*/
     /*height: 50%;*/
 }
+
+.float-right {
+    float: right;
+}
+
+/*.container-content-one {*/
+    /*display: none;*/
+/*}*/

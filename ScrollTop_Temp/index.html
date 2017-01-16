@@ -51,75 +51,80 @@
 </head>
 <body>
 
+
 <div id="container-one" class="container-whole height-200">
+    <h1 class="float-right"><a id="initScrollTop">initialise Scroll Top</a></h1>
+
     <h1>container one:
         <br>H: 200
         <br>T: 200
     </h1>
 </div>
 
-<div id="container-two" class="container-whole height-200">
-    <h1>container two:
-        <br>H: 200
-        <br>T: 400
-    </h1>
-</div>
+<div id="container-content-one" class="container-content-one">
 
-<div id="container-three" class="container-whole height-200">
-    <h1>container three:
-        <br>H: 200
-        <br>T: 600</h1>
-</div>
+    <div id="container-two" class="container-whole height-200">
+        <h1>container two:
+            <br>H: 200
+            <br>T: 400
+        </h1>
+    </div>
 
-<div id="container-four" class="container-whole height-200">
-    <h1>container four:
-        <br>H: 200
-        <br>T: 800
-    </h1>
-</div>
+    <div id="container-three" class="container-whole height-200">
+        <h1>container three:
+            <br>H: 200
+            <br>T: 600</h1>
+    </div>
 
-<div id="container-five" class="container-whole height-200">
-    <h1>container five:
-        <br>H: 200
-        <br>T: 1000</h1>
-</div>
+    <div id="container-four" class="container-whole height-200">
+        <h1>container four:
+            <br>H: 200
+            <br>T: 800
+        </h1>
+    </div>
 
-<div id="container-six" class="container-whole height-200">
-    <h1>container six:
-        <br>H: 200
-        <br>T: 1200</h1>
-</div>
+    <div id="container-five" class="container-whole height-200">
+        <h1>container five:
+            <br>H: 200
+            <br>T: 1000</h1>
+    </div>
 
-<div id="container-seven" class="container-whole height-200">
-    <h1>container seven:
-        <br>H: 200
-        <br>T: 1400</h1>
-</div>
+    <div id="container-six" class="container-whole height-200">
+        <h1>container six:
+            <br>H: 200
+            <br>T: 1200</h1>
+    </div>
 
-<div id="container-eight" class="container-whole height-200">
-    <h1>container eight:
-        <br>H: 200
-        <br>T: 1600</h1>
-</div>
+    <div id="container-seven" class="container-whole height-200">
+        <h1>container seven:
+            <br>H: 200
+            <br>T: 1400</h1>
+    </div>
 
-<div id="container-nine" class="container-whole height-200">
-    <h1>container nine:
-        <br>H: 200
-        <br>T: 1800</h1>
-</div>
+    <div id="container-eight" class="container-whole height-200">
+        <h1>container eight:
+            <br>H: 200
+            <br>T: 1600</h1>
+    </div>
 
-<div id="container-ten" class="container-whole height-200">
-    <h1>container ten:
-        <br>H: 200
-        <br>T: 2000</h1>
-</div>
+    <div id="container-nine" class="container-whole height-200">
+        <h1>container nine:
+            <br>H: 200
+            <br>T: 1800</h1>
+    </div>
 
+    <div id="container-ten" class="container-whole height-200">
+        <h1>container ten:
+            <br>H: 200
+            <br>T: 2000</h1>
+    </div>
+
+</div>
 
 <div id="stem" class="stem">
     <div id="measure" class="measure"></div>
     <div id="measure2" class="measure2"></div>
 </div>
-
 
 </body>
 
@@ -135,7 +140,7 @@
     console.log("document Width =" + documentWidth);
     console.log("window Width =" + windowWidth);
 
-    var halfWindowHeight = windowHeight/2;
+    var halfWindowHeight = windowHeight / 2;
 
     console.log("half window height =" + halfWindowHeight);
 
@@ -145,51 +150,60 @@
 
     var containerThreePositionTop = $("#container-three").position().top;
 
-    console.log("Container Three Pos Top =" + containerThreePositionTop); 
-    
+    console.log("Container Three Pos Top =" + containerThreePositionTop);
+
     var containerFourPositionTop = $("#container-four").position().top;
 
     console.log("Container Four Pos Top =" + containerFourPositionTop);
 
-    var f = (function () {
-        var windowHeight = $(window).height();
-        console.log("new window height = " + windowHeight);
-        var halfWindowHeight = windowHeight/2;
-        console.log("new window half height = " + halfWindowHeight);
-    });
-
 
     $("#measure2").animate({height: halfWindowHeight});
 
-//    $(document).ready(f);
-    $(window).resize(f);
+    //    $(document).ready(f);
 
-    $(window).scroll(function () {
-
-        var scrollTop = $(document).scrollTop();
-
-//        console.log("scrollTop =" + scrollTop );
-
-        var scrollTopPlusHalf = scrollTop + halfWindowHeight;
-
-        if (scrollTopPlusHalf > containerThreePositionTop) {
-            $("#container-three").addClass("red");
-        }
-        else {
-            $("#container-three").removeClass("red");
-        }
-
-        if (scrollTopPlusHalf > containerFourPositionTop) {
-            $("#container-four").addClass("red");
-        }
-        else {
-            $("#container-four").removeClass("red");
-        }
-
+    var f = (function () {
+        var windowHeight = $(window).height();
+        console.log("new window height = " + windowHeight);
+        var halfWindowHeight = windowHeight / 2;
+        console.log("new window half height = " + halfWindowHeight);
     });
 
+    $(window).resize(f);
 
 
+
+
+//
+//    $("#initScrollTop").click(function () {
+//        initScrollTop();
+////        $("#container-content-one").show();
+//    });
+
+//    function initScrollTop() {
+        $(window).scroll(function () {
+
+
+            var scrollTop = $(document).scrollTop();
+
+
+            var scrollTopPlusHalf = scrollTop + halfWindowHeight;
+
+            if (scrollTopPlusHalf > containerThreePositionTop) {
+                $("#container-three").addClass("red");
+            }
+            else {
+                $("#container-three").removeClass("red");
+            }
+
+            if (scrollTopPlusHalf > containerFourPositionTop) {
+                $("#container-four").addClass("red");
+            }
+            else {
+                $("#container-four").removeClass("red");
+            }
+
+        });
+//    }
 
 
 </script>
