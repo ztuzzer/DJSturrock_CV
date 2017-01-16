@@ -120,7 +120,8 @@ h2 {
 
     width: 30%;
 
-    /*background-color: blue;*/
+    background-color: blue;
+    opacity: 0.5;
 }
 
 .cont-right {
@@ -128,14 +129,16 @@ h2 {
 
     width: 70%;
 
-    /*background-color: green;*/
+    background-color: green;
+    opacity: 0.5;
 }
 
 .cont-whole {
     clear: both;
     width: 100%;
 
-    /*background-color: orange;*/
+    background-color: orange;
+    opacity: 0.5;
 }
 
 /* ********************
@@ -720,7 +723,8 @@ SCROLL TO TOP (INACTIVE)
 HIDE ITEMS
 ================================================== */
 
-#overview
+/*#overview*/
+#portfolio
 , #footer
 /*, .footer-promo-text*/
 , #contact
@@ -975,7 +979,8 @@ MEASUREMENT TOOL
     width: 100%;
     background-color: red;
     opacity: 0.5;
-    height: 50%;
+    /*height: 50%;*/
+    height: 200px;
 }
 
 .footer-promo-text {
