@@ -171,19 +171,18 @@
     $(window).resize(f);
 
 
+    $("#initScrollTop").click(function () {
+        initScrollTop();
+//        $("#container-content-one").show();
+    });
 
-
-//
-//    $("#initScrollTop").click(function () {
-//        initScrollTop();
-////        $("#container-content-one").show();
-//    });
-
-//    function initScrollTop() {
+    function initScrollTop() {
         $(window).scroll(function () {
 
 
             var scrollTop = $(document).scrollTop();
+
+
 
 
             var scrollTopPlusHalf = scrollTop + halfWindowHeight;
@@ -203,7 +202,7 @@
             }
 
         });
-//    }
+    }
 
 
 </script>
