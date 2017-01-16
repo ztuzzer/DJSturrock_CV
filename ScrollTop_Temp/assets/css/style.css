@@ -1,0 +1,50 @@
+.container-whole {
+    width: 100%;
+    background-color: green;
+    border-bottom: solid 5px black;
+}
+
+.height-200 {
+    height: 200px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+
+.container-whole.red {
+    background-color: red;
+}
+
+
+.stem {
+    width: 30%;
+    height: 100%;
+
+    position: fixed;
+    top: 0px;
+    left:0px;
+    /*bottom: 0px;*/
+
+    /*background-color: orange;*/
+    border-right: 5px solid #000;
+}
+
+.measure {
+    width: 100%;
+    background-color: orange;
+    opacity: 0.5;
+    /*height: 50%;*/
+    height: 50%;
+    position: absolute;
+}
+
+.measure2 {
+    position: absolute;
+    width: 50%;
+    background-color: blueviolet;
+    opacity: 0.5;
+    /*height: 50%;*/
+    /*height: 50%;*/
+}

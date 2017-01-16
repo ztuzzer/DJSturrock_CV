@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScrollTop TEMP</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ********************
+    GOOGLE FONTS
+    ******************** -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lato|Open+Sans|Open+Sans+Condensed:300|Permanent+Marker"
+          rel="stylesheet">
+
+    <!-- ********************
+    JQUERY
+    ******************** -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- ********************
+    BOOTSTRAP
+    ******************** -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+
+    <!-- ********************
+    Hovers
+    ******************** -->
+
+    <link rel="stylesheet" href="assets/css/Hover-master/css/hover.css">
+
+    <!-- ********************
+    OWN STYLES
+    ******************** -->
+
+    <!-- --- STYLE MAIN --- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="container-one" class="container-whole height-200">
+    <h1>container one:
+        <br>H: 200
+        <br>T: 200
+    </h1>
+</div>
+
+<div id="container-two" class="container-whole height-200">
+    <h1>container two:
+        <br>H: 200
+        <br>T: 400
+    </h1>
+</div>
+
+<div id="container-three" class="container-whole height-200">
+    <h1>container three:
+        <br>H: 200
+        <br>T: 600</h1>
+</div>
+
+<div id="container-four" class="container-whole height-200">
+    <h1>container four:
+        <br>H: 200
+        <br>T: 800
+    </h1>
+</div>
+
+<div id="container-five" class="container-whole height-200">
+    <h1>container five:
+        <br>H: 200
+        <br>T: 1000</h1>
+</div>
+
+<div id="container-six" class="container-whole height-200">
+    <h1>container six:
+        <br>H: 200
+        <br>T: 1200</h1>
+</div>
+
+<div id="container-seven" class="container-whole height-200">
+    <h1>container seven:
+        <br>H: 200
+        <br>T: 1400</h1>
+</div>
+
+<div id="container-eight" class="container-whole height-200">
+    <h1>container eight:
+        <br>H: 200
+        <br>T: 1600</h1>
+</div>
+
+<div id="container-nine" class="container-whole height-200">
+    <h1>container nine:
+        <br>H: 200
+        <br>T: 1800</h1>
+</div>
+
+<div id="container-ten" class="container-whole height-200">
+    <h1>container ten:
+        <br>H: 200
+        <br>T: 2000</h1>
+</div>
+
+
+<div id="stem" class="stem">
+    <div id="measure" class="measure"></div>
+    <div id="measure2" class="measure2"></div>
+</div>
+
+
+</body>
+
+<script>
+
+    var windowHeight = $(window).height();   // returns height of browser viewport
+    var documentHeight = $(document).height(); // returns height of HTML document
+    var windowWidth = $(window).width();   // returns width of browser viewport
+    var documentWidth = $(document).width();
+
+    console.log("document height =" + documentHeight);
+    console.log("window height =" + windowHeight);
+    console.log("document Width =" + documentWidth);
+    console.log("window Width =" + windowWidth);
+
+    var halfWindowHeight = windowHeight/2;
+
+    console.log("half window height =" + halfWindowHeight);
+
+    var containerOneHeight = $("#container-one").outerHeight();
+
+    console.log("Container One Height =" + containerOneHeight);
+
+    var containerThreePositionTop = $("#container-three").position().top;
+
+    console.log("Container Three Pos Top =" + containerThreePositionTop); 
+    
+    var containerFourPositionTop = $("#container-four").position().top;
+
+    console.log("Container Four Pos Top =" + containerFourPositionTop);
+
+    var f = (function () {
+        var windowHeight = $(window).height();
+        console.log("new window height = " + windowHeight);
+        var halfWindowHeight = windowHeight/2;
+        console.log("new window half height = " + halfWindowHeight);
+    });
+
+
+    $("#measure2").animate({height: halfWindowHeight});
+
+//    $(document).ready(f);
+    $(window).resize(f);
+
+    $(window).scroll(function () {
+
+        var scrollTop = $(document).scrollTop();
+
+//        console.log("scrollTop =" + scrollTop );
+
+        var scrollTopPlusHalf = scrollTop + halfWindowHeight;
+
+        if (scrollTopPlusHalf > containerThreePositionTop) {
+            $("#container-three").addClass("red");
+        }
+        else {
+            $("#container-three").removeClass("red");
+        }
+
+        if (scrollTopPlusHalf > containerFourPositionTop) {
+            $("#container-four").addClass("red");
+        }
+        else {
+            $("#container-four").removeClass("red");
+        }
+
+    });
+
+
+
+
+
+</script>
+</html>
