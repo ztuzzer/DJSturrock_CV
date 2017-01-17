@@ -228,13 +228,15 @@
         var windowHeight = $(window).height();
         console.log("new window height = " + windowHeight);
 
-        var halfWindowHeight = windowHeight / 2;
-        console.log("new window half height = " + halfWindowHeight);
+//        var halfWindowHeight = windowHeight / 2;
+//        console.log("new window half height = " + halfWindowHeight);
 
         this.windowHeight = windowHeight;
 
+//        var minFooterHeight2 = halfWindowHeight + "px";
 
         initScrollTop();
+        adjustMinFooterHeight();
     });
 
     $("#scrollTopFunctionOne").click(function () {
@@ -270,6 +272,10 @@
 
             console.log("Container Four Pos Top =" + containerFourPositionTop);
 
+            var containerTenPositionTop = $("#container-ten").position().top;
+
+            console.log("Container Four Pos Top =" + containerFourPositionTop);
+
             var footerPositionTop = $("#footer").position().top;
 
             console.log("Container Three Pos Top =" + footerPositionTop);
@@ -297,6 +303,13 @@
                 }
                 else {
                     $("#container-four").removeClass("red");
+                }
+
+                if (scrollTopPlusHalf >= containerTenPositionTop) {
+                    $("#container-ten").addClass("red");
+                }
+                else {
+                    $("#container-ten").removeClass("red");
                 }
 
                 if (scrollTopPlusHalf >= footerPositionTop) {
@@ -327,6 +340,10 @@
 
             console.log("Container Four Pos Top =" + content2containerFourPositionTop);
 
+            var content2containerFivePositionTop = $("#content2-container-five").position().top;
+
+            console.log("Container Four Pos Top =" + content2containerFivePositionTop);
+
 
             var footerPositionTop = $("#footer").position().top;
 
@@ -355,6 +372,12 @@
                     $("#content2-container-four").removeClass("blue");
                 }
 
+                if (scrollTopPlusHalf > content2containerFivePositionTop) {
+                    $("#content2-container-five").addClass("blue");
+                }
+                else {
+                    $("#content2-container-five").removeClass("blue");
+                }
 
 
                 if (scrollTopPlusHalf >= footerPositionTop) {
@@ -380,13 +403,24 @@
 
 
 
-
-
-
-
-
-
-
     $("#measure2").animate({height: halfWindowHeight});
+
+//    footer height
+
+    var minFooterHeight = halfWindowHeight + 20 + "px";
+
+    console.log("min footer height=" + minFooterHeight);
+
+    $("#footer-pt2").css("min-height", minFooterHeight);
+
+
+    function adjustMinFooterHeight () {
+
+        var minFooterHeight = (windowHeight / 2) + 20 + "px";
+
+        console.log("min footer height adjust=" + minFooterHeight);
+
+        $("#footer-pt2").css("min-height", minFooterHeight);
+    }
 </script>
 </html>
