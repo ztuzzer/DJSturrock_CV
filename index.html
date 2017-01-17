@@ -55,6 +55,7 @@
 
 <div id="stem" class="stem">
     <div id="measure" class="measure"></div>
+    <div id="measure2" class="measure2"></div>
 
 
     <!--<div class="cont-scroll-to-top">-->
@@ -165,57 +166,66 @@
     ================================================== -->
     <div id="overview">
 
-        <!-- ********************
-       CAREER STATEMENT
-       ******************** -->
-        <!-- --- IMAGE --- -->
-        <div class="cont-whole">
-            <div class="cont-img-centerLine height-125">
-                <picture>
-                    <img id="CarStaImg" src="assets/imgs/me1b.jpg" class="img-bubble bubble">
-                </picture>
-            </div>
-            <!--end cont-img-->
-        </div>
-        <!--end cont-whole-->
-
-        <!-- --- TITLE/PARAGRAPH --- -->
-        <div class="cont-whole">
-            <div class="cont-right">
-
-                <div id="CarStaTitle" class="cont-title-right align-right no-width">
-                    <h2 class="title-right font-white">Career Statement</h2>
+        <div id="overview-CarSta">
+            <!-- ********************
+           CAREER STATEMENT
+           ******************** -->
+            <!-- --- IMAGE --- -->
+            <div class="cont-whole">
+                <div class="cont-img-centerLine height-125">
+                    <picture>
+                        <img id="CarStaImg" src="assets/imgs/me1b.jpg" class="img-bubble bubble">
+                    </picture>
                 </div>
-
-                <div id="CarStaPara" class="overview-cont-paragraph-right no-height">
-                    <p class="overview-paragraph-right scrollbar-thin standard-character height-130">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                    </p>
-                </div>
-
+                <!--end cont-img-->
             </div>
-            <!--end cont-right-->
+            <!--end cont-whole-->
+
+            <!-- --- TITLE/PARAGRAPH --- -->
+            <div class="cont-whole">
+                <div class="cont-right">
+
+                    <div id="CarStaTitle" class="cont-title-right align-right no-width">
+                        <h2 class="title-right font-white">Career Statement</h2>
+                    </div>
+
+                    <div id="CarStaPara" class="overview-cont-paragraph-right no-height">
+                        <p class="overview-paragraph-right scrollbar-thin standard-character height-130">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                        </p>
+                    </div>
+
+                </div>
+                <!--end cont-right-->
+            </div>
+            <!--end cont-whole -->
+
         </div>
-        <!--end cont-whole -->
+        <!--end #overview-CarSta-->
 
         <div class="cont-whole page-gap-200"></div>
 
@@ -2159,62 +2169,149 @@ SCRIPTS
 ================================================== -->
 <script>
 
-//    var PosTop = $("#CarStaImg").position().top;
-//    console.log("pos-top = " + PosTop);
+    //    var PosTop = $("#CarStaImg").position().top;
+    //    console.log("pos-top = " + PosTop);
 
 
+    //    $(window).scroll(function () {
+    //
+    //
+    //        var PosTop = $("#CarStaImg").position().top;
+    ////        console.log("pos-top = " + PosTop);
+    //
+    //        var posTopMinus = PosTop - 200;
+    //        console.log("pos-topMinus = " + posTopMinus);
+    //
+    ////        var y_scroll_pos = window.pageYOffset;
+    ////        console.log("y-scroll-pos = " + y_scroll_pos);
+    //
+    //        var scrolltop = $(document).scrollTop();
+    //        console.log("scrolltop = " + scrolltop);
+    //
+    //
+    //        if (posTopMinus >= 200) {
+    //            revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+    //        }
+    //        else {
+    //            resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+    //        }
+    //
+    //    });
+
+    var windowHeight = $(window).height();   // returns height of browser viewport
+
+    console.log("Window height =" + windowHeight);
+
+    var pageState = "";
+
+    console.log("window height =" + windowHeight);
+
+    var halfWindowHeight = windowHeight / 2;
+
+    console.log("half window height =" + halfWindowHeight);
 
 
-//    $(window).scroll(function () {
-//
-//
-//        var PosTop = $("#CarStaImg").position().top;
-////        console.log("pos-top = " + PosTop);
-//
-//        var posTopMinus = PosTop - 200;
-//        console.log("pos-topMinus = " + posTopMinus);
-//
-////        var y_scroll_pos = window.pageYOffset;
-////        console.log("y-scroll-pos = " + y_scroll_pos);
-//
-//        var scrolltop = $(document).scrollTop();
-//        console.log("scrolltop = " + scrolltop);
-//
-//
-//        if (posTopMinus >= 200) {
-//            revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-//        }
-//        else {
-//            resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-//        }
-//
-//    });
+    $(window).resize(function () {
+        var windowHeight = $(window).height();
+        console.log("new window height = " + windowHeight);
+
+        var halfWindowHeight = windowHeight / 2;
+        console.log("new window half height = " + halfWindowHeight);
+
+        this.windowHeight = windowHeight;
 
 
-    $("#empowerhack-maskover-btn").click(function () {
-        revealMaskOver("#mask-over1");
+        initScrollTop();
     });
 
-    function revealMaskOver(maskOverID) {
-        $(maskOverID).show();
 
-        setTimeout(function () {
-            $(maskOverID).addClass("fade-in");
-            $("#body").addClass("scroll-none");
-        });
+    $("#measure2").animate({height: halfWindowHeight});
+
+
+    function initScrollTop() {
+        console.log("pageState=" + pageState);
+
+        if (pageState == "overviewState") {
+
+
+            var overviewCarStaPosTop = $("#overview-CarSta").position().top;
+
+            console.log("overviewCarSta Pos Top =" + overviewCarStaPosTop);
+
+
+
+
+
+            $(window).scroll(function () {
+
+                var scrollTop = $(document).scrollTop();
+                var scrollTopPlusHalf = scrollTop + windowHeight / 2;
+
+                if ($(document).scrollTop() >= 220) {
+                    arrowScrollDownAnimationReset();
+                    scrollToTopAnimation()
+                } else {
+                    scrollToTopAnimationReset();
+                }
+
+
+                if (scrollTopPlusHalf >= overviewCarStaPosTop) {
+                    revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+                }
+                else {
+                    resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+                }
+
+//                if ($(document).scrollTop() > 220) {
+//                    revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+//                }
+//                else {
+//                    resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+//                }
+
+                if ($(document).scrollTop() > 560) {
+                    revealOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
+                }
+                else {
+                    resetOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
+                }
+
+                if ($(document).scrollTop() > 760) {
+                    revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
+                }
+                else {
+                    resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
+                }
+
+                if ($(document).scrollTop() > 1100) {
+                    revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
+                } else {
+                    resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
+                }
+
+                if ($(document).scrollTop() > 1500) {
+                    revealOverviewInformationBlock("#POIPara, #POITitle");
+                } else {
+                    resetOverviewInformationBlock("#POIPara, #POITitle");
+                }
+
+
+                if ($(document).scrollTop() > 1990) {
+                    revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
+                } else {
+                    resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
+                }
+
+                if ($(document).scrollTop() > 2220) {
+                    revealOverviewInformationBlock("#IntPara, #IntTitle");
+                } else {
+                    resetOverviewInformationBlock("#IntPara, #IntTitle");
+                }
+
+            });
+        }
     }
 
-    $(".mask-over-close").click(function () {
-        $("#body").removeClass("scroll-none");
-        $(".portfolio-mask-over").removeClass("fade-in");
-
-        setTimeout(function () {
-            $("#mask-over1").hide();
-        }, 1000);
-    });
-
-
-    $('#carouselHacked').carousel();
 
     // =========================================================================================== ~ NAVIGATION SCRIPTS
 
@@ -2236,7 +2333,9 @@ SCRIPTS
 
         $("#overview, #footer").show();
 
-        overviewScroll();
+
+        pageState = "overviewState";
+        initScrollTop();
         footerScroll(2981, 3300);
 
         setTimeout(function () {
@@ -2414,64 +2513,64 @@ SCRIPTS
     // ============================================================================================ ~ OVERVIEW SCRIPTS
 
 
-    function overviewScroll() {
-        $(window).scroll(function () {
-
-            if ($(document).scrollTop() >= 220) {
-                arrowScrollDownAnimationReset();
-                scrollToTopAnimation()
-            } else {
-                scrollToTopAnimationReset();
-            }
-
-            if ($(document).scrollTop() > 220) {
-                revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-            }
-            else {
-                resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-            }
-
-            if ($(document).scrollTop() > 560) {
-                revealOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
-            }
-            else {
-                resetOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
-            }
-
-            if ($(document).scrollTop() > 760) {
-                revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
-            }
-            else {
-                resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
-            }
-
-            if ($(document).scrollTop() > 1100) {
-                revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
-            } else {
-                resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
-            }
-
-            if ($(document).scrollTop() > 1500) {
-                revealOverviewInformationBlock("#POIPara, #POITitle");
-            } else {
-                resetOverviewInformationBlock("#POIPara, #POITitle");
-            }
-
-
-            if ($(document).scrollTop() > 1990) {
-                revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
-            } else {
-                resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
-            }
-
-            if ($(document).scrollTop() > 2220) {
-                revealOverviewInformationBlock("#IntPara, #IntTitle");
-            } else {
-                resetOverviewInformationBlock("#IntPara, #IntTitle");
-            }
-
-        });
-    }
+    //    function overviewScroll() {
+    //        $(window).scroll(function () {
+    //
+    //            if ($(document).scrollTop() >= 220) {
+    //                arrowScrollDownAnimationReset();
+    //                scrollToTopAnimation()
+    //            } else {
+    //                scrollToTopAnimationReset();
+    //            }
+    //
+    //            if ($(document).scrollTop() > 220) {
+    //                revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+    //            }
+    //            else {
+    //                resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
+    //            }
+    //
+    //            if ($(document).scrollTop() > 560) {
+    //                revealOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
+    //            }
+    //            else {
+    //                resetOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
+    //            }
+    //
+    //            if ($(document).scrollTop() > 760) {
+    //                revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
+    //            }
+    //            else {
+    //                resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
+    //            }
+    //
+    //            if ($(document).scrollTop() > 1100) {
+    //                revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
+    //            } else {
+    //                resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
+    //            }
+    //
+    //            if ($(document).scrollTop() > 1500) {
+    //                revealOverviewInformationBlock("#POIPara, #POITitle");
+    //            } else {
+    //                resetOverviewInformationBlock("#POIPara, #POITitle");
+    //            }
+    //
+    //
+    //            if ($(document).scrollTop() > 1990) {
+    //                revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
+    //            } else {
+    //                resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
+    //            }
+    //
+    //            if ($(document).scrollTop() > 2220) {
+    //                revealOverviewInformationBlock("#IntPara, #IntTitle");
+    //            } else {
+    //                resetOverviewInformationBlock("#IntPara, #IntTitle");
+    //            }
+    //
+    //        });
+    //    }
 
 
     //    ****************************************************************************OVERVIEW REVEAL/RESET FUNCTIONS
@@ -2851,6 +2950,35 @@ SCRIPTS
             container: 'body'
         })
     })
+
+
+    //============================================================================================= ~ MASKOVERS
+
+
+    $("#empowerhack-maskover-btn").click(function () {
+        revealMaskOver("#mask-over1");
+    });
+
+    function revealMaskOver(maskOverID) {
+        $(maskOverID).show();
+
+        setTimeout(function () {
+            $(maskOverID).addClass("fade-in");
+            $("#body").addClass("scroll-none");
+        });
+    }
+
+    $(".mask-over-close").click(function () {
+        $("#body").removeClass("scroll-none");
+        $(".portfolio-mask-over").removeClass("fade-in");
+
+        setTimeout(function () {
+            $("#mask-over1").hide();
+        }, 1000);
+    });
+
+
+    $('#carouselHacked').carousel();
 
 </script>
 
