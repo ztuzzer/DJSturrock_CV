@@ -122,6 +122,81 @@
     </div>
 
 </div>
+<!--end content-one -->
+
+
+<div id="container-content-two" class="container-content-one">
+
+    <div id="content2-container-two" class="container-whole height-200">
+        <h1>CONTENT TWO
+            <br>container two:
+            <br>H: 200
+            <br>T: 400
+        </h1>
+    </div>
+
+    <div id="content2-container-three" class="container-whole height-200">
+        <h1>container three:
+            <br>H: 200
+            <br>T: 600</h1>
+    </div>
+
+    <div id="content2-container-four" class="container-whole height-200">
+        <h1>container four:
+            <br>H: 200
+            <br>T: 800
+        </h1>
+    </div>
+
+    <div id="content2-container-five" class="container-whole height-200">
+        <h1>container five:
+            <br>H: 200
+            <br>T: 1000</h1>
+    </div>
+
+    <!--<div id="content2-container-six" class="container-whole height-200">-->
+        <!--<h1>container six:-->
+            <!--<br>H: 200-->
+            <!--<br>T: 1200</h1>-->
+    <!--</div>-->
+
+    <!--<div id="content2-container-seven" class="container-whole height-200">-->
+        <!--<h1>container seven:-->
+            <!--<br>H: 200-->
+            <!--<br>T: 1400</h1>-->
+    <!--</div>-->
+
+    <!--<div id="content2-container-eight" class="container-whole height-200">-->
+        <!--<h1>container eight:-->
+            <!--<br>H: 200-->
+            <!--<br>T: 1600</h1>-->
+    <!--</div>-->
+
+    <!--<div id="content2-container-nine" class="container-whole height-200">-->
+        <!--<h1>container nine:-->
+            <!--<br>H: 200-->
+            <!--<br>T: 1800</h1>-->
+    <!--</div>-->
+
+    <!--<div id="content2-container-ten" class="container-whole height-200">-->
+        <!--<h1>container ten:-->
+            <!--<br>H: 200-->
+            <!--<br>T: 2000</h1>-->
+    <!--</div>-->
+
+</div>
+<!--end content-one -->
+
+<div id="footer" class="footer container-whole height-800">
+    <h1>FOOTER:
+        <br>H: 800
+        <br>T: N/A</h1>
+
+    <div id="footer-pt2" class="footer container-whole height-800">
+
+    </div>
+</div>
+
 
 <div id="stem" class="stem">
     <div id="measure" class="measure"></div>
@@ -164,15 +239,17 @@
     });
 
     $("#scrollTopFunctionOne").click(function () {
+        $("#container-content-two").hide();
         $("#container-content-one").show();
-
+        
         pageState = "contentOne";
 
         initScrollTop();
     });
 
     $("#scrollTopFunctionTwo").click(function () {
-        $("#container-content-one").show();
+        $("#container-content-one").hide();
+        $("#container-content-two").show();
 
         pageState = "contentTwo";
 
@@ -203,6 +280,7 @@
 
                 if (scrollTopPlusHalf >= containerThreePositionTop) {
                     $("#container-three").addClass("red");
+                    $("#container-three").removeClass("blue");
                 }
                 else {
                     $("#container-three").removeClass("red");
@@ -210,6 +288,7 @@
 
                 if (scrollTopPlusHalf >= containerFourPositionTop) {
                     $("#container-four").addClass("red");
+                    $("#container-four").removeClass("blue");
                 }
                 else {
                     $("#container-four").removeClass("red");
@@ -221,33 +300,33 @@
         else if (pageState == "contentTwo") {
 
 //            DO SOMETHING DIFFERENT
-            var containerThreePositionTop = $("#container-three").position().top;
+            var content2containerThreePositionTop = $("#content2-container-three").position().top;
 
-            console.log("Container Three Pos Top =" + containerThreePositionTop);
+            console.log("Container Three Pos Top =" + content2containerThreePositionTop);
 
-            var containerFourPositionTop = $("#container-four").position().top;
+            var content2containerFourPositionTop = $("#content2-container-four").position().top;
 
-            console.log("Container Four Pos Top =" + containerFourPositionTop);
+            console.log("Container Four Pos Top =" + content2containerFourPositionTop);
 
             $(window).scroll(function () {
 
                 var scrollTop = $(document).scrollTop();
                 var scrollTopPlusHalf = scrollTop + windowHeight / 2;
 
-                if (scrollTopPlusHalf > containerThreePositionTop) {
-                    $("#container-three").removeClass("red");
-                    $("#container-three").addClass("blue");
+                if (scrollTopPlusHalf > content2containerThreePositionTop) {
+                    $("#content2-container-three").removeClass("red");
+                    $("#content2-container-three").addClass("blue");
                 }
                 else {
-                    $("#container-three").removeClass("blue");
+                    $("#content2-container-three").removeClass("blue");
                 }
 
-                if (scrollTopPlusHalf > containerFourPositionTop) {
-                    $("#container-three").removeClass("red");
-                    $("#container-four").addClass("blue");
+                if (scrollTopPlusHalf > content2containerFourPositionTop) {
+                    $("#content2-container-three").removeClass("red");
+                    $("#content2-container-four").addClass("blue");
                 }
                 else {
-                    $("#container-four").removeClass("blue");
+                    $("#content2-container-four").removeClass("blue");
                 }
 
             });

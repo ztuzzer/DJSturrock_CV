@@ -1,8 +1,9 @@
 .container-whole {
     width: 100%;
-    background-color: green;
+
     border-bottom: solid 5px black;
 }
+
 
 .height-200 {
     height: 200px;
