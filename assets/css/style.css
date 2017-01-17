@@ -697,9 +697,16 @@ Z-INDEX
 }
 
 .cont-img-centerLine,
-.img-bubble {
-    z-index: +10;
+.img-bubble
+{
+    z-index: +2;
 }
+
+.cont-arrowScrollDown {
+    position: relative;
+    z-index: +3;
+}
+
 
 /* ==================================================
 SCROLL TO TOP (INACTIVE)
@@ -1257,7 +1264,18 @@ body::-webkit-scrollbar {
     /*width: 10px;*/
 }
 
+
+.cont-arrowScrollDown {
+    background-color: red;
+    /*margin-top: 50px;*/
+}
+
+
 /*body.scroll-none > .stem {*/
     /*position: fixed;*/
     /*left:0px;*/
 /*}*/
+
+.bckgrnd-white {
+    background-color: #fff;
+}

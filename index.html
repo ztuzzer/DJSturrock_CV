@@ -150,7 +150,7 @@
     <!-- ==================================================
     SCROLLDOWN ARROW
     ================================================== -->
-    <div class="cont-whole">
+    <div class="cont-arrowScrollDown cont-whole">
         <div class="cont-img-centerLine no-height">
 
             <img id="arrow-scroll-down" src="assets/icons/down-arrowB.svg" class="arrow-scroll-down"
@@ -166,7 +166,7 @@
     ================================================== -->
     <div id="overview">
 
-        <div id="overview-CarSta">
+        <div id="overviewCarSta">
             <!-- ********************
            CAREER STATEMENT
            ******************** -->
@@ -225,14 +225,14 @@
             <!--end cont-whole -->
 
         </div>
-        <!--end #overview-CarSta-->
+        <!--end #overviewCarSta-->
 
         <div class="cont-whole page-gap-200"></div>
 
         <!-- ********************
         DESIGN SKILLSET
         ******************** -->
-        <div class="cont-whole">
+        <div id="overviewDesSki" class="cont-whole">
 
             <!-- --- TITLE --- -->
             <div class="cont-left">
@@ -324,13 +324,14 @@
             </div>
             <!-- end cont-right -->
         </div>
+        <!--end #overviewDesSki-->
 
         <div class="cont-whole page-gap-200"></div>
 
         <!-- ********************
         TECHNICAL SKILLSET
         ******************** -->
-        <div class="cont-whole">
+        <div id="overviewTecSki" class="cont-whole">
 
             <!-- --- TITLE --- -->
             <div class="cont-left">
@@ -421,6 +422,7 @@
             </div>
             <!-- end cont-right -->
         </div>
+        <!--end overviewDesSki-->
 
         <div class="cont-whole page-gap-200"></div>
 
@@ -428,61 +430,71 @@
         <!-- ********************
         EDUCATIONAL BACKGROUND
         ******************** -->
-        <!-- --- IMAGE --- -->
-        <div class="cont-whole">
-            <div class="cont-img-centerLine height-125">
-                <picture>
-                    <img id="EduBacImg" src="assets/imgs/me2b.jpg" class="img-bubble bubble">
-                </picture>
-            </div>
-            <!--end cont-img-->
-        </div>
-        <!--end cont-whole-->
+        <div id="overviewEduBac">
 
-        <!-- --- TITLE/PARAGRAPH --- -->
-        <div class="cont-whole">
-            <div class="cont-right">
-
-                <div id="EduBacTitle" class="cont-title-right align-right no-width">
-                    <h2 class="title-right font-white">Educational Background</h2>
+            <!-- --- IMAGE --- -->
+            <div class="cont-whole">
+                <div class="cont-img-centerLine height-125">
+                    <picture>
+                        <img id="EduBacImg" src="assets/imgs/me2b.jpg" class="img-bubble bubble">
+                    </picture>
                 </div>
-
-                <div id="EduBacPara" class="overview-cont-paragraph-right no-height">
-                    <p class="overview-paragraph-right scrollbar-thin standard-character  height-130">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                    </p>
-                </div>
-
+                <!--end cont-img-->
             </div>
-            <!--end cont-right-->
+            <!--end cont-whole-->
+
+            <!-- --- TITLE/PARAGRAPH --- -->
+            <div class="cont-whole">
+                <div class="cont-right">
+
+                    <div id="EduBacTitle" class="cont-title-right align-right no-width">
+                        <h2 class="title-right font-white">Educational Background</h2>
+                    </div>
+
+                    <div id="EduBacPara" class="overview-cont-paragraph-right no-height">
+                        <p class="overview-paragraph-right scrollbar-thin standard-character  height-130">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                        </p>
+                    </div>
+
+                </div>
+                <!--end cont-right-->
+            </div>
+            <!--end cont-whole -->
+
         </div>
-        <!--end cont-whole -->
+        <!--end #overviewEduBac-->
 
         <div class="cont-whole page-gap-200"></div>
 
         <!-- ********************
         AWARDS, SKILLS & POINT OF INTEREST
         ******************** -->
-        <div class="cont-whole">
+        <div id="overviewPOI" class="cont-whole">
 
             <!-- --- AWARD/SKILLS TITLE --- -->
             <div class="cont-left">
@@ -514,7 +526,7 @@
             </div>
             <!-- end cont-right -->
         </div>
-        <!--end cont-whole-->
+        <!--end #overviewPOI-->
 
         <div class="cont-whole page-gap-200"></div>
 
@@ -522,61 +534,71 @@
         <!-- ********************
         PERSONAL SUMMARY
         ******************** -->
-        <!-- --- IMAGE --- -->
-        <div class="cont-whole">
-            <div class="cont-img-centerLine height-125">
-                <picture>
-                    <img id="PerSumImg" src="assets/imgs/me4b.jpg" class="img-bubble bubble">
-                </picture>
-            </div>
-            <!--end cont-img-->
-        </div>
-        <!--end cont-whole-->
+        <div id="overviewPerSum">
 
-        <!-- --- TITLE/PARAGRAPH --- -->
-        <div class="cont-whole">
-            <div class="cont-right">
-
-                <div id="PerSumTitle" class="cont-title-right align-right no-width">
-                    <h2 class="title-right font-white">Personal Summary</h2>
+            <!-- --- IMAGE --- -->
+            <div class="cont-whole">
+                <div class="cont-img-centerLine height-125">
+                    <picture>
+                        <img id="PerSumImg" src="assets/imgs/me4b.jpg" class="img-bubble bubble">
+                    </picture>
                 </div>
-
-                <div id="PerSumParaCont" class="overview-cont-paragraph-right no-height">
-                    <p class="overview-paragraph-right scrollbar-thin standard-character  height-130">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt ducimus
-                        expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
-                        sed,
-                        tempore temporibus veniam vero?
-                    </p>
-                </div>
-
+                <!--end cont-img-->
             </div>
-            <!--end cont-right-->
+            <!--end cont-whole-->
+
+            <!-- --- TITLE/PARAGRAPH --- -->
+            <div class="cont-whole">
+                <div class="cont-right">
+
+                    <div id="PerSumTitle" class="cont-title-right align-right no-width">
+                        <h2 class="title-right font-white">Personal Summary</h2>
+                    </div>
+
+                    <div id="PerSumParaCont" class="overview-cont-paragraph-right no-height">
+                        <p class="overview-paragraph-right scrollbar-thin standard-character  height-130">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi deserunt
+                            ducimus
+                            expedita fugiat hic ipsam itaque laborum libero natus officia, perspiciatis, quae qui quidem
+                            sed,
+                            tempore temporibus veniam vero?
+                        </p>
+                    </div>
+
+                </div>
+                <!--end cont-right-->
+            </div>
+            <!--end cont-whole -->
+
         </div>
-        <!--end cont-whole -->
+        <!--end #overviewPerSum-->
 
         <div class="cont-whole page-gap-200"></div>
 
         <!-- ********************
         INTERESTS/HOBBIES
         ******************** -->
-        <div class="cont-whole">
+        <div id="overviewInt" class="cont-whole">
 
             <!-- --- INT/HOB TITLE --- -->
             <div class="cont-left">
@@ -739,7 +761,7 @@
         <!-- ********************
         2016 DEC
         ******************** -->
-        <div id="2016-DEC">
+        <div id="2016-dec">
             <div class="cont-whole">
                 <div class="cont-left cont-dateAndSidelines">
 
@@ -2042,7 +2064,7 @@
             </div>
         </div>
 
-        <div class="cont-whole  page-gap-200"></div>
+        <div class="bckgrnd-white cont-whole page-gap-200"></div>
     </div>
     <!--end contact-->
 
@@ -2146,17 +2168,20 @@
                                     </div><!-- /.modal -->
                                 </h3>
                             </div>
+                            <!--end contInner-footer-promo-->
                         </div>
+                        <!--end contOuter-footer-promo-->
                     </div>
+                    <!--end cont-left-->
                 </div>
+                <!--end cont-whole-->
             </div>
-            <!-- invisible -->
+            <!-- end #footer-content-inv -->
         </div>
         <!--end footer-bckgrnd-->
 
     </div>
-
-    <!--<div class="cont-whole page-gap-100"></div>-->
+    <!--end #footer-->
 
 </div>
 <!--end container-content-->
@@ -2214,9 +2239,7 @@ SCRIPTS
     $(window).resize(function () {
         var windowHeight = $(window).height();
         console.log("new window height = " + windowHeight);
-
-        var halfWindowHeight = windowHeight / 2;
-        console.log("new window half height = " + halfWindowHeight);
+        
 
         this.windowHeight = windowHeight;
 
@@ -2233,13 +2256,41 @@ SCRIPTS
 
         if (pageState == "overviewState") {
 
-
-            var overviewCarStaPosTop = $("#overview-CarSta").position().top;
+            var overviewCarStaPosTop = $("#overviewCarSta").position().top;
 
             console.log("overviewCarSta Pos Top =" + overviewCarStaPosTop);
 
+            var overviewDesSkiPosTop = $("#overviewDesSki").position().top;
 
+            console.log("overviewDesSki Pos Top =" + overviewDesSkiPosTop);
 
+            var overviewTecSkiPosTop = $("#overviewTecSki").position().top;
+
+            console.log("overviewTecSki Pos Top =" + overviewTecSkiPosTop);
+
+            var overviewEduBacPosTop = $("#overviewEduBac").position().top;
+
+            console.log("overviewEduBac Pos Top =" + overviewEduBacPosTop);
+
+            var overviewPOIPosTop = $("#overviewPOI").position().top;
+
+            console.log("overviewPOI Pos Top =" + overviewPOIPosTop);
+
+            var overviewPerSumPosTop = $("#overviewPerSum").position().top;
+
+            console.log("overviewPerSum Pos Top =" + overviewPerSumPosTop);
+
+            var overviewIntPosTop = $("#overviewInt").position().top;
+
+            console.log("overviewInt Pos Top =" + overviewIntPosTop);
+
+            var FooterPt1PosTop = $("#footer-bckgrnd").position().top;
+
+            console.log("overviewInt Pos Top =" + overviewIntPosTop);
+
+            var FooterPt2PosTop = $("#footer-promo-text").position().top;
+
+            console.log("overviewInt Pos Top =" + overviewIntPosTop);
 
 
             $(window).scroll(function () {
@@ -2254,7 +2305,6 @@ SCRIPTS
                     scrollToTopAnimationReset();
                 }
 
-
                 if (scrollTopPlusHalf >= overviewCarStaPosTop) {
                     revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
                 }
@@ -2262,52 +2312,323 @@ SCRIPTS
                     resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
                 }
 
-//                if ($(document).scrollTop() > 220) {
-//                    revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-//                }
-//                else {
-//                    resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-//                }
 
-                if ($(document).scrollTop() > 560) {
+                if (scrollTopPlusHalf >= overviewDesSkiPosTop) {
                     revealOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
                 }
                 else {
                     resetOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
                 }
 
-                if ($(document).scrollTop() > 760) {
+                if (scrollTopPlusHalf >= overviewTecSkiPosTop) {
                     revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
                 }
                 else {
                     resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
                 }
 
-                if ($(document).scrollTop() > 1100) {
+                if (scrollTopPlusHalf >= overviewEduBacPosTop) {
                     revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
                 } else {
                     resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
                 }
 
-                if ($(document).scrollTop() > 1500) {
+                if (scrollTopPlusHalf >= overviewPOIPosTop) {
                     revealOverviewInformationBlock("#POIPara, #POITitle");
                 } else {
                     resetOverviewInformationBlock("#POIPara, #POITitle");
                 }
 
 
-                if ($(document).scrollTop() > 1990) {
+                if (scrollTopPlusHalf >= overviewPerSumPosTop) {
                     revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
                 } else {
                     resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
                 }
 
-                if ($(document).scrollTop() > 2220) {
+                if (scrollTopPlusHalf >= overviewIntPosTop) {
                     revealOverviewInformationBlock("#IntPara, #IntTitle");
                 } else {
                     resetOverviewInformationBlock("#IntPara, #IntTitle");
                 }
 
+                if (scrollTopPlusHalf >=  FooterPt1PosTop) {
+                    FooterAnimation();
+//                console.log("animation activated")
+                }
+                else {
+                    FooterAnimationReset();
+//                console.log("reset being called");
+                }
+
+                if (scrollTopPlusHalf >=  FooterPt2PosTop) {
+//                $("#footer-promo-text").removeClass("invisible");
+                    $("#footer-promo-text").addClass("fade-in");
+//                $("#footer-promo-text").fadeIn();
+                    console.log("fade-in");
+                }
+                else {
+                    $("#footer-promo-text").removeClass("fade-in");
+//                $("#footer-promo-text").fadeOut();
+                    console.log("fade-out");
+                }
+
+            });
+        }
+
+
+        else if (pageState == "timelineState") {
+
+            var timeline2017PosTop = $("#2017").position().top;
+            var timeline2017NowPosTop = $("#2017-now").position().top;
+            
+            var timeline2016PosTop = $("#2016").position().top;
+            var timeline2016DecPosTop = $("#2016-dec").position().top;
+            
+            var timeline2015PosTop = $("#2015").position().top;
+            var timeline2015SepPosTop = $("#2015-sep").position().top;
+            var timeline2015JanPosTop = $("#2015-jan").position().top;
+
+            var timeline2014PosTop = $("#2014").position().top;
+            var timeline2014OctPosTop = $("#2014-oct").position().top;
+            var timeline2014SepPosTop = $("#2014-sep").position().top;
+            var timeline2014AugPosTop = $("#2014-aug").position().top;
+            var timeline2014JulPosTop = $("#2014-jul").position().top;
+
+            var timeline2013PosTop = $("#2013").position().top;
+            var timeline2013AugPosTop = $("#2013-aug").position().top;
+            var timeline2013JulPosTop = $("#2013-jul").position().top;
+
+            var timeline2011PosTop = $("#2011").position().top;
+            var timeline2011SepPosTop = $("#2011-sep").position().top;
+            var timeline2011JulPosTop = $("#2011-jul").position().top;
+
+
+            var timeline2010PosTop = $("#2010").position().top;
+            var timeline2010SepPosTop = $("#2010-sep").position().top;
+            var timeline2010JunPosTop = $("#2010-jun").position().top;
+
+            var timeline2009PosTop = $("#2009").position().top;
+            var timeline2009SepPosTop = $("#2009-sep").position().top;
+            var timeline2009AugPosTop = $("#2009-aug").position().top;
+            var timeline2009JulPosTop = $("#2009-jul").position().top;
+
+            var FooterPt1PosTop = $("#footer-bckgrnd").position().top;
+            var FooterPt2PosTop = $("#footer-promo-text").position().top;
+
+
+
+            $(window).scroll(function () {
+
+                var scrollTop = $(document).scrollTop();
+                var scrollTopPlusHalf = scrollTop + windowHeight / 2;
+
+                if ($(document).scrollTop() > 50) {
+
+                    console.log($("body").scrollTop() + " px");
+                } else {
+                }
+
+                if (scrollTopPlusHalf >= timeline2017PosTop) {
+                    arrowScrollDownAnimationReset();
+
+                    revealYearBubble("#2017-bubble");
+                } else {
+                    revealYearBubbleReset("#2017-bubble")
+                }
+
+
+                if (scrollTopPlusHalf >= timeline2017NowPosTop) {
+                    revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
+                } else {
+                    resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
+                }
+
+
+                if (scrollTopPlusHalf >= timeline2016PosTop) {
+                    revealYearBubble("#2016-bubble");
+                } else {
+                    revealYearBubbleReset("#2016-bubble");
+                }
+
+                if (scrollTopPlusHalf >= timeline2016DecPosTop) {
+                    revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
+
+                    moveToPos2("#sideline-fl");
+                } else {
+                    resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
+
+                    moveToPos2Reset("#sideline-fl");
+                }
+
+                if (scrollTopPlusHalf >= timeline2015PosTop) {
+                    revealYearBubble("#2015-bubble");
+                } else {
+                    revealYearBubbleReset("#2015-bubble");
+                }
+
+                if (scrollTopPlusHalf >= timeline2015SepPosTop) {
+                    revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
+
+                    moveToPos2("#sideline-gh");
+                    moveToPos3("#sideline-fl");
+                } else {
+                    resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
+
+                    moveToPos2Reset("#sideline-gh");
+                    moveToPos3Reset("#sideline-fl");
+                }
+
+                if (scrollTopPlusHalf >= timeline2015JanPosTop) {
+                    revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
+
+                } else {
+                    resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2014PosTop) {
+                    revealYearBubble("#2014-bubble");
+                } else {
+                    revealYearBubbleReset("#2014-bubble");
+                }
+
+                if (scrollTopPlusHalf >= timeline2014OctPosTop) {
+                    revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
+
+                } else {
+                    resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2014SepPosTop) {
+                    revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
+                } else {
+                    resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
+                }
+
+                if (scrollTopPlusHalf >= timeline2014AugPosTop) {
+                    revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
+
+
+                    moveToPos2("#sideline-km");
+                    moveToPos3("#sideline-gh");
+                } else {
+                    resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
+
+                    moveToPos2Reset("#sideline-km");
+                    moveToPos3Reset("#sideline-gh");
+                }
+
+                if (scrollTopPlusHalf >= timeline2014JulPosTop) {
+                    revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
+                } else {
+                    resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2013PosTop) {
+                    revealYearBubble("#2013-bubble");
+                } else {
+                    revealYearBubbleReset("#2013-bubble")
+                }
+
+                if (scrollTopPlusHalf >= timeline2013AugPosTop) {
+                    revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
+                } else {
+                    resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2013JulPosTop) {
+                    revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
+
+                    moveToPos2("#sideline-lsa");
+                    moveToPos3("#sideline-km");
+                } else {
+                    resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
+
+                    moveToPos2Reset("#sideline-lsa");
+                    moveToPos3Reset("#sideline-km");
+                }
+
+                if (scrollTopPlusHalf >= timeline2011PosTop) {
+                    revealYearBubble("#2011-bubble");
+                } else {
+                    revealYearBubbleReset("#2011-bubble");
+                }
+
+
+                if (scrollTopPlusHalf >= timeline2011SepPosTop) {
+                    revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
+                } else {
+                    resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2011JulPosTop) {
+                    revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
+                } else {
+                    resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
+                }
+
+                if (scrollTopPlusHalf >= timeline2010PosTop) {
+                    revealYearBubble("#2010-bubble");
+                } else {
+                    revealYearBubbleReset("#2010-bubble");
+                }
+
+                if (scrollTopPlusHalf >= timeline2010SepPosTop) {
+                    revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
+                } else {
+                    resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2010JunPosTop) {
+                    revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
+                } else {
+                    resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
+                }
+
+                if (scrollTopPlusHalf >= timeline2009PosTop) {
+                    revealYearBubble("#2009-bubble");
+                } else {
+                    revealYearBubbleReset("#2009-bubble");
+                }
+
+                if (scrollTopPlusHalf >= timeline2009SepPosTop) {
+                    revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
+                } else {
+                    resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
+                }
+
+                if (scrollTopPlusHalf >= timeline2009AugPosTop) {
+                    revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
+                } else {
+                    resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
+                }
+
+                if (scrollTopPlusHalf >= timeline2009JulPosTop) {
+                    revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
+                } else {
+                    resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
+                }
+
+                if (scrollTopPlusHalf >= FooterPt1PosTop) {
+                    FooterAnimation();
+//                console.log("animation activated")
+                }
+                else {
+                    FooterAnimationReset();
+//                console.log("reset being called");
+                }
+
+                if (scrollTopPlusHalf >= FooterPt2PosTop) {
+//                $("#footer-promo-text").removeClass("invisible");
+                    $("#footer-promo-text").addClass("fade-in");
+//                $("#footer-promo-text").fadeIn();
+                    console.log("fade-in");
+                }
+                else {
+                    $("#footer-promo-text").removeClass("fade-in");
+//                $("#footer-promo-text").fadeOut();
+                    console.log("fade-out");
+                }
             });
         }
     }
@@ -2336,7 +2657,7 @@ SCRIPTS
 
         pageState = "overviewState";
         initScrollTop();
-        footerScroll(2981, 3300);
+//        footerScroll(2981, 3300);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
@@ -2364,8 +2685,10 @@ SCRIPTS
         $("#timeline-inactive").animate({width: '170px'});
 
         $("#timeline, #footer").show();
-        timelineScroll();
-        footerScroll(10740, 11060);
+
+        pageState = "timelineState";
+        initScrollTop();
+//        footerScroll(10740, 11060);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
@@ -2395,39 +2718,30 @@ SCRIPTS
 
     // ============================================================================================ ~ FOOTER SCRIPTS
 
-    function footerScroll(distIllumination, distPromoText) {
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > distIllumination) {
-                FooterAnimation();
-//                console.log("animation activated")
-            }
-            else {
-                FooterAnimationReset();
-//                console.log("reset being called");
-            }
-
-            if ($(document).scrollTop() >= distPromoText) {
-//                $("#footer-promo-text").removeClass("invisible");
-                $("#footer-promo-text").addClass("fade-in");
-//                $("#footer-promo-text").fadeIn();
-                console.log("fade-in");
-            }
-            else {
-                $("#footer-promo-text").removeClass("fade-in");
-//                $("#footer-promo-text").fadeOut();
-                console.log("fade-out");
-            }
-
-//            if ($(document).scrollTop() > promoText && ($("#footer-promo-text").css("opacity") >= 0 || $("#footer-promo-text").css("display") == "none" )) {
-//                $("#footer-promo-text").fadeIn();
+//    function footerScroll(distIllumination, distPromoText) {
+//        $(window).scroll(function () {
+//            if ($(document).scrollTop() > distIllumination) {
+//                FooterAnimation();
+////                console.log("animation activated")
+//            }
+//            else {
+//                FooterAnimationReset();
+////                console.log("reset being called");
+//            }
+//
+//            if ($(document).scrollTop() >= distPromoText) {
+////                $("#footer-promo-text").removeClass("invisible");
+//                $("#footer-promo-text").addClass("fade-in");
+////                $("#footer-promo-text").fadeIn();
 //                console.log("fade-in");
 //            }
-//            else if ($(document).scrollTop() <= promoText && ($("#footer-promo-text").css("opacity") <= 1 || $("#footer-promo-text").css("display") != "none" )) {
-//                $("#footer-promo-text").fadeOut();
+//            else {
+//                $("#footer-promo-text").removeClass("fade-in");
+////                $("#footer-promo-text").fadeOut();
 //                console.log("fade-out");
 //            }
-        });
-    }
+//        });
+//    }
 
     //    ****************************************************************************FOOTER REVEAL FUNCTIONS
 
@@ -2598,193 +2912,193 @@ SCRIPTS
     // ============================================================================================ ~ TIMELINE SCRIPTS
 
     function timelineScroll() {
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-
-                console.log($("body").scrollTop() + " px");
-            } else {
-            }
-
-            if ($(document).scrollTop() > 134) {
-                arrowScrollDownAnimationReset();
-
-                revealYearBubble("#2017-bubble");
-            } else {
-                revealYearBubbleReset("#2017-bubble")
-            }
-
-
-            if ($(document).scrollTop() > 330) {
-                revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
-            } else {
-                resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
-            }
-
-
-            if ($(document).scrollTop() > 1020) {
-                revealYearBubble("#2016-bubble");
-            } else {
-                revealYearBubbleReset("#2016-bubble");
-            }
-
-            if ($(document).scrollTop() > 1210) {
-                revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
-
-                moveToPos2("#sideline-fl");
-            } else {
-                resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
-
-                moveToPos2Reset("#sideline-fl");
-            }
-
-            if ($(document).scrollTop() > 1990) {
-                revealYearBubble("#2015-bubble");
-            } else {
-                revealYearBubbleReset("#2015-bubble");
-            }
-
-            if ($(document).scrollTop() > 2190) {
-                revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
-
-                moveToPos2("#sideline-gh");
-                moveToPos3("#sideline-fl");
-            } else {
-                resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
-
-                moveToPos2Reset("#sideline-gh");
-                moveToPos3Reset("#sideline-fl");
-            }
-
-            if ($(document).scrollTop() > 2740) {
-                revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
-
-            } else {
-                resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
-            }
-
-            if ($(document).scrollTop() > 3180) {
-                revealYearBubble("#2014-bubble");
-            } else {
-                revealYearBubbleReset("#2014-bubble");
-            }
-
-            if ($(document).scrollTop() > 3380) {
-                revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
-
-            } else {
-                resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
-            }
-
-            if ($(document).scrollTop() > 3670) {
-                revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
-            } else {
-                resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
-            }
-
-            if ($(document).scrollTop() > 4220) {
-                revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
-
-
-                moveToPos2("#sideline-km");
-                moveToPos3("#sideline-gh");
-            } else {
-                resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
-
-                moveToPos2Reset("#sideline-km");
-                moveToPos3Reset("#sideline-gh");
-            }
-
-            if ($(document).scrollTop() > 4965) {
-                revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
-            } else {
-                resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
-            }
-
-            if ($(document).scrollTop() > 5715) {
-                revealYearBubble("#2013-bubble");
-            } else {
-                revealYearBubbleReset("#2013-bubble")
-            }
-
-            if ($(document).scrollTop() > 5915) {
-                revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
-            } else {
-                resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
-            }
-
-            if ($(document).scrollTop() > 6200) {
-                revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
-
-                moveToPos2("#sideline-lsa");
-                moveToPos3("#sideline-km");
-            } else {
-                resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
-
-                moveToPos2Reset("#sideline-lsa");
-                moveToPos3Reset("#sideline-km");
-            }
-
-            if ($(document).scrollTop() > 6860) {
-                revealYearBubble("#2011-bubble");
-            } else {
-                revealYearBubbleReset("#2011-bubble");
-            }
-
-
-            if ($(document).scrollTop() > 7060) {
-                revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
-            } else {
-                resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
-            }
-
-            if ($(document).scrollTop() > 7360) {
-                revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
-            } else {
-                resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
-            }
-
-            if ($(document).scrollTop() > 7970) {
-                revealYearBubble("#2010-bubble");
-            } else {
-                revealYearBubbleReset("#2010-bubble");
-            }
-
-            if ($(document).scrollTop() > 8170) {
-                revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
-            } else {
-                resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
-            }
-
-            if ($(document).scrollTop() > 8422) {
-                revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
-            } else {
-                resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
-            }
-
-            if ($(document).scrollTop() > 9221) {
-                revealYearBubble("#2009-bubble");
-            } else {
-                revealYearBubbleReset("#2009-bubble");
-            }
-
-            if ($(document).scrollTop() > 9420) {
-                revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
-            } else {
-                resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
-            }
-
-            if ($(document).scrollTop() > 9710) {
-                revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
-            } else {
-                resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
-            }
-
-            if ($(document).scrollTop() > 10050) {
-                revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
-            } else {
-                resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
-            }
-        });
+//        $(window).scroll(function () {
+//            if ($(document).scrollTop() > 50) {
+//
+//                console.log($("body").scrollTop() + " px");
+//            } else {
+//            }
+//
+//            if ($(document).scrollTop() > 134) {
+//                arrowScrollDownAnimationReset();
+//
+//                revealYearBubble("#2017-bubble");
+//            } else {
+//                revealYearBubbleReset("#2017-bubble")
+//            }
+//
+//
+//            if ($(document).scrollTop() > 330) {
+//                revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
+//            } else {
+//                resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
+//            }
+//
+//
+//            if ($(document).scrollTop() > 1020) {
+//                revealYearBubble("#2016-bubble");
+//            } else {
+//                revealYearBubbleReset("#2016-bubble");
+//            }
+//
+//            if ($(document).scrollTop() > 1210) {
+//                revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
+//
+//                moveToPos2("#sideline-fl");
+//            } else {
+//                resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
+//
+//                moveToPos2Reset("#sideline-fl");
+//            }
+//
+//            if ($(document).scrollTop() > 1990) {
+//                revealYearBubble("#2015-bubble");
+//            } else {
+//                revealYearBubbleReset("#2015-bubble");
+//            }
+//
+//            if ($(document).scrollTop() > 2190) {
+//                revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
+//
+//                moveToPos2("#sideline-gh");
+//                moveToPos3("#sideline-fl");
+//            } else {
+//                resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
+//
+//                moveToPos2Reset("#sideline-gh");
+//                moveToPos3Reset("#sideline-fl");
+//            }
+//
+//            if ($(document).scrollTop() > 2740) {
+//                revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
+//
+//            } else {
+//                resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
+//            }
+//
+//            if ($(document).scrollTop() > 3180) {
+//                revealYearBubble("#2014-bubble");
+//            } else {
+//                revealYearBubbleReset("#2014-bubble");
+//            }
+//
+//            if ($(document).scrollTop() > 3380) {
+//                revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
+//
+//            } else {
+//                resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
+//            }
+//
+//            if ($(document).scrollTop() > 3670) {
+//                revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
+//            } else {
+//                resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
+//            }
+//
+//            if ($(document).scrollTop() > 4220) {
+//                revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
+//
+//
+//                moveToPos2("#sideline-km");
+//                moveToPos3("#sideline-gh");
+//            } else {
+//                resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
+//
+//                moveToPos2Reset("#sideline-km");
+//                moveToPos3Reset("#sideline-gh");
+//            }
+//
+//            if ($(document).scrollTop() > 4965) {
+//                revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
+//            } else {
+//                resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
+//            }
+//
+//            if ($(document).scrollTop() > 5715) {
+//                revealYearBubble("#2013-bubble");
+//            } else {
+//                revealYearBubbleReset("#2013-bubble")
+//            }
+//
+//            if ($(document).scrollTop() > 5915) {
+//                revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
+//            } else {
+//                resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
+//            }
+//
+//            if ($(document).scrollTop() > 6200) {
+//                revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
+//
+//                moveToPos2("#sideline-lsa");
+//                moveToPos3("#sideline-km");
+//            } else {
+//                resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
+//
+//                moveToPos2Reset("#sideline-lsa");
+//                moveToPos3Reset("#sideline-km");
+//            }
+//
+//            if ($(document).scrollTop() > 6860) {
+//                revealYearBubble("#2011-bubble");
+//            } else {
+//                revealYearBubbleReset("#2011-bubble");
+//            }
+//
+//
+//            if ($(document).scrollTop() > 7060) {
+//                revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
+//            } else {
+//                resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
+//            }
+//
+//            if ($(document).scrollTop() > 7360) {
+//                revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
+//            } else {
+//                resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
+//            }
+//
+//            if ($(document).scrollTop() > 7970) {
+//                revealYearBubble("#2010-bubble");
+//            } else {
+//                revealYearBubbleReset("#2010-bubble");
+//            }
+//
+//            if ($(document).scrollTop() > 8170) {
+//                revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
+//            } else {
+//                resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
+//            }
+//
+//            if ($(document).scrollTop() > 8422) {
+//                revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
+//            } else {
+//                resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
+//            }
+//
+//            if ($(document).scrollTop() > 9221) {
+//                revealYearBubble("#2009-bubble");
+//            } else {
+//                revealYearBubbleReset("#2009-bubble");
+//            }
+//
+//            if ($(document).scrollTop() > 9420) {
+//                revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
+//            } else {
+//                resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
+//            }
+//
+//            if ($(document).scrollTop() > 9710) {
+//                revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
+//            } else {
+//                resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
+//            }
+//
+//            if ($(document).scrollTop() > 10050) {
+//                revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
+//            } else {
+//                resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
+//            }
+//        });
     }
 
     //****************************************************************************REVEAL/RESET TIMELINE ITEM FUNCTIONS
