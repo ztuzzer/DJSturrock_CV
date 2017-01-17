@@ -1283,3 +1283,28 @@ body::-webkit-scrollbar {
 .bckgrnd-white {
     background-color: #fff;
 }
+
+.nav-span-inactive {
+    width:0px;
+    transition: all 1s;
+}
+
+.overview-inactive.reveal-width {
+    width: 184px;
+    transition: all 1s;
+}
+
+.portfolio-inactive.reveal-width {
+    width: 195px;
+    transition: all 1s;
+}
+
+.timeline-inactive.reveal-width {
+    width: 170px;
+    transition: all 1s;
+}
+
+.contact-inactive.reveal-width {
+    width: 160px;
+    transition: all 1s;
+}

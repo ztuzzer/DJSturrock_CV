@@ -81,33 +81,33 @@
                 <ul class="ul-simple">
                     <li class="li-header">
                     <span id="overview-active" class="nav-span-active">
-                        <a class="nav-item">Overview</a>
+                        <a id="overview-active-link" class="nav-item">Overview</a>
                     </span>
-                        <span id="overview-inactive" class="nav-span-inactive">
+                        <span id="overview-inactive" class="overview-inactive nav-span-inactive">
                         <a class="nav-item inactive">Overview</a>
                     </span>
                     </li>
                     <li class="li-header">
                     <span id="portfolio-active" class="nav-span-active">
-                        <a class="nav-item">portfolio</a>
+                        <a id="portfolio-active-link" class="nav-item">portfolio</a>
                     </span>
-                        <span id="portfolio-inactive" class="nav-span-inactive">
+                        <span id="portfolio-inactive" class="portfolio-inactive nav-span-inactive">
                         <a class="nav-item inactive">portfolio</a>
                     </span>
                     </li>
                     <li class="li-header">
                     <span id="timeline-active" class="nav-span-active">
-                        <a class="nav-item">timeline</a>
+                        <a id="timeline-active-link" class="nav-item">timeline</a>
                     </span>
-                        <span id="timeline-inactive" class="nav-span-inactive">
+                        <span id="timeline-inactive" class="timeline-inactive nav-span-inactive">
                         <a class="nav-item inactive">timeline</a>
                     </span>
                     </li>
                     <li class="li-header">
                     <span id="contact-active" class="nav-span-active">
-                        <a class="nav-item">contact</a>
+                        <a id="contact-active-link" class="nav-item">contact</a>
                     </span>
-                        <span id="contact-inactive" class="nav-span-inactive">
+                        <span id="contact-inactive" class="contact-inactive nav-span-inactive">
                         <a class="nav-item inactive">contact</a>
                     </span>
                     </li>
@@ -2197,7 +2197,7 @@ SCRIPTS
     // =========================================================================================== ~ NAVIGATION SCRIPTS
 
     // ****  ~ Overview ****
-    $("#overview-active").click(function () {
+    $("#overview-active-link").click(function () {
 
         // --- hide other page content ---
         $("#contact, #timeline").hide();
@@ -2206,8 +2206,11 @@ SCRIPTS
         // --- setup nav ---
         $(".nav-span-active").fadeIn();
         $("#overview-active").fadeOut();
-        $(".nav-span-inactive").animate({width: '0px'});
-        $("#overview-inactive").animate({width: '184px'});
+        $(".nav-span-inactive").removeClass("reveal-width");
+        $("#overview-inactive").addClass("reveal-width");
+
+//        $(".nav-span-inactive").animate({width: '0px'});
+//        $("#overview-inactive").animate({width: '184px'});
 
         // --- show content ---
         $("#overview, #footer").show();
@@ -2224,17 +2227,22 @@ SCRIPTS
     });
 
     // ***  ~ Portfolio ***
-    $("#portfolio-active").click(function () {
+    $("#portfolio-active-link").click(function () {
 
         // --- setup nav ---
         $(".nav-span-active").fadeIn();
         $("#portfolio-active").fadeOut();
-        $(".nav-span-inactive").animate({width: '0px'});
-        $("#portfolio-inactive").animate({width: '195px'});
+
+        $(".nav-span-inactive").removeClass("reveal-width");
+        $("#portfolio-inactive").addClass("reveal-width");
+
+
+//        $(".nav-span-inactive").animate({width: '0px'});
+//        $("#portfolio-inactive").animate({width: '195px'});
     });
 
     // ***  ~ Timeline ***
-    $("#timeline-active").click(function () {
+    $("#timeline-active-link").click(function () {
 
         // --- hide other page content ---
         $("#contact, #overview").hide();
@@ -2243,8 +2251,12 @@ SCRIPTS
         // --- setup nav ---
         $(".nav-span-active").fadeIn();
         $("#timeline-active").fadeOut();
-        $(".nav-span-inactive").animate({width: '0px'});
-        $("#timeline-inactive").animate({width: '170px'});
+
+        $(".nav-span-inactive").removeClass("reveal-width");
+        $("#timeline-inactive").addClass("reveal-width");
+
+//        $(".nav-span-inactive").animate({width: '0px'});
+//        $("#timeline-inactive").animate({width: '170px'});
 
         // --- show content ---
         $("#timeline, #footer").show();
@@ -2261,7 +2273,7 @@ SCRIPTS
     });
 
     // ***  ~ Contact ***
-    $("#contact-active").click(function () {
+    $("#contact-active-link").click(function () {
 
         // --- hide scroll down arrow ---
         arrowScrollDownAnimationReset()
@@ -2273,8 +2285,12 @@ SCRIPTS
             // --- setup nav ---
             $(".nav-span-active").fadeIn();
             $("#contact-active").fadeOut();
-            $(".nav-span-inactive").animate({width: '0px'});
-            $("#contact-inactive").animate({width: '160px'});
+
+            $(".nav-span-inactive").removeClass("reveal-width");
+            $("#contact-inactive").addClass("reveal-width");
+
+//            $(".nav-span-inactive").animate({width: '0px'});
+//            $("#contact-inactive").animate({width: '160px'});
 
             // --- show & animate content ---
             $("#contact").show();
