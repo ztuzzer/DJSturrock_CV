@@ -2109,7 +2109,7 @@
                     </div>
                 </div>
 
-                <div class="cont-whole">
+                <div id="minimumFooterHeight" class="cont-whole">
                     <div class="cont-left">
                         <div class="contOuter-footer-promo">
                             <div class="contInner-footer-promo">
@@ -2239,11 +2239,11 @@ SCRIPTS
     $(window).resize(function () {
         var windowHeight = $(window).height();
         console.log("new window height = " + windowHeight);
-        
+
 
         this.windowHeight = windowHeight;
 
-
+        adjustMinFooterHeight();
         initScrollTop();
     });
 
@@ -2633,6 +2633,15 @@ SCRIPTS
         }
     }
 
+//    MINIMUM FOOTER HEIGHT
+
+    var minFooterHeight = halfWindowHeight + 20 + "px";
+    $("#minimumFooterHeight").css("min-height", minFooterHeight);
+
+    function adjustMinFooterHeight () {
+        var minFooterHeight = (windowHeight / 2) + 20 + "px";
+        $("#minimumFooterHeight").css("min-height", minFooterHeight);
+    }
 
     // =========================================================================================== ~ NAVIGATION SCRIPTS
 
@@ -2657,7 +2666,6 @@ SCRIPTS
 
         pageState = "overviewState";
         initScrollTop();
-//        footerScroll(2981, 3300);
 
         setTimeout(function () {
             arrowScrollDownAnimation();
