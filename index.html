@@ -2194,62 +2194,100 @@ SCRIPTS
 ================================================== -->
 <script>
 
-    //    var PosTop = $("#CarStaImg").position().top;
-    //    console.log("pos-top = " + PosTop);
+    // =========================================================================================== ~ NAVIGATION SCRIPTS
 
+    // ****  ~ Overview ****
+    $("#overview-active").click(function () {
 
-    //    $(window).scroll(function () {
-    //
-    //
-    //        var PosTop = $("#CarStaImg").position().top;
-    ////        console.log("pos-top = " + PosTop);
-    //
-    //        var posTopMinus = PosTop - 200;
-    //        console.log("pos-topMinus = " + posTopMinus);
-    //
-    ////        var y_scroll_pos = window.pageYOffset;
-    ////        console.log("y-scroll-pos = " + y_scroll_pos);
-    //
-    //        var scrolltop = $(document).scrollTop();
-    //        console.log("scrolltop = " + scrolltop);
-    //
-    //
-    //        if (posTopMinus >= 200) {
-    //            revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-    //        }
-    //        else {
-    //            resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-    //        }
-    //
-    //    });
+        // --- hide other page content ---
+        $("#contact, #timeline").hide();
+        contactAnimationReset();
 
-    var windowHeight = $(window).height();   // returns height of browser viewport
+        // --- setup nav ---
+        $(".nav-span-active").fadeIn();
+        $("#overview-active").fadeOut();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#overview-inactive").animate({width: '184px'});
 
-    console.log("Window height =" + windowHeight);
+        // --- show content ---
+        $("#overview, #footer").show();
 
-    var pageState = "";
-
-    console.log("window height =" + windowHeight);
-
-    var halfWindowHeight = windowHeight / 2;
-
-    console.log("half window height =" + halfWindowHeight);
-
-
-    $(window).resize(function () {
-        var windowHeight = $(window).height();
-        console.log("new window height = " + windowHeight);
-
-
-        this.windowHeight = windowHeight;
-
-        adjustMinFooterHeight();
+        // --- init ScrollTop functions ---
+        pageState = "overviewState";
         initScrollTop();
+
+        // --- show scroll down arrow ---
+        setTimeout(function () {
+            arrowScrollDownAnimation();
+
+        }, 500);
     });
 
+    // ***  ~ Portfolio ***
+    $("#portfolio-active").click(function () {
 
-    $("#measure2").animate({height: halfWindowHeight});
+        // --- setup nav ---
+        $(".nav-span-active").fadeIn();
+        $("#portfolio-active").fadeOut();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#portfolio-inactive").animate({width: '195px'});
+    });
 
+    // ***  ~ Timeline ***
+    $("#timeline-active").click(function () {
+
+        // --- hide other page content ---
+        $("#contact, #overview").hide();
+        contactAnimationReset();
+
+        // --- setup nav ---
+        $(".nav-span-active").fadeIn();
+        $("#timeline-active").fadeOut();
+        $(".nav-span-inactive").animate({width: '0px'});
+        $("#timeline-inactive").animate({width: '170px'});
+
+        // --- show content ---
+        $("#timeline, #footer").show();
+
+        // --- init ScrollTop Functions ---
+        pageState = "timelineState";
+        initScrollTop();
+
+        // --- show ScrollDown arrow ---
+        setTimeout(function () {
+            arrowScrollDownAnimation();
+        }, 500);
+
+    });
+
+    // ***  ~ Contact ***
+    $("#contact-active").click(function () {
+
+        // --- hide scroll down arrow ---
+        arrowScrollDownAnimationReset()
+
+        setTimeout(function () {
+            // --- hide other content ---
+            $("#overview, #timeline, #footer").hide();
+
+            // --- setup nav ---
+            $(".nav-span-active").fadeIn();
+            $("#contact-active").fadeOut();
+            $(".nav-span-inactive").animate({width: '0px'});
+            $("#contact-inactive").animate({width: '160px'});
+
+            // --- show & animate content ---
+            $("#contact").show();
+            contactAnimation();
+        }, 500);
+    });
+
+    // =========================================================================================== ~ SCROLLTOP SCRIPTS
+
+    var windowHeight = $(window).height();
+    var halfWindowHeight = windowHeight / 2;
+
+    var pageState = "";
 
     function initScrollTop() {
         console.log("pageState=" + pageState);
@@ -2258,40 +2296,20 @@ SCRIPTS
 
             var overviewCarStaPosTop = $("#overviewCarSta").position().top;
 
-            console.log("overviewCarSta Pos Top =" + overviewCarStaPosTop);
-
             var overviewDesSkiPosTop = $("#overviewDesSki").position().top;
-
-            console.log("overviewDesSki Pos Top =" + overviewDesSkiPosTop);
 
             var overviewTecSkiPosTop = $("#overviewTecSki").position().top;
 
-            console.log("overviewTecSki Pos Top =" + overviewTecSkiPosTop);
-
             var overviewEduBacPosTop = $("#overviewEduBac").position().top;
-
-            console.log("overviewEduBac Pos Top =" + overviewEduBacPosTop);
 
             var overviewPOIPosTop = $("#overviewPOI").position().top;
 
-            console.log("overviewPOI Pos Top =" + overviewPOIPosTop);
-
             var overviewPerSumPosTop = $("#overviewPerSum").position().top;
-
-            console.log("overviewPerSum Pos Top =" + overviewPerSumPosTop);
 
             var overviewIntPosTop = $("#overviewInt").position().top;
 
-            console.log("overviewInt Pos Top =" + overviewIntPosTop);
-
             var FooterPt1PosTop = $("#footer-bckgrnd").position().top;
-
-            console.log("overviewInt Pos Top =" + overviewIntPosTop);
-
             var FooterPt2PosTop = $("#footer-promo-text").position().top;
-
-            console.log("overviewInt Pos Top =" + overviewIntPosTop);
-
 
             $(window).scroll(function () {
 
@@ -2311,7 +2329,6 @@ SCRIPTS
                 else {
                     resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
                 }
-
 
                 if (scrollTopPlusHalf >= overviewDesSkiPosTop) {
                     revealOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
@@ -2354,23 +2371,16 @@ SCRIPTS
 
                 if (scrollTopPlusHalf >=  FooterPt1PosTop) {
                     FooterAnimation();
-//                console.log("animation activated")
                 }
                 else {
                     FooterAnimationReset();
-//                console.log("reset being called");
                 }
 
                 if (scrollTopPlusHalf >=  FooterPt2PosTop) {
-//                $("#footer-promo-text").removeClass("invisible");
                     $("#footer-promo-text").addClass("fade-in");
-//                $("#footer-promo-text").fadeIn();
-                    console.log("fade-in");
                 }
                 else {
                     $("#footer-promo-text").removeClass("fade-in");
-//                $("#footer-promo-text").fadeOut();
-                    console.log("fade-out");
                 }
 
             });
@@ -2423,12 +2433,6 @@ SCRIPTS
                 var scrollTop = $(document).scrollTop();
                 var scrollTopPlusHalf = scrollTop + windowHeight / 2;
 
-                if ($(document).scrollTop() > 50) {
-
-                    console.log($("body").scrollTop() + " px");
-                } else {
-                }
-
                 if (scrollTopPlusHalf >= timeline2017PosTop) {
                     arrowScrollDownAnimationReset();
 
@@ -2437,13 +2441,11 @@ SCRIPTS
                     revealYearBubbleReset("#2017-bubble")
                 }
 
-
                 if (scrollTopPlusHalf >= timeline2017NowPosTop) {
                     revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
                 } else {
                     resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
                 }
-
 
                 if (scrollTopPlusHalf >= timeline2016PosTop) {
                     revealYearBubble("#2016-bubble");
@@ -2507,7 +2509,6 @@ SCRIPTS
 
                 if (scrollTopPlusHalf >= timeline2014AugPosTop) {
                     revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
-
 
                     moveToPos2("#sideline-km");
                     moveToPos3("#sideline-gh");
@@ -2611,176 +2612,24 @@ SCRIPTS
 
                 if (scrollTopPlusHalf >= FooterPt1PosTop) {
                     FooterAnimation();
-//                console.log("animation activated")
                 }
                 else {
                     FooterAnimationReset();
-//                console.log("reset being called");
                 }
 
                 if (scrollTopPlusHalf >= FooterPt2PosTop) {
-//                $("#footer-promo-text").removeClass("invisible");
                     $("#footer-promo-text").addClass("fade-in");
-//                $("#footer-promo-text").fadeIn();
-                    console.log("fade-in");
                 }
                 else {
                     $("#footer-promo-text").removeClass("fade-in");
-//                $("#footer-promo-text").fadeOut();
-                    console.log("fade-out");
                 }
             });
         }
     }
 
-//    MINIMUM FOOTER HEIGHT
-
-    var minFooterHeight = halfWindowHeight + 20 + "px";
-    $("#minimumFooterHeight").css("min-height", minFooterHeight);
-
-    function adjustMinFooterHeight () {
-        var minFooterHeight = (windowHeight / 2) + 20 + "px";
-        $("#minimumFooterHeight").css("min-height", minFooterHeight);
-    }
-
-    // =========================================================================================== ~ NAVIGATION SCRIPTS
-
-    $("#port-ux-bubble").click(function () {
-        $(".port-sectionBubble").removeClass("small");
-        $("#port-ux-bubble-text").removeClass("small");
-    });
-
-    // ****  ~ Overview ****
-    $("#overview-active").click(function () {
-
-        $("#contact, #timeline").hide();
-        contactAnimationReset();
-
-        $(".nav-span-active").fadeIn();
-        $("#overview-active").fadeOut();
-        $(".nav-span-inactive").animate({width: '0px'});
-        $("#overview-inactive").animate({width: '184px'});
-
-        $("#overview, #footer").show();
-
-
-        pageState = "overviewState";
-        initScrollTop();
-
-        setTimeout(function () {
-            arrowScrollDownAnimation();
-
-        }, 500);
-    });
-
-    // ***  ~ Portfolio ***
-    $("#portfolio-active").click(function () {
-        $(".nav-span-active").fadeIn();
-        $("#portfolio-active").fadeOut();
-        $(".nav-span-inactive").animate({width: '0px'});
-        $("#portfolio-inactive").animate({width: '195px'});
-    });
-
-    // ***  ~ Timeline ***
-    $("#timeline-active").click(function () {
-
-        $("#contact, #overview").hide();
-        contactAnimationReset();
-
-        $(".nav-span-active").fadeIn();
-        $("#timeline-active").fadeOut();
-        $(".nav-span-inactive").animate({width: '0px'});
-        $("#timeline-inactive").animate({width: '170px'});
-
-        $("#timeline, #footer").show();
-
-        pageState = "timelineState";
-        initScrollTop();
-//        footerScroll(10740, 11060);
-
-        setTimeout(function () {
-            arrowScrollDownAnimation();
-        }, 500);
-
-    });
-
-    // ***  ~ Contact ***
-    $("#contact-active").click(function () {
-
-        arrowScrollDownAnimationReset()
-
-        setTimeout(function () {
-            $("#overview, #timeline, #footer").hide();
-
-
-            $(".nav-span-active").fadeIn();
-            $("#contact-active").fadeOut();
-            $(".nav-span-inactive").animate({width: '0px'});
-            $("#contact-inactive").animate({width: '160px'});
-
-
-            $("#contact").show();
-            contactAnimation();
-        }, 500);
-    });
-
-    // ============================================================================================ ~ FOOTER SCRIPTS
-
-//    function footerScroll(distIllumination, distPromoText) {
-//        $(window).scroll(function () {
-//            if ($(document).scrollTop() > distIllumination) {
-//                FooterAnimation();
-////                console.log("animation activated")
-//            }
-//            else {
-//                FooterAnimationReset();
-////                console.log("reset being called");
-//            }
-//
-//            if ($(document).scrollTop() >= distPromoText) {
-////                $("#footer-promo-text").removeClass("invisible");
-//                $("#footer-promo-text").addClass("fade-in");
-////                $("#footer-promo-text").fadeIn();
-//                console.log("fade-in");
-//            }
-//            else {
-//                $("#footer-promo-text").removeClass("fade-in");
-////                $("#footer-promo-text").fadeOut();
-//                console.log("fade-out");
-//            }
-//        });
-//    }
-
-    //    ****************************************************************************FOOTER REVEAL FUNCTIONS
-
-
-    function FooterAnimation() {
-        $("#footer-bckgrnd").addClass("illuminated");
-        $("#footer-content-inv").removeClass("invisible");
-
-    }
-    function FooterAnimationReset() {
-        $("#footer-bckgrnd").removeClass("illuminated");
-        $("#footer-content-inv").addClass("invisible");
-//        $("#footer-promo-text").addClass("invisible");
-    }
-
-    // **** document height ***
-    //    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    //    var h2 = h/2;
-    //
-    //    var h4 = $(window).height();
-    //    console.log("h4 =" + h4);
-    //
-    //    document.getElementById("stem").style.height = h4 + "px";
-    //    console.log("h =" + h);
-    //    console.log("h2 =" + h2);
-
     // ========================================================================================== ~ HEADER INIT SCRIPTS
 
-
     $(document).ready(header_init());
-    //    $(document).ready(arrowScrollDownAnimation());
 
     // ***  ~ HEADER INIT MAIN FUNCTION ***
     function header_init() {
@@ -2834,67 +2683,6 @@ SCRIPTS
 
     // ============================================================================================ ~ OVERVIEW SCRIPTS
 
-
-    //    function overviewScroll() {
-    //        $(window).scroll(function () {
-    //
-    //            if ($(document).scrollTop() >= 220) {
-    //                arrowScrollDownAnimationReset();
-    //                scrollToTopAnimation()
-    //            } else {
-    //                scrollToTopAnimationReset();
-    //            }
-    //
-    //            if ($(document).scrollTop() > 220) {
-    //                revealOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-    //            }
-    //            else {
-    //                resetOverviewBubble("#CarStaImg", "#CarStaTitle", "#CarStaPara");
-    //            }
-    //
-    //            if ($(document).scrollTop() > 560) {
-    //                revealOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
-    //            }
-    //            else {
-    //                resetOverviewInformationBlock("#DesSkiPara, #DesSkiTitle");
-    //            }
-    //
-    //            if ($(document).scrollTop() > 760) {
-    //                revealOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
-    //            }
-    //            else {
-    //                resetOverviewInformationBlock("#TecSkiPara, #TecSkiTitle");
-    //            }
-    //
-    //            if ($(document).scrollTop() > 1100) {
-    //                revealOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara");
-    //            } else {
-    //                resetOverviewBubble("#EduBacImg", "#EduBacTitle", "#EduBacPara")
-    //            }
-    //
-    //            if ($(document).scrollTop() > 1500) {
-    //                revealOverviewInformationBlock("#POIPara, #POITitle");
-    //            } else {
-    //                resetOverviewInformationBlock("#POIPara, #POITitle");
-    //            }
-    //
-    //
-    //            if ($(document).scrollTop() > 1990) {
-    //                revealOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont");
-    //            } else {
-    //                resetOverviewBubble("#PerSumImg", "#PerSumTitle", "#PerSumParaCont")
-    //            }
-    //
-    //            if ($(document).scrollTop() > 2220) {
-    //                revealOverviewInformationBlock("#IntPara, #IntTitle");
-    //            } else {
-    //                resetOverviewInformationBlock("#IntPara, #IntTitle");
-    //            }
-    //
-    //        });
-    //    }
-
-
     //    ****************************************************************************OVERVIEW REVEAL/RESET FUNCTIONS
 
     function revealOverviewBubble(imgBubble, title, paraCont) {
@@ -2919,195 +2707,6 @@ SCRIPTS
 
     // ============================================================================================ ~ TIMELINE SCRIPTS
 
-    function timelineScroll() {
-//        $(window).scroll(function () {
-//            if ($(document).scrollTop() > 50) {
-//
-//                console.log($("body").scrollTop() + " px");
-//            } else {
-//            }
-//
-//            if ($(document).scrollTop() > 134) {
-//                arrowScrollDownAnimationReset();
-//
-//                revealYearBubble("#2017-bubble");
-//            } else {
-//                revealYearBubbleReset("#2017-bubble")
-//            }
-//
-//
-//            if ($(document).scrollTop() > 330) {
-//                revealTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl", "#sideline-top-fl", "#sideline-bottom-fl");
-//            } else {
-//                resetTimelineItem("#2017-now-date, #2017-now-title, #2017-now-para", "#cont-sideline-fl");
-//            }
-//
-//
-//            if ($(document).scrollTop() > 1020) {
-//                revealYearBubble("#2016-bubble");
-//            } else {
-//                revealYearBubbleReset("#2016-bubble");
-//            }
-//
-//            if ($(document).scrollTop() > 1210) {
-//                revealTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh", "#sideline-top-gh", "#sideline-bottom-gh");
-//
-//                moveToPos2("#sideline-fl");
-//            } else {
-//                resetTimelineItem("#2016-dec-date, #2016-dec-title, #2016-dec-para", "#cont-sideline-gh");
-//
-//                moveToPos2Reset("#sideline-fl");
-//            }
-//
-//            if ($(document).scrollTop() > 1990) {
-//                revealYearBubble("#2015-bubble");
-//            } else {
-//                revealYearBubbleReset("#2015-bubble");
-//            }
-//
-//            if ($(document).scrollTop() > 2190) {
-//                revealTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd", "#sideline-top-gd", "#sideline-bottom-gd");
-//
-//                moveToPos2("#sideline-gh");
-//                moveToPos3("#sideline-fl");
-//            } else {
-//                resetTimelineItem("#2015-sep-date, #2015-sep-title, #2015-sep-para", "#cont-sideline-gd");
-//
-//                moveToPos2Reset("#sideline-gh");
-//                moveToPos3Reset("#sideline-fl");
-//            }
-//
-//            if ($(document).scrollTop() > 2740) {
-//                revealTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2", "#sideline-top-fl2", "#sideline-bottom-fl2");
-//
-//            } else {
-//                resetTimelineItem("#2015-jan-date, #2015-jan-title, #2015-jan-para", "#cont-sideline-fl2");
-//            }
-//
-//            if ($(document).scrollTop() > 3180) {
-//                revealYearBubble("#2014-bubble");
-//            } else {
-//                revealYearBubbleReset("#2014-bubble");
-//            }
-//
-//            if ($(document).scrollTop() > 3380) {
-//                revealTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2", "#sideline-top-gd2", "#sideline-bottom-gd2");
-//
-//            } else {
-//                resetTimelineItem("#2014-oct-date, #2014-oct-title, #2014-oct-para", "#cont-sideline-gd2");
-//            }
-//
-//            if ($(document).scrollTop() > 3670) {
-//                revealTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km", "#sideline-top-km", "#sideline-bottom-km");
-//            } else {
-//                resetTimelineItem("#2014-sep-date, #2014-sep-title, #2014-sep-para", "#cont-sideline-km");
-//            }
-//
-//            if ($(document).scrollTop() > 4220) {
-//                revealTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa", "#sideline-top-lsa", "#sideline-bottom-lsa");
-//
-//
-//                moveToPos2("#sideline-km");
-//                moveToPos3("#sideline-gh");
-//            } else {
-//                resetTimelineItem("#2014-aug-date, #2014-aug-title, #2014-aug-para", "#cont-sideline-lsa");
-//
-//                moveToPos2Reset("#sideline-km");
-//                moveToPos3Reset("#sideline-gh");
-//            }
-//
-//            if ($(document).scrollTop() > 4965) {
-//                revealTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2", "#sideline-top-gh2", "#sideline-bottom-gh2");
-//            } else {
-//                resetTimelineItem("#2014-jul-date, #2014-jul-title, #2014-jul-para", "#cont-sideline-gh2");
-//            }
-//
-//            if ($(document).scrollTop() > 5715) {
-//                revealYearBubble("#2013-bubble");
-//            } else {
-//                revealYearBubbleReset("#2013-bubble")
-//            }
-//
-//            if ($(document).scrollTop() > 5915) {
-//                revealTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2", "#sideline-top-km2", "#sideline-bottom-km2");
-//            } else {
-//                resetTimelineItem("#2013-aug-date, #2013-aug-title, #2013-aug-para", "#cont-sideline-km2");
-//            }
-//
-//            if ($(document).scrollTop() > 6200) {
-//                revealTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg", "#sideline-top-sg", "#sideline-bottom-sg");
-//
-//                moveToPos2("#sideline-lsa");
-//                moveToPos3("#sideline-km");
-//            } else {
-//                resetTimelineItem("#2013-jul-date, #2013-jul-title, #2013-jul-para", "#cont-sideline-sg");
-//
-//                moveToPos2Reset("#sideline-lsa");
-//                moveToPos3Reset("#sideline-km");
-//            }
-//
-//            if ($(document).scrollTop() > 6860) {
-//                revealYearBubble("#2011-bubble");
-//            } else {
-//                revealYearBubbleReset("#2011-bubble");
-//            }
-//
-//
-//            if ($(document).scrollTop() > 7060) {
-//                revealTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2", "#sideline-top-lsa2", "#sideline-bottom-lsa2");
-//            } else {
-//                resetTimelineItem("#2011-sep-date, #2011-sep-title, #2011-sep-para", "#cont-sideline-lsa2");
-//            }
-//
-//            if ($(document).scrollTop() > 7360) {
-//                revealTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe", "#sideline-top-uoe", "#sideline-bottom-uoe");
-//            } else {
-//                resetTimelineItem("#2011-jul-date, #2011-jul-title, #2011-jul-para", "#cont-sideline-uoe");
-//            }
-//
-//            if ($(document).scrollTop() > 7970) {
-//                revealYearBubble("#2010-bubble");
-//            } else {
-//                revealYearBubbleReset("#2010-bubble");
-//            }
-//
-//            if ($(document).scrollTop() > 8170) {
-//                revealTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2", "#sideline-top-uoe2", "#sideline-bottom-uoe2");
-//            } else {
-//                resetTimelineItem("#2010-sep-date, #2010-sep-title, #2010-sep-para", "#cont-sideline-uoe2");
-//            }
-//
-//            if ($(document).scrollTop() > 8422) {
-//                revealTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa", "#sideline-top-sa", "#sideline-bottom-sa");
-//            } else {
-//                resetTimelineItem("#2010-jun-date, #2010-jun-title, #2010-jun-para", "#cont-sideline-sa");
-//            }
-//
-//            if ($(document).scrollTop() > 9221) {
-//                revealYearBubble("#2009-bubble");
-//            } else {
-//                revealYearBubbleReset("#2009-bubble");
-//            }
-//
-//            if ($(document).scrollTop() > 9420) {
-//                revealTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2", "#sideline-top-sa2", "#sideline-bottom-sa2");
-//            } else {
-//                resetTimelineItem("#2009-sep-date, #2009-sep-title, #2009-sep-para", "#cont-sideline-sa2");
-//            }
-//
-//            if ($(document).scrollTop() > 9710) {
-//                revealTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl", "#sideline-top-pl", "#sideline-bottom-pl");
-//            } else {
-//                resetTimelineItem("#2009-aug-date, #2009-aug-title, #2009-aug-para", "#cont-sideline-pl");
-//            }
-//
-//            if ($(document).scrollTop() > 10050) {
-//                revealTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch", "#sideline-top-sch", "#sideline-bottom-sch");
-//            } else {
-//                resetTimelineItem("#2009-jul-date, #2009-jul-title, #2009-jul-para", "#cont-sideline-sch");
-//            }
-//        });
-    }
 
     //****************************************************************************REVEAL/RESET TIMELINE ITEM FUNCTIONS
 
@@ -3224,9 +2823,66 @@ SCRIPTS
         $("#stem").animate({height: '420px'});
     }
 
+    //============================================================================================= ~ MASKOVERS
+
+    $("#empowerhack-maskover-btn").click(function () {
+        revealMaskOver("#mask-over1");
+    });
+
+    function revealMaskOver(maskOverID) {
+        $(maskOverID).show();
+
+        setTimeout(function () {
+            $(maskOverID).addClass("fade-in");
+            $("#body").addClass("scroll-none");
+        });
+    }
+
+    $(".mask-over-close").click(function () {
+        $("#body").removeClass("scroll-none");
+        $(".portfolio-mask-over").removeClass("fade-in");
+
+        setTimeout(function () {
+            $("#mask-over1").hide();
+        }, 1000);
+    });
+
+    // =========================================================================================== ~ WINDOW RESIZE SCRIPTS
+
+    $(window).resize(function () {
+        var windowHeight = $(window).height();
+        this.windowHeight = windowHeight;
+
+        adjustMinFooterHeight();
+        initScrollTop();
+    });
+
+    // ============================================================================================ ~ FOOTER SCRIPTS
+
+    //   ****************************************************************************MINIMUM FOOTER HEIGHT
+
+    var minFooterHeight = halfWindowHeight + 20 + "px";
+    $("#minimumFooterHeight").css("min-height", minFooterHeight);
+
+    function adjustMinFooterHeight () {
+        var minFooterHeight = (windowHeight / 2) + 20 + "px";
+        $("#minimumFooterHeight").css("min-height", minFooterHeight);
+    }
+
+    //    ****************************************************************************FOOTER REVEAL FUNCTIONS
+
+
+    function FooterAnimation() {
+        $("#footer-bckgrnd").addClass("illuminated");
+        $("#footer-content-inv").removeClass("invisible");
+
+    }
+    function FooterAnimationReset() {
+        $("#footer-bckgrnd").removeClass("illuminated");
+        $("#footer-content-inv").addClass("invisible");
+    }
 
     // ============================================================================================ ~ MINOR SCRIPTS
-
 
     //    ****************************************************************************SCROLL DOWN BUTTON FUNCTION
 
@@ -3255,7 +2911,6 @@ SCRIPTS
 
     //    ****************************************************************************SCROLLBAR HOVER FUNCTION
 
-
     $(".scrollbar-thin").mouseover(function () {
         $(this).addClass("scrollbar-visible");
     });
@@ -3265,7 +2920,6 @@ SCRIPTS
 
     // ============================================================================================ ~ BOOTSTRAP SCRIPTS
 
-
     // *** TOOLTIP ***
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({
@@ -3274,33 +2928,19 @@ SCRIPTS
     })
 
 
-    //============================================================================================= ~ MASKOVERS
-
-
-    $("#empowerhack-maskover-btn").click(function () {
-        revealMaskOver("#mask-over1");
-    });
-
-    function revealMaskOver(maskOverID) {
-        $(maskOverID).show();
-
-        setTimeout(function () {
-            $(maskOverID).addClass("fade-in");
-            $("#body").addClass("scroll-none");
-        });
-    }
-
-    $(".mask-over-close").click(function () {
-        $("#body").removeClass("scroll-none");
-        $(".portfolio-mask-over").removeClass("fade-in");
-
-        setTimeout(function () {
-            $("#mask-over1").hide();
-        }, 1000);
-    });
-
-
+    // *** CAROUSEL ***
     $('#carouselHacked').carousel();
+
+
+    //============================================================================================= ~ TEMPORARY
+
+    $("#port-ux-bubble").click(function () {
+        $(".port-sectionBubble").removeClass("small");
+        $("#port-ux-bubble-text").removeClass("small");
+    });
+
+
+    $("#measure2").animate({height: halfWindowHeight});
 
 </script>
 
