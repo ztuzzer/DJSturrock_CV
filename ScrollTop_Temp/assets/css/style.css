@@ -22,6 +22,12 @@ h1 {
     background-color: blue;
 }
 
+.container-whole.pink {
+    background-color: pink;
+}
+
+
+
 .stem {
     width: 30%;
     height: 100%;
@@ -59,4 +65,12 @@ h1 {
 
 .container-content-one {
     display: none;
+}
+
+#footer {
+    margin-bottom: 1000px;
+}
+
+.height-800 {
+    /*height: 800px;*/
 }

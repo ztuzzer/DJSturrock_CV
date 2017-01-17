@@ -192,8 +192,10 @@
         <br>H: 800
         <br>T: N/A</h1>
 
-    <div id="footer-pt2" class="footer container-whole height-800">
-
+    <div id="footer-pt2" class="footer container-whole height-200">
+        <h1>FOOTER part two:
+            <br>H: 800
+            <br>T: N/A</h1>
     </div>
 </div>
 
@@ -271,6 +273,14 @@
 
             console.log("Container Four Pos Top =" + containerFourPositionTop);
 
+            var footerPositionTop = $("#footer").position().top;
+
+            console.log("Container Three Pos Top =" + footerPositionTop);
+
+            var footerPart2PositionTop = $("#footer-pt2").position().top;
+
+            console.log("Container Four Pos Top =" + footerPart2PositionTop);
+
 
 
             $(window).scroll(function () {
@@ -280,7 +290,6 @@
 
                 if (scrollTopPlusHalf >= containerThreePositionTop) {
                     $("#container-three").addClass("red");
-                    $("#container-three").removeClass("blue");
                 }
                 else {
                     $("#container-three").removeClass("red");
@@ -288,18 +297,31 @@
 
                 if (scrollTopPlusHalf >= containerFourPositionTop) {
                     $("#container-four").addClass("red");
-                    $("#container-four").removeClass("blue");
                 }
                 else {
                     $("#container-four").removeClass("red");
                 }
 
+                if (scrollTopPlusHalf >= footerPositionTop) {
+                    $("#footer").addClass("red");
+                }
+                else {
+                    $("#footer").removeClass("red");
+                }
+
+                if (scrollTopPlusHalf >= footerPart2PositionTop) {
+                    $("#footer-pt2").addClass("pink");
+                }
+                else {
+                    $("#footer-pt2").removeClass("pink");
+                }
+
+
+
             });
         }
 
         else if (pageState == "contentTwo") {
-
-//            DO SOMETHING DIFFERENT
             var content2containerThreePositionTop = $("#content2-container-three").position().top;
 
             console.log("Container Three Pos Top =" + content2containerThreePositionTop);
@@ -308,13 +330,21 @@
 
             console.log("Container Four Pos Top =" + content2containerFourPositionTop);
 
+
+            var footerPositionTop = $("#footer").position().top;
+
+            console.log("Container Three Pos Top =" + footerPositionTop);
+
+            var footerPart2PositionTop = $("#footer-pt2").position().top;
+
+            console.log("Container Four Pos Top =" + footerPart2PositionTop);
+
             $(window).scroll(function () {
 
                 var scrollTop = $(document).scrollTop();
                 var scrollTopPlusHalf = scrollTop + windowHeight / 2;
 
                 if (scrollTopPlusHalf > content2containerThreePositionTop) {
-                    $("#content2-container-three").removeClass("red");
                     $("#content2-container-three").addClass("blue");
                 }
                 else {
@@ -322,11 +352,28 @@
                 }
 
                 if (scrollTopPlusHalf > content2containerFourPositionTop) {
-                    $("#content2-container-three").removeClass("red");
                     $("#content2-container-four").addClass("blue");
                 }
                 else {
                     $("#content2-container-four").removeClass("blue");
+                }
+
+
+
+                if (scrollTopPlusHalf >= footerPositionTop) {
+                    $("#footer").addClass("red");
+                }
+                else {
+                    $("#footer").removeClass("red");
+                }
+
+                if (scrollTopPlusHalf >= footerPart2PositionTop) {
+                    $("#footer-pt2").addClass("pink");
+                }
+
+
+                else {
+                    $("#footer-pt2").removeClass("pink");
                 }
 
             });
