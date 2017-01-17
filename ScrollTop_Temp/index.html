@@ -40,7 +40,7 @@
     Hovers
     ******************** -->
 
-    <link rel="stylesheet" href="assets/css/Hover-master/css/hover.css">
+    <!--<link rel="stylesheet" href="assets/css/Hover-master/css/hover.css">-->
 
     <!-- ********************
     OWN STYLES
@@ -53,7 +53,8 @@
 
 
 <div id="container-one" class="container-whole height-200">
-    <h1 class="float-right"><a id="initScrollTop">initialise Scroll Top</a></h1>
+    <h1 class="float-right"><a id="scrollTopFunctionOne">ScrollTop Function One</a></h1>
+    <h1 class="float-right"><a id="scrollTopFunctionTwo">ScrollTop Function Two</a></h1>
 
     <h1>container one:
         <br>H: 200
@@ -64,7 +65,8 @@
 <div id="container-content-one" class="container-content-one">
 
     <div id="container-two" class="container-whole height-200">
-        <h1>container two:
+        <h1>CONTENT ONE
+            <br>container two:
             <br>H: 200
             <br>T: 400
         </h1>
@@ -130,79 +132,138 @@
 
 <script>
 
-    var windowHeight = $(window).height();   // returns height of browser viewport
-    var documentHeight = $(document).height(); // returns height of HTML document
-    var windowWidth = $(window).width();   // returns width of browser viewport
-    var documentWidth = $(document).width();
 
-    console.log("document height =" + documentHeight);
+
+    var windowHeight = $(window).height();   // returns height of browser viewport
+
+    console.log("Window height =" + windowHeight);
+
+    var pageState = "";
+
     console.log("window height =" + windowHeight);
-    console.log("document Width =" + documentWidth);
-    console.log("window Width =" + windowWidth);
 
     var halfWindowHeight = windowHeight / 2;
 
     console.log("half window height =" + halfWindowHeight);
 
-    var containerOneHeight = $("#container-one").outerHeight();
+//    $(document).ready(function() {
+//        initScrollTop();
+//    });
 
-    console.log("Container One Height =" + containerOneHeight);
-
-
-    $("#measure2").animate({height: halfWindowHeight});
-
-    //    $(document).ready(f);
-
-    var f = (function () {
+    $(window).resize(function () {
         var windowHeight = $(window).height();
         console.log("new window height = " + windowHeight);
+
         var halfWindowHeight = windowHeight / 2;
         console.log("new window half height = " + halfWindowHeight);
+
+        this.windowHeight = windowHeight;
+
+
+        initScrollTop();
     });
 
-    $(window).resize(f);
-
-
-    $("#initScrollTop").click(function () {
+    $("#scrollTopFunctionOne").click(function () {
         $("#container-content-one").show();
+
+        pageState = "contentOne";
+
+        initScrollTop();
+    });
+
+    $("#scrollTopFunctionTwo").click(function () {
+        $("#container-content-one").show();
+
+        pageState = "contentTwo";
+
         initScrollTop();
     });
 
     function initScrollTop() {
 
-        var containerThreePositionTop = $("#container-three").position().top;
 
-        console.log("Container Three Pos Top =" + containerThreePositionTop);
+        console.log("pageState=" + pageState);
 
-        var containerFourPositionTop = $("#container-four").position().top;
+        if (pageState == "contentOne") {
 
-        console.log("Container Four Pos Top =" + containerFourPositionTop);
+            var containerThreePositionTop = $("#container-three").position().top;
 
-        $(window).scroll(function () {
+            console.log("Container Three Pos Top =" + containerThreePositionTop);
+
+            var containerFourPositionTop = $("#container-four").position().top;
+
+            console.log("Container Four Pos Top =" + containerFourPositionTop);
 
 
-            var scrollTop = $(document).scrollTop();
 
+            $(window).scroll(function () {
 
-            var scrollTopPlusHalf = scrollTop + halfWindowHeight;
+                var scrollTop = $(document).scrollTop();
+                var scrollTopPlusHalf = scrollTop + windowHeight / 2;
 
-            if (scrollTopPlusHalf > containerThreePositionTop) {
-                $("#container-three").addClass("red");
-            }
-            else {
-                $("#container-three").removeClass("red");
-            }
+                if (scrollTopPlusHalf >= containerThreePositionTop) {
+                    $("#container-three").addClass("red");
+                }
+                else {
+                    $("#container-three").removeClass("red");
+                }
 
-            if (scrollTopPlusHalf > containerFourPositionTop) {
-                $("#container-four").addClass("red");
-            }
-            else {
-                $("#container-four").removeClass("red");
-            }
+                if (scrollTopPlusHalf >= containerFourPositionTop) {
+                    $("#container-four").addClass("red");
+                }
+                else {
+                    $("#container-four").removeClass("red");
+                }
 
-        });
+            });
+        }
+
+        else if (pageState == "contentTwo") {
+
+//            DO SOMETHING DIFFERENT
+            var containerThreePositionTop = $("#container-three").position().top;
+
+            console.log("Container Three Pos Top =" + containerThreePositionTop);
+
+            var containerFourPositionTop = $("#container-four").position().top;
+
+            console.log("Container Four Pos Top =" + containerFourPositionTop);
+
+            $(window).scroll(function () {
+
+                var scrollTop = $(document).scrollTop();
+                var scrollTopPlusHalf = scrollTop + windowHeight / 2;
+
+                if (scrollTopPlusHalf > containerThreePositionTop) {
+                    $("#container-three").removeClass("red");
+                    $("#container-three").addClass("blue");
+                }
+                else {
+                    $("#container-three").removeClass("blue");
+                }
+
+                if (scrollTopPlusHalf > containerFourPositionTop) {
+                    $("#container-three").removeClass("red");
+                    $("#container-four").addClass("blue");
+                }
+                else {
+                    $("#container-four").removeClass("blue");
+                }
+
+            });
+        }
     }
 
 
+
+
+
+
+
+
+
+
+
+    $("#measure2").animate({height: halfWindowHeight});
 </script>
 </html>
