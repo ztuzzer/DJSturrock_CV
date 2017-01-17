@@ -288,10 +288,14 @@ h1.title {
 .title-right {
     width: 500px!important;
     padding-bottom: 9px;
-    padding-left: 155px;
+
     /*line-height: 50px;*/
 display: inline-block;
     /*background-color: red;*/
+}
+
+.title-right.overview-content {
+    padding-left: 155px;
 }
 
 .overview-cont-paragraph-right {
